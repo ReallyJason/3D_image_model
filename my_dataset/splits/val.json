@@ -1,0 +1,275 @@
+[
+  {
+    "id": "stair_00001",
+    "category": "stair",
+    "name": "Iain_Dawson_Kew_Road_Formby",
+    "model_file": "objects/stair_00001/model.glb",
+    "renders_dir": "objects/stair_00001",
+    "license": "CC-BY-4.0",
+    "original_uid": "8476c4170df24cf5bbe6967222d1a42d",
+    "stats": {
+      "face_count": 14608,
+      "vertex_count": 7309
+    }
+  },
+  {
+    "id": "characters_creatures_00058",
+    "category": "characters_creatures",
+    "name": "BULLET BILL",
+    "model_file": "objects/characters_creatures_00058/model.glb",
+    "renders_dir": "objects/characters_creatures_00058",
+    "license": "CC-BY-4.0",
+    "original_uid": "6cfb55bd41d24db298b52b11ad74aa0a",
+    "stats": {
+      "face_count": 32122,
+      "vertex_count": 16398
+    }
+  },
+  {
+    "id": "cars_vehicles_00061",
+    "category": "cars_vehicles",
+    "name": "Wooden Toy Locomotive",
+    "model_file": "objects/cars_vehicles_00061/model.glb",
+    "renders_dir": "objects/cars_vehicles_00061",
+    "license": "CC-BY-4.0",
+    "original_uid": "3fff5bbe42bf4ffeb95bbcddb5d39688",
+    "stats": {
+      "face_count": 36680,
+      "vertex_count": 18712
+    }
+  },
+  {
+    "id": "cultural_heritage_history_00151",
+    "category": "cultural_heritage_history",
+    "name": "COADS_56-15",
+    "model_file": "objects/cultural_heritage_history_00151/model.glb",
+    "renders_dir": "objects/cultural_heritage_history_00151",
+    "license": "CC-BY-SA-4.0",
+    "original_uid": "8c4fece7abbf4b1d99545e223e9cbbf0",
+    "stats": {
+      "face_count": 1305886,
+      "vertex_count": 857050
+    }
+  },
+  {
+    "id": "animals_pets_00095",
+    "category": "animals_pets",
+    "name": "Heart Emoji 3D",
+    "model_file": "objects/animals_pets_00095/model.glb",
+    "renders_dir": "objects/animals_pets_00095",
+    "license": "CC-BY-4.0",
+    "original_uid": "10891952bdd0488d9269852e0a42df78",
+    "stats": {
+      "face_count": 2738,
+      "vertex_count": 2666
+    }
+  },
+  {
+    "id": "agisoft_00133",
+    "category": "agisoft",
+    "name": "Kookaburra (2)",
+    "model_file": "objects/agisoft_00133/model.glb",
+    "renders_dir": "objects/agisoft_00133",
+    "license": "CC-BY-4.0",
+    "original_uid": "31959f6d42f74e609eda3a8342eba988",
+    "stats": {
+      "face_count": 347648,
+      "vertex_count": 173868
+    }
+  },
+  {
+    "id": "weapons_military_00099",
+    "category": "weapons_military",
+    "name": "Kunai",
+    "model_file": "objects/weapons_military_00099/model.glb",
+    "renders_dir": "objects/weapons_military_00099",
+    "license": "CC-BY-4.0",
+    "original_uid": "a646531842584f9eb18cb926fdc2effe",
+    "stats": {
+      "face_count": 25748,
+      "vertex_count": 12920
+    }
+  },
+  {
+    "id": "architecture_00130",
+    "category": "architecture",
+    "name": "what shape is earth (hint: not flat)",
+    "model_file": "objects/architecture_00130/model.glb",
+    "renders_dir": "objects/architecture_00130",
+    "license": "CC-BY-4.0",
+    "original_uid": "0ac411adc5aa4eb682f34b2b868076d3",
+    "stats": {
+      "face_count": 5888,
+      "vertex_count": 2946
+    }
+  },
+  {
+    "id": "architecture_00185",
+    "category": "architecture",
+    "name": "Modelo #68",
+    "model_file": "objects/architecture_00185/model.glb",
+    "renders_dir": "objects/architecture_00185",
+    "license": "CC-BY-4.0",
+    "original_uid": "eb9a16e819ee4b089a626061319f3d84",
+    "stats": {
+      "face_count": 488,
+      "vertex_count": 246
+    }
+  },
+  {
+    "id": "art_abstract_00120",
+    "category": "art_abstract",
+    "name": "Stylized Mushrooms",
+    "model_file": "objects/art_abstract_00120/model.glb",
+    "renders_dir": "objects/art_abstract_00120",
+    "license": "CC-BY-4.0",
+    "original_uid": "ffc842bb25cb40cba2eb8d5a4a6f34c7",
+    "stats": {
+      "face_count": 508658,
+      "vertex_count": 254508
+    }
+  },
+  {
+    "id": "fashion_style_00041",
+    "category": "fashion_style",
+    "name": "Le Biscuit \" Miss Emmy \" ( STL )",
+    "model_file": "objects/fashion_style_00041/model.glb",
+    "renders_dir": "objects/fashion_style_00041",
+    "license": "CC-BY-4.0",
+    "original_uid": "ac02e94e10cf4e35b80701ab8655130b",
+    "stats": {
+      "face_count": 1582759,
+      "vertex_count": 791381
+    }
+  },
+  {
+    "id": "pamir_00202",
+    "category": "pamir",
+    "name": "23111B",
+    "model_file": "objects/pamir_00202/model.glb",
+    "renders_dir": "objects/pamir_00202",
+    "license": "CC-BY-4.0",
+    "original_uid": "c082e79901ef4c3e9cc2df55fe872f19",
+    "stats": {
+      "face_count": 5110,
+      "vertex_count": 3902
+    }
+  },
+  {
+    "id": "nature_plants_00081",
+    "category": "nature_plants",
+    "name": "Icicle Diorama",
+    "model_file": "objects/nature_plants_00081/model.glb",
+    "renders_dir": "objects/nature_plants_00081",
+    "license": "CC-BY-4.0",
+    "original_uid": "4fd65ced9aac4c1a9cc974fed30a987e",
+    "stats": {
+      "face_count": 346304,
+      "vertex_count": 173283
+    }
+  },
+  {
+    "id": "furniture_home_00136",
+    "category": "furniture_home",
+    "name": "\u041b\u044e\u0441\u0442\u0440\u0430 2306-8P Favourite",
+    "model_file": "objects/furniture_home_00136/model.glb",
+    "renders_dir": "objects/furniture_home_00136",
+    "license": "CC-BY-4.0",
+    "original_uid": "b2393385990a48239bd6797f22bffa6f",
+    "stats": {
+      "face_count": 348908,
+      "vertex_count": 217075
+    }
+  },
+  {
+    "id": "electronics_gadgets_00062",
+    "category": "electronics_gadgets",
+    "name": "Arcade",
+    "model_file": "objects/electronics_gadgets_00062/model.glb",
+    "renders_dir": "objects/electronics_gadgets_00062",
+    "license": "CC-BY-4.0",
+    "original_uid": "2c381d615ff64c64a8e3913be7f03039",
+    "stats": {
+      "face_count": 4467,
+      "vertex_count": 2634
+    }
+  },
+  {
+    "id": "metashape_00076",
+    "category": "metashape",
+    "name": "Old Westminster Winery",
+    "model_file": "objects/metashape_00076/model.glb",
+    "renders_dir": "objects/metashape_00076",
+    "license": "CC-BY-4.0",
+    "original_uid": "a6b7a10408ad42e990ea0d78764dc6f2",
+    "stats": {
+      "face_count": 1000000,
+      "vertex_count": 502188
+    }
+  },
+  {
+    "id": "object_00180",
+    "category": "object",
+    "name": "Object 10",
+    "model_file": "objects/object_00180/model.glb",
+    "renders_dir": "objects/object_00180",
+    "license": "CC-BY-4.0",
+    "original_uid": "71f123c49a5042348243ff409062ba47",
+    "stats": {
+      "face_count": 6088,
+      "vertex_count": 3410
+    }
+  },
+  {
+    "id": "design_00129",
+    "category": "design",
+    "name": "Run-Down Suburban Flip",
+    "model_file": "objects/design_00129/model.glb",
+    "renders_dir": "objects/design_00129",
+    "license": "CC-BY-NC-SA-4.0",
+    "original_uid": "f8d4834b55d54a4991ff7f8b68269f4e",
+    "stats": {
+      "face_count": 878030,
+      "vertex_count": 621711
+    }
+  },
+  {
+    "id": "science_technology_00194",
+    "category": "science_technology",
+    "name": "Kriss Vector",
+    "model_file": "objects/science_technology_00194/model.glb",
+    "renders_dir": "objects/science_technology_00194",
+    "license": "CC-BY-4.0",
+    "original_uid": "3a2892e5c7d64ac08ec3ada42c64aa65",
+    "stats": {
+      "face_count": 83899,
+      "vertex_count": 42743
+    }
+  },
+  {
+    "id": "polycam_00157",
+    "category": "polycam",
+    "name": "Albeit Dock Statue",
+    "model_file": "objects/polycam_00157/model.glb",
+    "renders_dir": "objects/polycam_00157",
+    "license": "CC-BY-NC-SA-4.0",
+    "original_uid": "7654064ccf2845f699175657a581f8bd",
+    "stats": {
+      "face_count": 212144,
+      "vertex_count": 106417
+    }
+  },
+  {
+    "id": "u_00204",
+    "category": "u",
+    "name": "u_\u0414\u0420-88.D500mm_OBJ.obj",
+    "model_file": "objects/u_00204/model.glb",
+    "renders_dir": "objects/u_00204",
+    "license": "CC-BY-4.0",
+    "original_uid": "0dc3d31d2c4c4e9794ed040478014bf4",
+    "stats": {
+      "face_count": 32760,
+      "vertex_count": 19080
+    }
+  }
+]

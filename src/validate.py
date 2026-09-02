@@ -1,16 +1,7 @@
 """
-3D Model Health & Validation Checker.
+3D Model Health & Validation Diagnostics.
 
-Inspects 3D models before rendering to detect broken, corrupted, or degenerate objects:
-- Corrupted/unreadable files
-- Missing/empty geometry (0 vertices, 0 faces, or only 2D/3D spline paths)
-- NaN / Infinite coordinates
-- Extreme scale (micro-scale < 1e-4 or gigantic > 1e4)
-- Off-center bias
-- Missing textures / materials
-- Degenerate faces
-
-Outputs a structured validation report and updates metadata.json.
+Detects corrupted files, missing geometry, NaN coordinates, and scale/texture anomalies.
 """
 
 import os
@@ -18,15 +9,14 @@ import json
 import argparse
 import numpy as np
 import trimesh
-from typing import Dict, Any, List, Tuple
+from typing import Dict, Any, List
 
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-DEFAULT_DATASET_DIR = os.path.join(PROJECT_DIR, "my_dataset")
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DEFAULT_DATASET_DIR = os.path.join(PROJECT_ROOT, "my_dataset")
 
 def validate_model(file_path: str) -> Dict[str, Any]:
     """
     Runs full diagnostics on a 3D model file.
-    
     Returns a dictionary of metrics, issues, and validation status ('PASS', 'WARN', 'FAIL').
     """
     result: Dict[str, Any] = {
@@ -60,7 +50,6 @@ def validate_model(file_path: str) -> Dict[str, Any]:
         result["issues"].append("File is empty (0 bytes)")
         return result
 
-    # 1. Test loading
     try:
         scene = trimesh.load(file_path, force='scene')
         result["can_open"] = True
@@ -68,11 +57,9 @@ def validate_model(file_path: str) -> Dict[str, Any]:
         result["issues"].append(f"Failed to open model: {str(e)[:120]}")
         return result
 
-    # 2. Extract triangular geometry
     try:
         geom = scene.to_geometry()
         if not isinstance(geom, trimesh.Trimesh):
-            # If multiple meshes, concatenate all Trimesh geometries
             mesh_list = [g for g in scene.geometry.values() if isinstance(g, trimesh.Trimesh)]
             if mesh_list:
                 geom = trimesh.util.concatenate(mesh_list)
@@ -92,14 +79,12 @@ def validate_model(file_path: str) -> Dict[str, Any]:
         result["issues"].append(f"Empty geometry: {num_verts} vertices, {num_faces} faces")
         return result
 
-    # 3. Coordinate sanity (NaN / Inf)
     verts_arr = np.asarray(geom.vertices)
     if np.isnan(verts_arr).any() or np.isinf(verts_arr).any():
         result["has_nan_inf"] = True
         result["issues"].append("Model contains NaN or Infinite vertex coordinates")
         return result
 
-    # 4. Dimensions & Scale
     extents = [float(x) for x in geom.extents]
     max_extent = float(np.max(geom.extents))
     result["extents"] = extents
@@ -113,7 +98,6 @@ def validate_model(file_path: str) -> Dict[str, Any]:
     elif max_extent < 0.05:
         result["warnings"].append(f"Model is very small (max extent {max_extent:.4f})")
 
-    # 5. Centering Check
     center = geom.bounding_box.centroid
     center_offset = float(np.linalg.norm(center))
     result["center_offset"] = center_offset
@@ -122,7 +106,6 @@ def validate_model(file_path: str) -> Dict[str, Any]:
     if result["relative_center_offset"] > 5.0:
         result["warnings"].append(f"Model is placed far from origin (center offset: {center_offset:.2f})")
 
-    # 6. Degenerate faces check
     try:
         degenerate_count = int(np.sum(geom.area_faces <= 1e-9))
         result["degenerate_faces"] = degenerate_count
@@ -131,27 +114,21 @@ def validate_model(file_path: str) -> Dict[str, Any]:
     except Exception:
         pass
 
-    # 7. Watertight check (useful for volumetric / signed distance functions)
     try:
         result["is_watertight"] = bool(geom.is_watertight)
     except Exception:
         result["is_watertight"] = False
 
-    # 8. Textures, UVs, and Materials
     visual = getattr(geom, 'visual', None)
     if visual is not None:
-        # Check UVs
         uv = getattr(visual, 'uv', None)
         if uv is not None and len(uv) > 0:
             result["has_uv"] = True
 
-        # Check vertex colors
         vc = getattr(visual, 'vertex_colors', None)
         if vc is not None and len(vc) > 0:
-            # Check if non-default
             result["has_vertex_colors"] = True
 
-        # Check material / texture map
         mat = getattr(visual, 'material', None)
         if mat is not None:
             has_img = getattr(mat, 'baseColorTexture', None) is not None or getattr(mat, 'image', None) is not None
@@ -161,7 +138,6 @@ def validate_model(file_path: str) -> Dict[str, Any]:
     if not result["has_textures"] and not result["has_vertex_colors"]:
         result["warnings"].append("No textures or vertex colors detected (geometry only)")
 
-    # Assign overall status
     if len(result["issues"]) > 0:
         result["status"] = "FAIL"
     elif len(result["warnings"]) > 0:
@@ -180,7 +156,7 @@ def check_dataset(dataset_dir: str = DEFAULT_DATASET_DIR) -> Dict[str, Any]:
     report_path = os.path.join(dataset_dir, "validation_report.json")
 
     if not os.path.exists(objects_dir):
-        print(f"Error: Objects directory {objects_dir} does not exist. Run organize first.")
+        print(f"Error: Objects directory {objects_dir} does not exist.")
         return {}
 
     master_metadata: Dict[str, Any] = {}
@@ -196,7 +172,7 @@ def check_dataset(dataset_dir: str = DEFAULT_DATASET_DIR) -> Dict[str, Any]:
     print(f"\n=======================================================")
     print(f"       3D MODEL HEALTH CHECK & VALIDATION")
     print(f"=======================================================")
-    print(f"Inspecting {len(object_folders)} objects in {objects_dir}...\n")
+    print(f"Inspecting {len(object_folders)} objects in {objects_dir}...\n", flush=True)
 
     summary = {"PASS": 0, "WARN": 0, "FAIL": 0, "total": len(object_folders)}
     results: Dict[str, Any] = {}
@@ -210,7 +186,6 @@ def check_dataset(dataset_dir: str = DEFAULT_DATASET_DIR) -> Dict[str, Any]:
         summary[status] += 1
         results[obj_id] = diag
 
-        # Update object-level metadata
         obj_meta_path = os.path.join(obj_dir, "metadata.json")
         obj_meta = {}
         if os.path.exists(obj_meta_path):
@@ -228,11 +203,9 @@ def check_dataset(dataset_dir: str = DEFAULT_DATASET_DIR) -> Dict[str, Any]:
         with open(obj_meta_path, "w", encoding="utf-8") as f:
             json.dump(obj_meta, f, indent=2)
 
-        # Update master metadata
         if obj_id in master_metadata:
             master_metadata[obj_id]["validation"] = obj_meta["validation"]
 
-        # Terminal status icon
         icon = "✅" if status == "PASS" else ("⚠️ " if status == "WARN" else "❌")
         info = f"verts: {diag['num_vertices']:,} | faces: {diag['num_faces']:,}"
         if status == "FAIL":
@@ -242,9 +215,8 @@ def check_dataset(dataset_dir: str = DEFAULT_DATASET_DIR) -> Dict[str, Any]:
         else:
             detail = f"OK (extent: {diag['max_extent']:.2f})"
 
-        print(f"[{icon} {status:4}] {obj_id[:25]:25} | {info:30} | {detail}")
+        print(f"[{icon} {status:4}] {obj_id[:25]:25} | {info:30} | {detail}", flush=True)
 
-    # Write updated master metadata and validation report
     with open(master_metadata_path, "w", encoding="utf-8") as f:
         json.dump(master_metadata, f, indent=2)
 
@@ -257,16 +229,16 @@ def check_dataset(dataset_dir: str = DEFAULT_DATASET_DIR) -> Dict[str, Any]:
     with open(report_path, "w", encoding="utf-8") as f:
         json.dump(report_data, f, indent=2)
 
-    print(f"\n=======================================================")
-    print(f"                   VALIDATION SUMMARY")
-    print(f"=======================================================")
-    print(f"  Total Models Checked: {summary['total']}")
-    print(f"  ✅ Fully Valid (PASS): {summary['PASS']}")
-    print(f"  ⚠️  Usable with Warnings (WARN): {summary['WARN']}")
-    print(f"  ❌ Broken / Corrupted (FAIL): {summary['FAIL']}")
-    print(f"  Usable Rate (PASS + WARN): {report_data['usable_rate_percent']}%")
-    print(f"  Detailed Report: {report_path}")
-    print(f"=======================================================\n")
+    print(f"\n=======================================================", flush=True)
+    print(f"                   VALIDATION SUMMARY", flush=True)
+    print(f"=======================================================", flush=True)
+    print(f"  Total Models Checked: {summary['total']}", flush=True)
+    print(f"  ✅ Fully Valid (PASS): {summary['PASS']}", flush=True)
+    print(f"  ⚠️  Usable with Warnings (WARN): {summary['WARN']}", flush=True)
+    print(f"  ❌ Broken / Corrupted (FAIL): {summary['FAIL']}", flush=True)
+    print(f"  Usable Rate (PASS + WARN): {report_data['usable_rate_percent']}%", flush=True)
+    print(f"  Detailed Report: {report_path}", flush=True)
+    print(f"=======================================================\n", flush=True)
 
     return report_data
 

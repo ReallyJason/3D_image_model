@@ -1,0 +1,2121 @@
+[
+  {
+    "id": "stair_00127",
+    "category": "stair",
+    "name": "Lisa_Pearl_Preston",
+    "model_file": "objects/stair_00127/model.glb",
+    "renders_dir": "objects/stair_00127",
+    "license": "CC-BY-4.0",
+    "original_uid": "5bca5f7b71394991979288e68a39c358",
+    "stats": {
+      "face_count": 15105,
+      "vertex_count": 8902
+    }
+  },
+  {
+    "id": "stair_00056",
+    "category": "stair",
+    "name": "Gragas-S",
+    "model_file": "objects/stair_00056/model.glb",
+    "renders_dir": "objects/stair_00056",
+    "license": "CC-BY-4.0",
+    "original_uid": "092bb80346414104abd5cace71892752",
+    "stats": {
+      "face_count": 30142,
+      "vertex_count": 19223
+    }
+  },
+  {
+    "id": "stair_00085",
+    "category": "stair",
+    "name": "panesar",
+    "model_file": "objects/stair_00085/model.glb",
+    "renders_dir": "objects/stair_00085",
+    "license": "CC-BY-4.0",
+    "original_uid": "786b981333b142e08f6125dcc9b2bf95",
+    "stats": {
+      "face_count": 7793,
+      "vertex_count": 3323
+    }
+  },
+  {
+    "id": "stair_00179",
+    "category": "stair",
+    "name": "FCMWCS1",
+    "model_file": "objects/stair_00179/model.glb",
+    "renders_dir": "objects/stair_00179",
+    "license": "CC-BY-4.0",
+    "original_uid": "d2c54ae7a5484b7bb156a5ac5882c0ea",
+    "stats": {
+      "face_count": 12250,
+      "vertex_count": 5305
+    }
+  },
+  {
+    "id": "toy_00002",
+    "category": "toy",
+    "name": "4 Toy",
+    "model_file": "objects/toy_00002/model.glb",
+    "renders_dir": "objects/toy_00002",
+    "license": "CC-BY-4.0",
+    "original_uid": "8ff7f1f2465347cd8b80c9b206c2781e",
+    "stats": {
+      "face_count": 6716,
+      "vertex_count": 3376
+    }
+  },
+  {
+    "id": "p12323a_00003",
+    "category": "p12323a",
+    "name": "P12323A Posi Joist Layout",
+    "model_file": "objects/p12323a_00003/model.glb",
+    "renders_dir": "objects/p12323a_00003",
+    "license": "CC-BY-4.0",
+    "original_uid": "c786b97d08b94d02a1fa3b87d2e86cf1",
+    "stats": {
+      "face_count": 169681,
+      "vertex_count": 133835
+    }
+  },
+  {
+    "id": "characters_creatures_00107",
+    "category": "characters_creatures",
+    "name": "Lucantor Alien Ambassador",
+    "model_file": "objects/characters_creatures_00107/model.glb",
+    "renders_dir": "objects/characters_creatures_00107",
+    "license": "CC-BY-4.0",
+    "original_uid": "2f12bb2287b747089e82a4296d333946",
+    "stats": {
+      "face_count": 15152,
+      "vertex_count": 7609
+    }
+  },
+  {
+    "id": "characters_creatures_00145",
+    "category": "characters_creatures",
+    "name": "Soldado Esqueleto",
+    "model_file": "objects/characters_creatures_00145/model.glb",
+    "renders_dir": "objects/characters_creatures_00145",
+    "license": "CC-BY-4.0",
+    "original_uid": "37d0e0a69a0c44c28fb3f48ccf381b09",
+    "stats": {
+      "face_count": 7342,
+      "vertex_count": 3903
+    }
+  },
+  {
+    "id": "characters_creatures_00086",
+    "category": "characters_creatures",
+    "name": "Snowman",
+    "model_file": "objects/characters_creatures_00086/model.glb",
+    "renders_dir": "objects/characters_creatures_00086",
+    "license": "CC-BY-4.0",
+    "original_uid": "7e331e1b5f6848a0a296eebaba555936",
+    "stats": {
+      "face_count": 27264,
+      "vertex_count": 13674
+    }
+  },
+  {
+    "id": "characters_creatures_00104",
+    "category": "characters_creatures",
+    "name": "Gran",
+    "model_file": "objects/characters_creatures_00104/model.glb",
+    "renders_dir": "objects/characters_creatures_00104",
+    "license": "CC-BY-4.0",
+    "original_uid": "fa5ffcb180ea48458945ace96f47ddd9",
+    "stats": {
+      "face_count": 11454,
+      "vertex_count": 6027
+    }
+  },
+  {
+    "id": "characters_creatures_00004",
+    "category": "characters_creatures",
+    "name": "Golden Whitty ver-2",
+    "model_file": "objects/characters_creatures_00004/model.glb",
+    "renders_dir": "objects/characters_creatures_00004",
+    "license": "CC-BY-NC-4.0",
+    "original_uid": "139331da744542009f146018fd0e05f4",
+    "stats": {
+      "face_count": 10208,
+      "vertex_count": 5170
+    }
+  },
+  {
+    "id": "characters_creatures_00150",
+    "category": "characters_creatures",
+    "name": "Wattson Apex Legends",
+    "model_file": "objects/characters_creatures_00150/model.glb",
+    "renders_dir": "objects/characters_creatures_00150",
+    "license": "CC-BY-4.0",
+    "original_uid": "c5f34f56eb9f4855aba37f2806301fd7",
+    "stats": {
+      "face_count": 51632,
+      "vertex_count": 27239
+    }
+  },
+  {
+    "id": "characters_creatures_00074",
+    "category": "characters_creatures",
+    "name": "Superior Spiderman",
+    "model_file": "objects/characters_creatures_00074/model.glb",
+    "renders_dir": "objects/characters_creatures_00074",
+    "license": "CC-BY-4.0",
+    "original_uid": "dd8d6b4342c1473bba5cda722484eeb0",
+    "stats": {
+      "face_count": 20972,
+      "vertex_count": 10524
+    }
+  },
+  {
+    "id": "characters_creatures_00141",
+    "category": "characters_creatures",
+    "name": "UBFunkey STL model",
+    "model_file": "objects/characters_creatures_00141/model.glb",
+    "renders_dir": "objects/characters_creatures_00141",
+    "license": "CC-BY-4.0",
+    "original_uid": "067fb8650b14441e8d193f66740aa704",
+    "stats": {
+      "face_count": 23424,
+      "vertex_count": 11869
+    }
+  },
+  {
+    "id": "characters_creatures_00113",
+    "category": "characters_creatures",
+    "name": "Rabbit cute",
+    "model_file": "objects/characters_creatures_00113/model.glb",
+    "renders_dir": "objects/characters_creatures_00113",
+    "license": "CC-BY-4.0",
+    "original_uid": "26dc6203ba4547788dc226fe9addbc46",
+    "stats": {
+      "face_count": 64732,
+      "vertex_count": 57632
+    }
+  },
+  {
+    "id": "characters_creatures_00043",
+    "category": "characters_creatures",
+    "name": "Bok-bot",
+    "model_file": "objects/characters_creatures_00043/model.glb",
+    "renders_dir": "objects/characters_creatures_00043",
+    "license": "CC-BY-4.0",
+    "original_uid": "8e348d4d2f2949cf88bd896a92a4364d",
+    "stats": {
+      "face_count": 24384,
+      "vertex_count": 12258
+    }
+  },
+  {
+    "id": "sketch_00005",
+    "category": "sketch",
+    "name": "Sketch Fab Robot",
+    "model_file": "objects/sketch_00005/model.glb",
+    "renders_dir": "objects/sketch_00005",
+    "license": "CC-BY-4.0",
+    "original_uid": "be2c02614d774f9da672dfdc44015219",
+    "stats": {
+      "face_count": 23578,
+      "vertex_count": 10631
+    }
+  },
+  {
+    "id": "cars_vehicles_00111",
+    "category": "cars_vehicles",
+    "name": "Time Waver",
+    "model_file": "objects/cars_vehicles_00111/model.glb",
+    "renders_dir": "objects/cars_vehicles_00111",
+    "license": "CC-BY-4.0",
+    "original_uid": "04e056fc338346d4850143b71e7923d4",
+    "stats": {
+      "face_count": 1992,
+      "vertex_count": 1274
+    }
+  },
+  {
+    "id": "cars_vehicles_00072",
+    "category": "cars_vehicles",
+    "name": "Z\u00fcndapp KS 750",
+    "model_file": "objects/cars_vehicles_00072/model.glb",
+    "renders_dir": "objects/cars_vehicles_00072",
+    "license": "CC-BY-4.0",
+    "original_uid": "928847ca88d746dfaf27a5e296ef71a1",
+    "stats": {
+      "face_count": 8425,
+      "vertex_count": 5895
+    }
+  },
+  {
+    "id": "cars_vehicles_00067",
+    "category": "cars_vehicles",
+    "name": "Task4",
+    "model_file": "objects/cars_vehicles_00067/model.glb",
+    "renders_dir": "objects/cars_vehicles_00067",
+    "license": "CC-BY-4.0",
+    "original_uid": "45d83365c0684a5f838e1d662b27d0d3",
+    "stats": {
+      "face_count": 115878,
+      "vertex_count": 60487
+    }
+  },
+  {
+    "id": "cars_vehicles_00006",
+    "category": "cars_vehicles",
+    "name": "Safety Campus 06-2020",
+    "model_file": "objects/cars_vehicles_00006/model.glb",
+    "renders_dir": "objects/cars_vehicles_00006",
+    "license": "CC-BY-4.0",
+    "original_uid": "efd35e7d21ac482688c294e3b6c9f74e",
+    "stats": {
+      "face_count": 847486,
+      "vertex_count": 561768
+    }
+  },
+  {
+    "id": "12135_00007",
+    "category": "12135",
+    "name": "12135",
+    "model_file": "objects/12135_00007/model.glb",
+    "renders_dir": "objects/12135_00007",
+    "license": "CC-BY-4.0",
+    "original_uid": "21d5f90dbc9f4f229b0faa7b56b67f3e",
+    "stats": {
+      "face_count": 12124,
+      "vertex_count": 12516
+    }
+  },
+  {
+    "id": "trnio_00008",
+    "category": "trnio",
+    "name": "A TRNIO Model",
+    "model_file": "objects/trnio_00008/model.glb",
+    "renders_dir": "objects/trnio_00008",
+    "license": "CC-BY-4.0",
+    "original_uid": "dcd33159a0864de388de3a08f55e604a",
+    "stats": {
+      "face_count": 202466,
+      "vertex_count": 113324
+    }
+  },
+  {
+    "id": "lorax_00010",
+    "category": "lorax",
+    "name": "Lorax Target",
+    "model_file": "objects/lorax_00010/model.glb",
+    "renders_dir": "objects/lorax_00010",
+    "license": "CC-BY-4.0",
+    "original_uid": "7d6a14874eed48c2b720f0d1adfe6dd9",
+    "stats": {
+      "face_count": 646,
+      "vertex_count": 329
+    }
+  },
+  {
+    "id": "cultural_heritage_history_00125",
+    "category": "cultural_heritage_history",
+    "name": "The portcullis slab nub of the Great Pyramid",
+    "model_file": "objects/cultural_heritage_history_00125/model.glb",
+    "renders_dir": "objects/cultural_heritage_history_00125",
+    "license": "CC-BY-4.0",
+    "original_uid": "531c2d38e6ca4c6a809155c3569121db",
+    "stats": {
+      "face_count": 142357,
+      "vertex_count": 71398
+    }
+  },
+  {
+    "id": "cultural_heritage_history_00051",
+    "category": "cultural_heritage_history",
+    "name": "INDIA",
+    "model_file": "objects/cultural_heritage_history_00051/model.glb",
+    "renders_dir": "objects/cultural_heritage_history_00051",
+    "license": "CC-BY-4.0",
+    "original_uid": "b5df7cd550f64e818943ad96fff7e902",
+    "stats": {
+      "face_count": 177229,
+      "vertex_count": 89018
+    }
+  },
+  {
+    "id": "cultural_heritage_history_00210",
+    "category": "cultural_heritage_history",
+    "name": "Zahnmedizin Sammlungsraum Plan",
+    "model_file": "objects/cultural_heritage_history_00210/model.glb",
+    "renders_dir": "objects/cultural_heritage_history_00210",
+    "license": "CC-BY-4.0",
+    "original_uid": "e84c05caa2c9408c847006fcaff756b5",
+    "stats": {
+      "face_count": 9866,
+      "vertex_count": 9335
+    }
+  },
+  {
+    "id": "cultural_heritage_history_00011",
+    "category": "cultural_heritage_history",
+    "name": "elf_bow",
+    "model_file": "objects/cultural_heritage_history_00011/model.glb",
+    "renders_dir": "objects/cultural_heritage_history_00011",
+    "license": "CC-BY-4.0",
+    "original_uid": "71c71dd1dc754a8e9a84d43f5f3af7b9",
+    "stats": {
+      "face_count": 4704216,
+      "vertex_count": 2353194
+    }
+  },
+  {
+    "id": "cultural_heritage_history_00057",
+    "category": "cultural_heritage_history",
+    "name": "PNRP F.1.30.134.1.b",
+    "model_file": "objects/cultural_heritage_history_00057/model.glb",
+    "renders_dir": "objects/cultural_heritage_history_00057",
+    "license": "CC-BY-4.0",
+    "original_uid": "a38b6658117e4135ab0374cca4d745b9",
+    "stats": {
+      "face_count": 239444,
+      "vertex_count": 119724
+    }
+  },
+  {
+    "id": "cultural_heritage_history_00103",
+    "category": "cultural_heritage_history",
+    "name": "Monolito Edafol\u00f3gicos N\u00ba 20",
+    "model_file": "objects/cultural_heritage_history_00103/model.glb",
+    "renders_dir": "objects/cultural_heritage_history_00103",
+    "license": "CC-BY-4.0",
+    "original_uid": "39a16b32565045399e2cbedc2ae60833",
+    "stats": {
+      "face_count": 331580,
+      "vertex_count": 167289
+    }
+  },
+  {
+    "id": "cultural_heritage_history_00155",
+    "category": "cultural_heritage_history",
+    "name": "Historically Accurate Fauchard",
+    "model_file": "objects/cultural_heritage_history_00155/model.glb",
+    "renders_dir": "objects/cultural_heritage_history_00155",
+    "license": "CC-BY-4.0",
+    "original_uid": "45de53ef9001415398663f6412a35424",
+    "stats": {
+      "face_count": 663,
+      "vertex_count": 350
+    }
+  },
+  {
+    "id": "cultural_heritage_history_00069",
+    "category": "cultural_heritage_history",
+    "name": "Lest we forget",
+    "model_file": "objects/cultural_heritage_history_00069/model.glb",
+    "renders_dir": "objects/cultural_heritage_history_00069",
+    "license": "CC-BY-4.0",
+    "original_uid": "77d3028507ed4631a356aeb0a055a55e",
+    "stats": {
+      "face_count": 14533,
+      "vertex_count": 7399
+    }
+  },
+  {
+    "id": "places_travel_00012",
+    "category": "places_travel",
+    "name": "Hunedoara",
+    "model_file": "objects/places_travel_00012/model.glb",
+    "renders_dir": "objects/places_travel_00012",
+    "license": "CC-BY-4.0",
+    "original_uid": "1ce26e72d2dc4c66aca37a8124671a2f",
+    "stats": {
+      "face_count": 999999,
+      "vertex_count": 500436
+    }
+  },
+  {
+    "id": "animals_pets_00192",
+    "category": "animals_pets",
+    "name": "Coloful Hen -by Archer S",
+    "model_file": "objects/animals_pets_00192/model.glb",
+    "renders_dir": "objects/animals_pets_00192",
+    "license": "CC-BY-4.0",
+    "original_uid": "8b7b47ddf6c34891a0663c8c00e5184c",
+    "stats": {
+      "face_count": 4299611,
+      "vertex_count": 2149806
+    }
+  },
+  {
+    "id": "animals_pets_00089",
+    "category": "animals_pets",
+    "name": "Easter Bonnie | FNaF AR Special Delivery Skin",
+    "model_file": "objects/animals_pets_00089/model.glb",
+    "renders_dir": "objects/animals_pets_00089",
+    "license": "CC-BY-4.0",
+    "original_uid": "d8eba60697b14fecbb1fa44cc2e98ef0",
+    "stats": {
+      "face_count": 20406,
+      "vertex_count": 10870
+    }
+  },
+  {
+    "id": "animals_pets_00131",
+    "category": "animals_pets",
+    "name": "Fantasy sea turtle",
+    "model_file": "objects/animals_pets_00131/model.glb",
+    "renders_dir": "objects/animals_pets_00131",
+    "license": "CC-BY-4.0",
+    "original_uid": "4d90afacb21b45b79c3a6b87ea050482",
+    "stats": {
+      "face_count": 1251700,
+      "vertex_count": 625852
+    }
+  },
+  {
+    "id": "animals_pets_00190",
+    "category": "animals_pets",
+    "name": "Fireplace",
+    "model_file": "objects/animals_pets_00190/model.glb",
+    "renders_dir": "objects/animals_pets_00190",
+    "license": "CC-BY-4.0",
+    "original_uid": "77eb5e3e6d5945bdb318eaad57e2af1f",
+    "stats": {
+      "face_count": 912,
+      "vertex_count": 529
+    }
+  },
+  {
+    "id": "animals_pets_00013",
+    "category": "animals_pets",
+    "name": "Orange fish",
+    "model_file": "objects/animals_pets_00013/model.glb",
+    "renders_dir": "objects/animals_pets_00013",
+    "license": "CC-BY-4.0",
+    "original_uid": "3564578cde5c42279ead680df1619e3c",
+    "stats": {
+      "face_count": 10604,
+      "vertex_count": 5628
+    }
+  },
+  {
+    "id": "animals_pets_00167",
+    "category": "animals_pets",
+    "name": "Dragon eggs - Inktober",
+    "model_file": "objects/animals_pets_00167/model.glb",
+    "renders_dir": "objects/animals_pets_00167",
+    "license": "CC-BY-4.0",
+    "original_uid": "e06f2b55dc0d4fe18285e63da74644ae",
+    "stats": {
+      "face_count": 3142,
+      "vertex_count": 2200
+    }
+  },
+  {
+    "id": "animals_pets_00036",
+    "category": "animals_pets",
+    "name": "Lukethelpswolfs-gummy-bear-model",
+    "model_file": "objects/animals_pets_00036/model.glb",
+    "renders_dir": "objects/animals_pets_00036",
+    "license": "CC-BY-4.0",
+    "original_uid": "116027be119d45019224a2c31c2f1b19",
+    "stats": {
+      "face_count": 67076,
+      "vertex_count": 35277
+    }
+  },
+  {
+    "id": "animals_pets_00045",
+    "category": "animals_pets",
+    "name": "test",
+    "model_file": "objects/animals_pets_00045/model.glb",
+    "renders_dir": "objects/animals_pets_00045",
+    "license": "CC-BY-4.0",
+    "original_uid": "67eccca31df140dcb3ad549496e77fea",
+    "stats": {
+      "face_count": 4118,
+      "vertex_count": 2093
+    }
+  },
+  {
+    "id": "bbffbx1_00014",
+    "category": "bbffbx1",
+    "name": "Bbffbx1",
+    "model_file": "objects/bbffbx1_00014/model.glb",
+    "renders_dir": "objects/bbffbx1_00014",
+    "license": "CC-BY-4.0",
+    "original_uid": "f9e1f80dab694ef1a3a85f135266c46f",
+    "stats": {
+      "face_count": 4082,
+      "vertex_count": 2043
+    }
+  },
+  {
+    "id": "20th_00015",
+    "category": "20th",
+    "name": "20th Century Fox logo The Cannonball Run variant",
+    "model_file": "objects/20th_00015/model.glb",
+    "renders_dir": "objects/20th_00015",
+    "license": "CC-BY-4.0",
+    "original_uid": "1e782aa8ca9e4dada94aabcb463086ae",
+    "stats": {
+      "face_count": 15978,
+      "vertex_count": 8332
+    }
+  },
+  {
+    "id": "agisoft_00031",
+    "category": "agisoft",
+    "name": "Combs Wood tramway abutment",
+    "model_file": "objects/agisoft_00031/model.glb",
+    "renders_dir": "objects/agisoft_00031",
+    "license": "CC-BY-4.0",
+    "original_uid": "abb20cb4f66a4293b15ff7c8c0139e84",
+    "stats": {
+      "face_count": 2934916,
+      "vertex_count": 1471555
+    }
+  },
+  {
+    "id": "agisoft_00173",
+    "category": "agisoft",
+    "name": "Estaci\u00f3n Central",
+    "model_file": "objects/agisoft_00173/model.glb",
+    "renders_dir": "objects/agisoft_00173",
+    "license": "CC-BY-4.0",
+    "original_uid": "fd48be676773464ab2c1fed60c8524ec",
+    "stats": {
+      "face_count": 1084288,
+      "vertex_count": 544446
+    }
+  },
+  {
+    "id": "agisoft_00108",
+    "category": "agisoft",
+    "name": "Dayton Series Monolith",
+    "model_file": "objects/agisoft_00108/model.glb",
+    "renders_dir": "objects/agisoft_00108",
+    "license": "CC-BY-4.0",
+    "original_uid": "b358f05d20c649d09b2e491e5ddde48a",
+    "stats": {
+      "face_count": 1008302,
+      "vertex_count": 504251
+    }
+  },
+  {
+    "id": "weapons_military_00063",
+    "category": "weapons_military",
+    "name": "Tridents",
+    "model_file": "objects/weapons_military_00063/model.glb",
+    "renders_dir": "objects/weapons_military_00063",
+    "license": "CC-BY-4.0",
+    "original_uid": "8e21876a00a445e4addc74f05a97ba1a",
+    "stats": {
+      "face_count": 3507,
+      "vertex_count": 1779
+    }
+  },
+  {
+    "id": "weapons_military_00114",
+    "category": "weapons_military",
+    "name": "Heavy Assault Rifle",
+    "model_file": "objects/weapons_military_00114/model.glb",
+    "renders_dir": "objects/weapons_military_00114",
+    "license": "CC-BY-4.0",
+    "original_uid": "8954673ca33a45578f27e4b476b81719",
+    "stats": {
+      "face_count": 4752,
+      "vertex_count": 2482
+    }
+  },
+  {
+    "id": "weapons_military_00050",
+    "category": "weapons_military",
+    "name": "Axe",
+    "model_file": "objects/weapons_military_00050/model.glb",
+    "renders_dir": "objects/weapons_military_00050",
+    "license": "CC-BY-4.0",
+    "original_uid": "19e61b54ffc146b1aea489f8261100b3",
+    "stats": {
+      "face_count": 7694,
+      "vertex_count": 3921
+    }
+  },
+  {
+    "id": "weapons_military_00165",
+    "category": "weapons_military",
+    "name": "RUST AK-47 WOODCRAFT",
+    "model_file": "objects/weapons_military_00165/model.glb",
+    "renders_dir": "objects/weapons_military_00165",
+    "license": "CC-BY-4.0",
+    "original_uid": "d45f11d0e3954394a7f0e7200f09e235",
+    "stats": {
+      "face_count": 12819,
+      "vertex_count": 6719
+    }
+  },
+  {
+    "id": "weapons_military_00094",
+    "category": "weapons_military",
+    "name": "\u7acb\u4f53\u8d77\u52d5\u88c5\u7f6e",
+    "model_file": "objects/weapons_military_00094/model.glb",
+    "renders_dir": "objects/weapons_military_00094",
+    "license": "CC-BY-4.0",
+    "original_uid": "ce0641d489a441d8a2583b49bbc3354e",
+    "stats": {
+      "face_count": 13372,
+      "vertex_count": 6923
+    }
+  },
+  {
+    "id": "weapons_military_00068",
+    "category": "weapons_military",
+    "name": "Gripen NG",
+    "model_file": "objects/weapons_military_00068/model.glb",
+    "renders_dir": "objects/weapons_military_00068",
+    "license": "CC-BY-4.0",
+    "original_uid": "be94bc8bdab14385b67442df3eaa34ae",
+    "stats": {
+      "face_count": 5652,
+      "vertex_count": 3039
+    }
+  },
+  {
+    "id": "architecture_00033",
+    "category": "architecture",
+    "name": "Wooden nailed box",
+    "model_file": "objects/architecture_00033/model.glb",
+    "renders_dir": "objects/architecture_00033",
+    "license": "CC-BY-4.0",
+    "original_uid": "c9154bccd5864490a01ffb1ceaa08985",
+    "stats": {
+      "face_count": 6030,
+      "vertex_count": 2992
+    }
+  },
+  {
+    "id": "architecture_00197",
+    "category": "architecture",
+    "name": "parcelle de terrain auvergne",
+    "model_file": "objects/architecture_00197/model.glb",
+    "renders_dir": "objects/architecture_00197",
+    "license": "CC-BY-4.0",
+    "original_uid": "6e8b60dbcd8b433fbc2a197f625c1613",
+    "stats": {
+      "face_count": 161767,
+      "vertex_count": 81857
+    }
+  },
+  {
+    "id": "architecture_00075",
+    "category": "architecture",
+    "name": "Bungalow The Fairport",
+    "model_file": "objects/architecture_00075/model.glb",
+    "renders_dir": "objects/architecture_00075",
+    "license": "CC-BY-4.0",
+    "original_uid": "d0c4672e5fd14e21a6e244ce39246f57",
+    "stats": {
+      "face_count": 117568,
+      "vertex_count": 62401
+    }
+  },
+  {
+    "id": "architecture_00101",
+    "category": "architecture",
+    "name": "Kiev1983 apartments from aerial footage",
+    "model_file": "objects/architecture_00101/model.glb",
+    "renders_dir": "objects/architecture_00101",
+    "license": "CC-BY-4.0",
+    "original_uid": "cd4db430210544c892ada5d708fcd40f",
+    "stats": {
+      "face_count": 19999,
+      "vertex_count": 10341
+    }
+  },
+  {
+    "id": "architecture_00100",
+    "category": "architecture",
+    "name": "Station",
+    "model_file": "objects/architecture_00100/model.glb",
+    "renders_dir": "objects/architecture_00100",
+    "license": "CC-BY-4.0",
+    "original_uid": "50989e731fed4b11ba5b5c63faa2143c",
+    "stats": {
+      "face_count": 107574,
+      "vertex_count": 70412
+    }
+  },
+  {
+    "id": "architecture_00203",
+    "category": "architecture",
+    "name": "Estudio de Caso - Inseguridad",
+    "model_file": "objects/architecture_00203/model.glb",
+    "renders_dir": "objects/architecture_00203",
+    "license": "CC-BY-4.0",
+    "original_uid": "3b6e2b62fc134eb5a5cf0e561eb2dc61",
+    "stats": {
+      "face_count": 29836,
+      "vertex_count": 12001
+    }
+  },
+  {
+    "id": "architecture_00172",
+    "category": "architecture",
+    "name": "\u015fervan serhat ay",
+    "model_file": "objects/architecture_00172/model.glb",
+    "renders_dir": "objects/architecture_00172",
+    "license": "CC-BY-4.0",
+    "original_uid": "c7b9505bbf534d36b22736a1c7c10a08",
+    "stats": {
+      "face_count": 27274,
+      "vertex_count": 12976
+    }
+  },
+  {
+    "id": "architecture_00209",
+    "category": "architecture",
+    "name": "Gantz Room - VR Android Test Low Poly Room 1Mb",
+    "model_file": "objects/architecture_00209/model.glb",
+    "renders_dir": "objects/architecture_00209",
+    "license": "CC-BY-4.0",
+    "original_uid": "59cdfc0f26f445bfac4018722ce324c6",
+    "stats": {
+      "face_count": 7734,
+      "vertex_count": 4916
+    }
+  },
+  {
+    "id": "architecture_00156",
+    "category": "architecture",
+    "name": "Dynamite",
+    "model_file": "objects/architecture_00156/model.glb",
+    "renders_dir": "objects/architecture_00156",
+    "license": "CC-BY-4.0",
+    "original_uid": "87a71b45e3904d8aac3d4c2516db769e",
+    "stats": {
+      "face_count": 4594,
+      "vertex_count": 1866
+    }
+  },
+  {
+    "id": "architecture_00147",
+    "category": "architecture",
+    "name": "Almacen",
+    "model_file": "objects/architecture_00147/model.glb",
+    "renders_dir": "objects/architecture_00147",
+    "license": "CC-BY-4.0",
+    "original_uid": "15960e0c09de4780bfa1a32f991673c1",
+    "stats": {
+      "face_count": 406,
+      "vertex_count": 218
+    }
+  },
+  {
+    "id": "architecture_00162",
+    "category": "architecture",
+    "name": "Leichenhalle",
+    "model_file": "objects/architecture_00162/model.glb",
+    "renders_dir": "objects/architecture_00162",
+    "license": "CC-BY-4.0",
+    "original_uid": "1087bbd5bc0643988a545d74311cd175",
+    "stats": {
+      "face_count": 2352,
+      "vertex_count": 1224
+    }
+  },
+  {
+    "id": "architecture_00059",
+    "category": "architecture",
+    "name": "Fantasy Arc Model",
+    "model_file": "objects/architecture_00059/model.glb",
+    "renders_dir": "objects/architecture_00059",
+    "license": "CC-BY-4.0",
+    "original_uid": "b747cb348028457298c27736e09b9365",
+    "stats": {
+      "face_count": 426,
+      "vertex_count": 219
+    }
+  },
+  {
+    "id": "architecture_00140",
+    "category": "architecture",
+    "name": "RESID\u00caNCIA D&G",
+    "model_file": "objects/architecture_00140/model.glb",
+    "renders_dir": "objects/architecture_00140",
+    "license": "CC-BY-4.0",
+    "original_uid": "124515cdbe234139bfdc1ca66c68441c",
+    "stats": {
+      "face_count": 20532,
+      "vertex_count": 12854
+    }
+  },
+  {
+    "id": "architecture_00055",
+    "category": "architecture",
+    "name": "\u062a\u0633\u0644\u064a\u0645 \u0627\u0644\u0641\u0627\u0646\u0648\u0633 \u0628\u062d\u0645\u062f \u0627\u0644\u0644\u0647",
+    "model_file": "objects/architecture_00055/model.glb",
+    "renders_dir": "objects/architecture_00055",
+    "license": "CC-BY-4.0",
+    "original_uid": "0e53a38a3c92499e81f28d0e1c6207ce",
+    "stats": {
+      "face_count": 325200,
+      "vertex_count": 161337
+    }
+  },
+  {
+    "id": "architecture_00119",
+    "category": "architecture",
+    "name": "Anime style home",
+    "model_file": "objects/architecture_00119/model.glb",
+    "renders_dir": "objects/architecture_00119",
+    "license": "CC-BY-4.0",
+    "original_uid": "c8f9d54f9b48447dad0197e1859f42c1",
+    "stats": {
+      "face_count": 23760,
+      "vertex_count": 13110
+    }
+  },
+  {
+    "id": "architecture_00040",
+    "category": "architecture",
+    "name": "KMende and LPope TH - 8.0m x 2.4m",
+    "model_file": "objects/architecture_00040/model.glb",
+    "renders_dir": "objects/architecture_00040",
+    "license": "CC-BY-4.0",
+    "original_uid": "12b8439bb0b24c38a49b47d0b5021f51",
+    "stats": {
+      "face_count": 8496,
+      "vertex_count": 132528
+    }
+  },
+  {
+    "id": "architecture_00044",
+    "category": "architecture",
+    "name": "CN220791",
+    "model_file": "objects/architecture_00044/model.glb",
+    "renders_dir": "objects/architecture_00044",
+    "license": "CC-BY-4.0",
+    "original_uid": "13006ef7de0340c1bfd28446aa608401",
+    "stats": {
+      "face_count": 5352,
+      "vertex_count": 4365
+    }
+  },
+  {
+    "id": "architecture_00079",
+    "category": "architecture",
+    "name": "BL1511- Bloom Lavabo Bataryas\u0131",
+    "model_file": "objects/architecture_00079/model.glb",
+    "renders_dir": "objects/architecture_00079",
+    "license": "CC-BY-4.0",
+    "original_uid": "a8fdd7d563d74d1bac029f1bbaaa53fd",
+    "stats": {
+      "face_count": 138084,
+      "vertex_count": 69052
+    }
+  },
+  {
+    "id": "architecture_00184",
+    "category": "architecture",
+    "name": "\u043f\u0440\u0438\u043c\u0435\u0440",
+    "model_file": "objects/architecture_00184/model.glb",
+    "renders_dir": "objects/architecture_00184",
+    "license": "CC-BY-4.0",
+    "original_uid": "63fd1bf91996490a81190f3b83665227",
+    "stats": {
+      "face_count": 97,
+      "vertex_count": 94
+    }
+  },
+  {
+    "id": "test4_00034",
+    "category": "test4",
+    "name": "test4",
+    "model_file": "objects/test4_00034/model.glb",
+    "renders_dir": "objects/test4_00034",
+    "license": "CC-BY-NC-SA-4.0",
+    "original_uid": "4344257132d7484fb55bda90b3cdd2f4",
+    "stats": {
+      "face_count": 680,
+      "vertex_count": 425
+    }
+  },
+  {
+    "id": "pliers_00035",
+    "category": "pliers",
+    "name": "Pliers test",
+    "model_file": "objects/pliers_00035/model.glb",
+    "renders_dir": "objects/pliers_00035",
+    "license": "CC-BY-4.0",
+    "original_uid": "34e12dea7baa4adfb97d4d97c7a34fd0",
+    "stats": {
+      "face_count": 850,
+      "vertex_count": 444
+    }
+  },
+  {
+    "id": "art_abstract_00206",
+    "category": "art_abstract",
+    "name": "Augustus Of Prima Porta",
+    "model_file": "objects/art_abstract_00206/model.glb",
+    "renders_dir": "objects/art_abstract_00206",
+    "license": "CC-BY-4.0",
+    "original_uid": "e522ebd518444861a28a9c46e9200daa",
+    "stats": {
+      "face_count": 1415368,
+      "vertex_count": 714185
+    }
+  },
+  {
+    "id": "art_abstract_00189",
+    "category": "art_abstract",
+    "name": "Daily Doodle Shotgun",
+    "model_file": "objects/art_abstract_00189/model.glb",
+    "renders_dir": "objects/art_abstract_00189",
+    "license": "CC-BY-4.0",
+    "original_uid": "7798ab549eae4fac9c085b59276bbefd",
+    "stats": {
+      "face_count": 352428,
+      "vertex_count": 348430
+    }
+  },
+  {
+    "id": "art_abstract_00102",
+    "category": "art_abstract",
+    "name": "Tree body",
+    "model_file": "objects/art_abstract_00102/model.glb",
+    "renders_dir": "objects/art_abstract_00102",
+    "license": "CC-BY-SA-4.0",
+    "original_uid": "18eb48a937b14e56ae02b7da237ad204",
+    "stats": {
+      "face_count": 29178,
+      "vertex_count": 28502
+    }
+  },
+  {
+    "id": "art_abstract_00053",
+    "category": "art_abstract",
+    "name": "Blue Rose Sword",
+    "model_file": "objects/art_abstract_00053/model.glb",
+    "renders_dir": "objects/art_abstract_00053",
+    "license": "CC-BY-4.0",
+    "original_uid": "c73e1926980847c98b17f65a6f1919ed",
+    "stats": {
+      "face_count": 32984,
+      "vertex_count": 20148
+    }
+  },
+  {
+    "id": "art_abstract_00037",
+    "category": "art_abstract",
+    "name": "Day 83 - Utility box - 1scanaday",
+    "model_file": "objects/art_abstract_00037/model.glb",
+    "renders_dir": "objects/art_abstract_00037",
+    "license": "CC-BY-NC-SA-4.0",
+    "original_uid": "8f3be836a9a74e859ef467cdc7eca90e",
+    "stats": {
+      "face_count": 27781,
+      "vertex_count": 14091
+    }
+  },
+  {
+    "id": "art_abstract_00183",
+    "category": "art_abstract",
+    "name": "Kill-la-kill-blade (Matoi's half)",
+    "model_file": "objects/art_abstract_00183/model.glb",
+    "renders_dir": "objects/art_abstract_00183",
+    "license": "CC-BY-4.0",
+    "original_uid": "35597e5019e44d1eab435ebe84bed2ac",
+    "stats": {
+      "face_count": 2302,
+      "vertex_count": 1120
+    }
+  },
+  {
+    "id": "art_abstract_00175",
+    "category": "art_abstract",
+    "name": "Rounded Cube Doodle",
+    "model_file": "objects/art_abstract_00175/model.glb",
+    "renders_dir": "objects/art_abstract_00175",
+    "license": "CC-BY-4.0",
+    "original_uid": "60fe93ebcdf04237a19e63b48855bfc5",
+    "stats": {
+      "face_count": 4272,
+      "vertex_count": 2142
+    }
+  },
+  {
+    "id": "dragon_00038",
+    "category": "dragon",
+    "name": "Dragon",
+    "model_file": "objects/dragon_00038/model.glb",
+    "renders_dir": "objects/dragon_00038",
+    "license": "CC-BY-4.0",
+    "original_uid": "98d28c2babb24e1284a9e812b6e4921f",
+    "stats": {
+      "face_count": 4902,
+      "vertex_count": 3030
+    }
+  },
+  {
+    "id": "modelagem_00039",
+    "category": "modelagem",
+    "name": "Modelagem Estrutural - Barrac\u00e3o 12x30",
+    "model_file": "objects/modelagem_00039/model.glb",
+    "renders_dir": "objects/modelagem_00039",
+    "license": "CC-BY-4.0",
+    "original_uid": "9cf3eaf2604b45998cc8d89a8665aff4",
+    "stats": {
+      "face_count": 46584,
+      "vertex_count": 30720
+    }
+  },
+  {
+    "id": "fashion_style_00093",
+    "category": "fashion_style",
+    "name": "Snorkel mask for Spark AR",
+    "model_file": "objects/fashion_style_00093/model.glb",
+    "renders_dir": "objects/fashion_style_00093",
+    "license": "CC-BY-4.0",
+    "original_uid": "d9891d2aae664c8a97740fb9d5c414cf",
+    "stats": {
+      "face_count": 6302,
+      "vertex_count": 3324
+    }
+  },
+  {
+    "id": "scaniverse_00042",
+    "category": "scaniverse",
+    "name": "CT_cityHall202206151204",
+    "model_file": "objects/scaniverse_00042/model.glb",
+    "renders_dir": "objects/scaniverse_00042",
+    "license": "CC-BY-NC-SA-4.0",
+    "original_uid": "01ca4c1d54a04428ae8b4fec45d38071",
+    "stats": {
+      "face_count": 218800,
+      "vertex_count": 124863
+    }
+  },
+  {
+    "id": "batu000027_00046",
+    "category": "batu000027",
+    "name": "BATU000027",
+    "model_file": "objects/batu000027_00046/model.glb",
+    "renders_dir": "objects/batu000027_00046",
+    "license": "CC-BY-4.0",
+    "original_uid": "85bc77dc5c1e40caa4f98401513a616a",
+    "stats": {
+      "face_count": 1422,
+      "vertex_count": 717
+    }
+  },
+  {
+    "id": "diboine_00047",
+    "category": "diboine",
+    "name": "Diboine's Oldsona",
+    "model_file": "objects/diboine_00047/model.glb",
+    "renders_dir": "objects/diboine_00047",
+    "license": "CC-BY-4.0",
+    "original_uid": "f37bc2926ce645ddace2feb2f5ac84cc",
+    "stats": {
+      "face_count": 154472,
+      "vertex_count": 79183
+    }
+  },
+  {
+    "id": "pamir_00169",
+    "category": "pamir",
+    "name": "T5292S",
+    "model_file": "objects/pamir_00169/model.glb",
+    "renders_dir": "objects/pamir_00169",
+    "license": "CC-BY-4.0",
+    "original_uid": "be06b125780e4f82a191398ddf322634",
+    "stats": {
+      "face_count": 5314,
+      "vertex_count": 4105
+    }
+  },
+  {
+    "id": "pamir_00048",
+    "category": "pamir",
+    "name": "Sylwek_Kalinowski",
+    "model_file": "objects/pamir_00048/model.glb",
+    "renders_dir": "objects/pamir_00048",
+    "license": "CC-BY-4.0",
+    "original_uid": "9e26bddd716541e8a0dc4c52d62027bf",
+    "stats": {
+      "face_count": 5742,
+      "vertex_count": 4666
+    }
+  },
+  {
+    "id": "pamir_00138",
+    "category": "pamir",
+    "name": "BINO",
+    "model_file": "objects/pamir_00138/model.glb",
+    "renders_dir": "objects/pamir_00138",
+    "license": "CC-BY-4.0",
+    "original_uid": "d02b9a8e2e324440ac606d549883e3e4",
+    "stats": {
+      "face_count": 24189,
+      "vertex_count": 19595
+    }
+  },
+  {
+    "id": "pamir_00205",
+    "category": "pamir",
+    "name": "Bia\u0142ogard",
+    "model_file": "objects/pamir_00205/model.glb",
+    "renders_dir": "objects/pamir_00205",
+    "license": "CC-BY-4.0",
+    "original_uid": "7b2330967a644bc093069be097716d03",
+    "stats": {
+      "face_count": 12276,
+      "vertex_count": 9754
+    }
+  },
+  {
+    "id": "nature_plants_00049",
+    "category": "nature_plants",
+    "name": "Yellow Barrel",
+    "model_file": "objects/nature_plants_00049/model.glb",
+    "renders_dir": "objects/nature_plants_00049",
+    "license": "CC-BY-4.0",
+    "original_uid": "4636284e977d4579ac033a42299bde48",
+    "stats": {
+      "face_count": 1156,
+      "vertex_count": 580
+    }
+  },
+  {
+    "id": "bench_00052",
+    "category": "bench",
+    "name": "Bench",
+    "model_file": "objects/bench_00052/model.glb",
+    "renders_dir": "objects/bench_00052",
+    "license": "CC-BY-4.0",
+    "original_uid": "99257e9b3b1443bd91a22d61bfeb7182",
+    "stats": {
+      "face_count": 21222,
+      "vertex_count": 10876
+    }
+  },
+  {
+    "id": "furniture_home_00159",
+    "category": "furniture_home",
+    "name": "Bowling pin",
+    "model_file": "objects/furniture_home_00159/model.glb",
+    "renders_dir": "objects/furniture_home_00159",
+    "license": "CC-BY-4.0",
+    "original_uid": "6f4789c7c0f74c55adfedc57c73dba60",
+    "stats": {
+      "face_count": 45696,
+      "vertex_count": 23426
+    }
+  },
+  {
+    "id": "furniture_home_00164",
+    "category": "furniture_home",
+    "name": "\u0421\u0432\u0435\u0442\u0438\u043b\u044c\u043d\u0438\u043a 31612 Eglo",
+    "model_file": "objects/furniture_home_00164/model.glb",
+    "renders_dir": "objects/furniture_home_00164",
+    "license": "CC-BY-4.0",
+    "original_uid": "897dc58901a54174adc9ba30b3d63eb0",
+    "stats": {
+      "face_count": 6032,
+      "vertex_count": 3248
+    }
+  },
+  {
+    "id": "furniture_home_00080",
+    "category": "furniture_home",
+    "name": "Maytoni TRA004B-22B",
+    "model_file": "objects/furniture_home_00080/model.glb",
+    "renders_dir": "objects/furniture_home_00080",
+    "license": "CC-BY-4.0",
+    "original_uid": "4ff2f29be7f64bde889c52751102e3f9",
+    "stats": {
+      "face_count": 241248,
+      "vertex_count": 123071
+    }
+  },
+  {
+    "id": "furniture_home_00187",
+    "category": "furniture_home",
+    "name": "\u0411\u0440\u0430 Maytoni ARM132-WL-01-GR",
+    "model_file": "objects/furniture_home_00187/model.glb",
+    "renders_dir": "objects/furniture_home_00187",
+    "license": "CC-BY-4.0",
+    "original_uid": "ee306377d6bb4c4385b8aec6761fe340",
+    "stats": {
+      "face_count": 69106,
+      "vertex_count": 35300
+    }
+  },
+  {
+    "id": "furniture_home_00091",
+    "category": "furniture_home",
+    "name": "Dirty cooker",
+    "model_file": "objects/furniture_home_00091/model.glb",
+    "renders_dir": "objects/furniture_home_00091",
+    "license": "CC-BY-SA-4.0",
+    "original_uid": "a0c216a7de774aba903f441d7899aa02",
+    "stats": {
+      "face_count": 1890,
+      "vertex_count": 1123
+    }
+  },
+  {
+    "id": "furniture_home_00208",
+    "category": "furniture_home",
+    "name": "Cooking Table Assembled",
+    "model_file": "objects/furniture_home_00208/model.glb",
+    "renders_dir": "objects/furniture_home_00208",
+    "license": "CC-BY-4.0",
+    "original_uid": "810c129d19e3436ca657215479d06fc5",
+    "stats": {
+      "face_count": 2665578,
+      "vertex_count": 1331601
+    }
+  },
+  {
+    "id": "furniture_home_00166",
+    "category": "furniture_home",
+    "name": "Elektrostandard Mira D \u0447\u0435\u0440\u043d\u043e\u0435 \u0437\u043e\u043b\u043e\u0442\u043e",
+    "model_file": "objects/furniture_home_00166/model.glb",
+    "renders_dir": "objects/furniture_home_00166",
+    "license": "CC-BY-4.0",
+    "original_uid": "661e63f0d6324fafb7eea0a95bb655d5",
+    "stats": {
+      "face_count": 88628,
+      "vertex_count": 50571
+    }
+  },
+  {
+    "id": "stocksbridge_00060",
+    "category": "stocksbridge",
+    "name": "Stocksbridge",
+    "model_file": "objects/stocksbridge_00060/model.glb",
+    "renders_dir": "objects/stocksbridge_00060",
+    "license": "CC-BY-4.0",
+    "original_uid": "bc77a7fc5b5a4e6eb50c275031f726e8",
+    "stats": {
+      "face_count": 10726,
+      "vertex_count": 8149
+    }
+  },
+  {
+    "id": "electronics_gadgets_00153",
+    "category": "electronics_gadgets",
+    "name": "Radio",
+    "model_file": "objects/electronics_gadgets_00153/model.glb",
+    "renders_dir": "objects/electronics_gadgets_00153",
+    "license": "CC-BY-4.0",
+    "original_uid": "6fe10c004c5442a2800d4b660335e677",
+    "stats": {
+      "face_count": 12392,
+      "vertex_count": 6394
+    }
+  },
+  {
+    "id": "electronics_gadgets_00115",
+    "category": "electronics_gadgets",
+    "name": "Chrome Zephyr 30",
+    "model_file": "objects/electronics_gadgets_00115/model.glb",
+    "renders_dir": "objects/electronics_gadgets_00115",
+    "license": "CC-BY-4.0",
+    "original_uid": "65b4185f6e134c6095b92d3fa151b0cb",
+    "stats": {
+      "face_count": 13783,
+      "vertex_count": 7020
+    }
+  },
+  {
+    "id": "lidar_00064",
+    "category": "lidar",
+    "name": "LIDAR",
+    "model_file": "objects/lidar_00064/model.glb",
+    "renders_dir": "objects/lidar_00064",
+    "license": "CC-BY-4.0",
+    "original_uid": "2f458badc6a849ce8333956323a937c8",
+    "stats": {
+      "face_count": 3135,
+      "vertex_count": 1698
+    }
+  },
+  {
+    "id": "mc_00066",
+    "category": "mc",
+    "name": "MC- Anim- Earth-05- Pin Spin",
+    "model_file": "objects/mc_00066/model.glb",
+    "renders_dir": "objects/mc_00066",
+    "license": "CC-BY-4.0",
+    "original_uid": "5c080b09a2d34678bc9b3b9e49035537",
+    "stats": {
+      "face_count": 45060,
+      "vertex_count": 22590
+    }
+  },
+  {
+    "id": "constantine_00070",
+    "category": "constantine",
+    "name": "Head of Constantine",
+    "model_file": "objects/constantine_00070/model.glb",
+    "renders_dir": "objects/constantine_00070",
+    "license": "CC-BY-4.0",
+    "original_uid": "891ee0708ce945eabaffeacd5c901a04",
+    "stats": {
+      "face_count": 159384,
+      "vertex_count": 80000
+    }
+  },
+  {
+    "id": "hw4_00071",
+    "category": "hw4",
+    "name": "HW4 for XYZSchool",
+    "model_file": "objects/hw4_00071/model.glb",
+    "renders_dir": "objects/hw4_00071",
+    "license": "CC-BY-4.0",
+    "original_uid": "54d696bcc2d3482089ad6ff31cc303e2",
+    "stats": {
+      "face_count": 157174,
+      "vertex_count": 79781
+    }
+  },
+  {
+    "id": "sketchup_00073",
+    "category": "sketchup",
+    "name": "MARSELO",
+    "model_file": "objects/sketchup_00073/model.glb",
+    "renders_dir": "objects/sketchup_00073",
+    "license": "CC-BY-4.0",
+    "original_uid": "ee1267bdb4b74022ad32a1ef6987b0ec",
+    "stats": {
+      "face_count": 5684,
+      "vertex_count": 6679
+    }
+  },
+  {
+    "id": "metashape_00161",
+    "category": "metashape",
+    "name": "Fabric_4",
+    "model_file": "objects/metashape_00161/model.glb",
+    "renders_dir": "objects/metashape_00161",
+    "license": "CC-BY-4.0",
+    "original_uid": "d028274cfd2e46da91ae709892e82ebe",
+    "stats": {
+      "face_count": 447938,
+      "vertex_count": 227961
+    }
+  },
+  {
+    "id": "metashape_00142",
+    "category": "metashape",
+    "name": "S0019",
+    "model_file": "objects/metashape_00142/model.glb",
+    "renders_dir": "objects/metashape_00142",
+    "license": "CC-BY-4.0",
+    "original_uid": "dd3a4df939b445dfb5da1c6c266f7b51",
+    "stats": {
+      "face_count": 115612,
+      "vertex_count": 58947
+    }
+  },
+  {
+    "id": "object_00077",
+    "category": "object",
+    "name": "\u536f",
+    "model_file": "objects/object_00077/model.glb",
+    "renders_dir": "objects/object_00077",
+    "license": "CC-BY-4.0",
+    "original_uid": "d4b1bdd4467d43f4b4a9f59aed18ff1d",
+    "stats": {
+      "face_count": 3528,
+      "vertex_count": 1766
+    }
+  },
+  {
+    "id": "object_00092",
+    "category": "object",
+    "name": "\u0418\u0440\u043a\u0443\u0442\u0441\u043a",
+    "model_file": "objects/object_00092/model.glb",
+    "renders_dir": "objects/object_00092",
+    "license": "CC-BY-4.0",
+    "original_uid": "ab219e0bd40542c3b970d5cbbbeb0861",
+    "stats": {
+      "face_count": 2650,
+      "vertex_count": 1578
+    }
+  },
+  {
+    "id": "object_00152",
+    "category": "object",
+    "name": "\u0412\u0430\u0437\u0430",
+    "model_file": "objects/object_00152/model.glb",
+    "renders_dir": "objects/object_00152",
+    "license": "CC-BY-4.0",
+    "original_uid": "71ff58684b2743d7b756ece8887eb8c0",
+    "stats": {
+      "face_count": 5888,
+      "vertex_count": 5890
+    }
+  },
+  {
+    "id": "au_00078",
+    "category": "au",
+    "name": "AU-52485 V3",
+    "model_file": "objects/au_00078/model.glb",
+    "renders_dir": "objects/au_00078",
+    "license": "CC-BY-4.0",
+    "original_uid": "cc5e84376d594032b5d4ad31108330f5",
+    "stats": {
+      "face_count": 67758,
+      "vertex_count": 33895
+    }
+  },
+  {
+    "id": "virg_00082",
+    "category": "virg",
+    "name": "2018 10 18 Virg Landfill Rgb Simplified 3d Mesh",
+    "model_file": "objects/virg_00082/model.glb",
+    "renders_dir": "objects/virg_00082",
+    "license": "CC-BY-4.0",
+    "original_uid": "5a106a92ee4b452ebc48058bc9fc9507",
+    "stats": {
+      "face_count": 999999,
+      "vertex_count": 500841
+    }
+  },
+  {
+    "id": "3dlivescannerpro_00083",
+    "category": "3dlivescannerpro",
+    "name": "test",
+    "model_file": "objects/3dlivescannerpro_00083/model.glb",
+    "renders_dir": "objects/3dlivescannerpro_00083",
+    "license": "CC-BY-SA-4.0",
+    "original_uid": "4328dab39fb640b790bb813c881a41f3",
+    "stats": {
+      "face_count": 8981,
+      "vertex_count": 7286
+    }
+  },
+  {
+    "id": "ortiz1802_00084",
+    "category": "ortiz1802",
+    "name": "Ortiz1802 Slide",
+    "model_file": "objects/ortiz1802_00084/model.glb",
+    "renders_dir": "objects/ortiz1802_00084",
+    "license": "CC-BY-4.0",
+    "original_uid": "84776fa7fe23406985f27186205508ff",
+    "stats": {
+      "face_count": 284,
+      "vertex_count": 144
+    }
+  },
+  {
+    "id": "ch_00087",
+    "category": "ch",
+    "name": "Ch 1-2-3 Project 2",
+    "model_file": "objects/ch_00087/model.glb",
+    "renders_dir": "objects/ch_00087",
+    "license": "CC-BY-4.0",
+    "original_uid": "6302a9c24dd24960853cd236c20b821a",
+    "stats": {
+      "face_count": 5402,
+      "vertex_count": 2852
+    }
+  },
+  {
+    "id": "wasp_00090",
+    "category": "wasp",
+    "name": "Low Poly Wasp With Animation",
+    "model_file": "objects/wasp_00090/model.glb",
+    "renders_dir": "objects/wasp_00090",
+    "license": "CC-BY-4.0",
+    "original_uid": "9cddd7e967b7423483b63b74eae287e8",
+    "stats": {
+      "face_count": 23914,
+      "vertex_count": 12429
+    }
+  },
+  {
+    "id": "testmaja_00098",
+    "category": "testmaja",
+    "name": "Testmaja",
+    "model_file": "objects/testmaja_00098/model.glb",
+    "renders_dir": "objects/testmaja_00098",
+    "license": "CC-BY-4.0",
+    "original_uid": "f4606c7f4515472185bd7ca0f513563f",
+    "stats": {
+      "face_count": 15714,
+      "vertex_count": 13327
+    }
+  },
+  {
+    "id": "paloma_00105",
+    "category": "paloma",
+    "name": "paloma_herman",
+    "model_file": "objects/paloma_00105/model.glb",
+    "renders_dir": "objects/paloma_00105",
+    "license": "CC-BY-4.0",
+    "original_uid": "f9cd61ec99fb4a309d2da47b6b0d0014",
+    "stats": {
+      "face_count": 12286,
+      "vertex_count": 7036
+    }
+  },
+  {
+    "id": "gepard_00106",
+    "category": "gepard",
+    "name": "Gepard 3.9",
+    "model_file": "objects/gepard_00106/model.glb",
+    "renders_dir": "objects/gepard_00106",
+    "license": "CC-BY-4.0",
+    "original_uid": "dacd22d9ff9d40f0a476d2c2bbb30c29",
+    "stats": {
+      "face_count": 44861,
+      "vertex_count": 22974
+    }
+  },
+  {
+    "id": "kepler62_00109",
+    "category": "kepler62",
+    "name": "kepler62_movie",
+    "model_file": "objects/kepler62_00109/model.glb",
+    "renders_dir": "objects/kepler62_00109",
+    "license": "CC-BY-4.0",
+    "original_uid": "8bc2d3459e8243edbde954914cf9469f",
+    "stats": {
+      "face_count": 642048,
+      "vertex_count": 306432
+    }
+  },
+  {
+    "id": "design_00149",
+    "category": "design",
+    "name": "quartier riche  - Import\u00e9",
+    "model_file": "objects/design_00149/model.glb",
+    "renders_dir": "objects/design_00149",
+    "license": "CC-BY-NC-SA-4.0",
+    "original_uid": "246a9c6f5c744202b0db41336abba2a6",
+    "stats": {
+      "face_count": 2124989,
+      "vertex_count": 1544444
+    }
+  },
+  {
+    "id": "design_00112",
+    "category": "design",
+    "name": "\u2022\u2022\u2022",
+    "model_file": "objects/design_00112/model.glb",
+    "renders_dir": "objects/design_00112",
+    "license": "CC-BY-NC-SA-4.0",
+    "original_uid": "937cec0745864765a76486832408d28a",
+    "stats": {
+      "face_count": 69170,
+      "vertex_count": 37345
+    }
+  },
+  {
+    "id": "design_00215",
+    "category": "design",
+    "name": "Newproject38 - Copy",
+    "model_file": "objects/design_00215/model.glb",
+    "renders_dir": "objects/design_00215",
+    "license": "CC-BY-NC-SA-4.0",
+    "original_uid": "023975ca1dbf4c4db82b07c9153da2a7",
+    "stats": {
+      "face_count": 64485,
+      "vertex_count": 37624
+    }
+  },
+  {
+    "id": "food_drink_00117",
+    "category": "food_drink",
+    "name": "Bakery goods with iphone 12 pro max",
+    "model_file": "objects/food_drink_00117/model.glb",
+    "renders_dir": "objects/food_drink_00117",
+    "license": "CC-BY-4.0",
+    "original_uid": "b3d142f6d72b4f0788e841f229041e74",
+    "stats": {
+      "face_count": 232484,
+      "vertex_count": 116194
+    }
+  },
+  {
+    "id": "sgd_00118",
+    "category": "sgd",
+    "name": "AndersonRock",
+    "model_file": "objects/sgd_00118/model.glb",
+    "renders_dir": "objects/sgd_00118",
+    "license": "CC-BY-4.0",
+    "original_uid": "6a78cb037b6a43f2b9fd3367687f692c",
+    "stats": {
+      "face_count": 1280,
+      "vertex_count": 642
+    }
+  },
+  {
+    "id": "13165_00121",
+    "category": "13165",
+    "name": "13165",
+    "model_file": "objects/13165_00121/model.glb",
+    "renders_dir": "objects/13165_00121",
+    "license": "CC-BY-4.0",
+    "original_uid": "a4cae2821f734c53aa81fc0508fb2bb6",
+    "stats": {
+      "face_count": 7727,
+      "vertex_count": 8925
+    }
+  },
+  {
+    "id": "anon_00122",
+    "category": "anon",
+    "name": "Anon (76y) - 31 05 2022- 3D Head [AX3D]-3D-",
+    "model_file": "objects/anon_00122/model.glb",
+    "renders_dir": "objects/anon_00122",
+    "license": "CC-BY-4.0",
+    "original_uid": "9c942351d08047bb95eafe0e48711ef9",
+    "stats": {
+      "face_count": 920094,
+      "vertex_count": 460253
+    }
+  },
+  {
+    "id": "figura_00123",
+    "category": "figura",
+    "name": "Figura 2",
+    "model_file": "objects/figura_00123/model.glb",
+    "renders_dir": "objects/figura_00123",
+    "license": "CC-BY-4.0",
+    "original_uid": "f701c85240dd490598f8a65a2b6a268e",
+    "stats": {
+      "face_count": 209436,
+      "vertex_count": 138347
+    }
+  },
+  {
+    "id": "shoemaker_00124",
+    "category": "shoemaker",
+    "name": "Shoemaker",
+    "model_file": "objects/shoemaker_00124/model.glb",
+    "renders_dir": "objects/shoemaker_00124",
+    "license": "CC-BY-4.0",
+    "original_uid": "70dc3987d00a453fb2f38917ad6d8d2e",
+    "stats": {
+      "face_count": 1308,
+      "vertex_count": 1602
+    }
+  },
+  {
+    "id": "168_3_00126",
+    "category": "168_3",
+    "name": "168-3",
+    "model_file": "objects/168_3_00126/model.glb",
+    "renders_dir": "objects/168_3_00126",
+    "license": "CC-BY-4.0",
+    "original_uid": "515aa60711e945d99e669778067bf27d",
+    "stats": {
+      "face_count": 20000,
+      "vertex_count": 10019
+    }
+  },
+  {
+    "id": "palm_00134",
+    "category": "palm",
+    "name": "Palm Tree",
+    "model_file": "objects/palm_00134/model.glb",
+    "renders_dir": "objects/palm_00134",
+    "license": "CC-BY-4.0",
+    "original_uid": "470499f5479f4c63b5ab8e02f0370375",
+    "stats": {
+      "face_count": 19568,
+      "vertex_count": 8276
+    }
+  },
+  {
+    "id": "barv_00135",
+    "category": "barv",
+    "name": "Barv 21 54 Gard 6 Lev Bezfas",
+    "model_file": "objects/barv_00135/model.glb",
+    "renders_dir": "objects/barv_00135",
+    "license": "CC-BY-4.0",
+    "original_uid": "432236449762439082eea55e288e46f8",
+    "stats": {
+      "face_count": 256526,
+      "vertex_count": 130101
+    }
+  },
+  {
+    "id": "mechanics_00137",
+    "category": "mechanics",
+    "name": "3D print",
+    "model_file": "objects/mechanics_00137/model.glb",
+    "renders_dir": "objects/mechanics_00137",
+    "license": "CC-BY-4.0",
+    "original_uid": "41635ba4a0134d5e8f48f9200111d6fa",
+    "stats": {
+      "face_count": 79165,
+      "vertex_count": 68350
+    }
+  },
+  {
+    "id": "composite_00139",
+    "category": "composite",
+    "name": "Composite Final Board",
+    "model_file": "objects/composite_00139/model.glb",
+    "renders_dir": "objects/composite_00139",
+    "license": "CC-BY-4.0",
+    "original_uid": "958222a4c03e4570b0e0f520ca7ee949",
+    "stats": {
+      "face_count": 36399,
+      "vertex_count": 20646
+    }
+  },
+  {
+    "id": "science_technology_00143",
+    "category": "science_technology",
+    "name": "2017-03  Libro1 for #3DScanBooks challenge",
+    "model_file": "objects/science_technology_00143/model.glb",
+    "renders_dir": "objects/science_technology_00143",
+    "license": "CC-BY-4.0",
+    "original_uid": "bdec1f8afb3f4c19811478fd90b15c9c",
+    "stats": {
+      "face_count": 1192736,
+      "vertex_count": 597602
+    }
+  },
+  {
+    "id": "science_technology_00214",
+    "category": "science_technology",
+    "name": "el-line-ex(il)-120-hm-cpc-220",
+    "model_file": "objects/science_technology_00214/model.glb",
+    "renders_dir": "objects/science_technology_00214",
+    "license": "CC-BY-4.0",
+    "original_uid": "9d21cd8184ff4f179c6fcb031dea07f1",
+    "stats": {
+      "face_count": 323521,
+      "vertex_count": 162731
+    }
+  },
+  {
+    "id": "science_technology_00200",
+    "category": "science_technology",
+    "name": "I_21_2",
+    "model_file": "objects/science_technology_00200/model.glb",
+    "renders_dir": "objects/science_technology_00200",
+    "license": "CC-BY-4.0",
+    "original_uid": "5250476c811746c88531af87d3994b55",
+    "stats": {
+      "face_count": 75589,
+      "vertex_count": 40801
+    }
+  },
+  {
+    "id": "anders_00144",
+    "category": "anders",
+    "name": "Anders avatar",
+    "model_file": "objects/anders_00144/model.glb",
+    "renders_dir": "objects/anders_00144",
+    "license": "CC-BY-4.0",
+    "original_uid": "efa35b245e1244d6b341013d8621f2b0",
+    "stats": {
+      "face_count": 659674,
+      "vertex_count": 331895
+    }
+  },
+  {
+    "id": "fitness_00146",
+    "category": "fitness",
+    "name": "FREE LowPoly Crossfit - Pull Ups",
+    "model_file": "objects/fitness_00146/model.glb",
+    "renders_dir": "objects/fitness_00146",
+    "license": "CC-BY-4.0",
+    "original_uid": "8663988fb0de490e97beafd79b806e20",
+    "stats": {
+      "face_count": 193,
+      "vertex_count": 110
+    }
+  },
+  {
+    "id": "polycam_00148",
+    "category": "polycam",
+    "name": "23CH 9",
+    "model_file": "objects/polycam_00148/model.glb",
+    "renders_dir": "objects/polycam_00148",
+    "license": "CC-BY-NC-SA-4.0",
+    "original_uid": "0d71a058290344e3aa13ce69d9393d38",
+    "stats": {
+      "face_count": 175848,
+      "vertex_count": 101463
+    }
+  },
+  {
+    "id": "mha21_00154",
+    "category": "mha21",
+    "name": "Brain and Lateral Ventricles",
+    "model_file": "objects/mha21_00154/model.glb",
+    "renders_dir": "objects/mha21_00154",
+    "license": "CC-BY-4.0",
+    "original_uid": "13e9539826484cb6a93de525b0cdce08",
+    "stats": {
+      "face_count": 1259388,
+      "vertex_count": 628415
+    }
+  },
+  {
+    "id": "elevationapi_00158",
+    "category": "elevationapi",
+    "name": "C5640 Trokhaloi East",
+    "model_file": "objects/elevationapi_00158/model.glb",
+    "renders_dir": "objects/elevationapi_00158",
+    "license": "CC-BY-NC-SA-4.0",
+    "original_uid": "fdf4094824814129a74c274eec01d115",
+    "stats": {
+      "face_count": 4000,
+      "vertex_count": 2091
+    }
+  },
+  {
+    "id": "est_00160",
+    "category": "est",
+    "name": "2219_EST_V1",
+    "model_file": "objects/est_00160/model.glb",
+    "renders_dir": "objects/est_00160",
+    "license": "CC-BY-4.0",
+    "original_uid": "cf23fe81ec9d454a82a470df7b504e13",
+    "stats": {
+      "face_count": 77452,
+      "vertex_count": 33951
+    }
+  },
+  {
+    "id": "nested_00163",
+    "category": "nested",
+    "name": "NESTED DODECAHEDRON PENDANT",
+    "model_file": "objects/nested_00163/model.glb",
+    "renders_dir": "objects/nested_00163",
+    "license": "CC-BY-4.0",
+    "original_uid": "2ef06e0db6f84fb5a630a46c0a7f7f93",
+    "stats": {
+      "face_count": 354850,
+      "vertex_count": 177097
+    }
+  },
+  {
+    "id": "cgt_00168",
+    "category": "cgt",
+    "name": "cgt 116 final",
+    "model_file": "objects/cgt_00168/model.glb",
+    "renders_dir": "objects/cgt_00168",
+    "license": "CC-BY-4.0",
+    "original_uid": "ce07c04789694249baf4d502c9f82613",
+    "stats": {
+      "face_count": 334817,
+      "vertex_count": 167711
+    }
+  },
+  {
+    "id": "parcheggio_00170",
+    "category": "parcheggio",
+    "name": "Parcheggio Montato 27 05",
+    "model_file": "objects/parcheggio_00170/model.glb",
+    "renders_dir": "objects/parcheggio_00170",
+    "license": "CC-BY-4.0",
+    "original_uid": "c1ecd65c1b0a4f45b801ac01ad766f92",
+    "stats": {
+      "face_count": 152698,
+      "vertex_count": 85009
+    }
+  },
+  {
+    "id": "maya_00171",
+    "category": "maya",
+    "name": "RoadSign",
+    "model_file": "objects/maya_00171/model.glb",
+    "renders_dir": "objects/maya_00171",
+    "license": "CC-BY-4.0",
+    "original_uid": "be5d2a6b77ec4b4a8d4c058927309283",
+    "stats": {
+      "face_count": 348,
+      "vertex_count": 198
+    }
+  },
+  {
+    "id": "sigma_00174",
+    "category": "sigma",
+    "name": "Sigma Santiago",
+    "model_file": "objects/sigma_00174/model.glb",
+    "renders_dir": "objects/sigma_00174",
+    "license": "CC-BY-4.0",
+    "original_uid": "897ecd58d5594e77bfd6f717d3b14a15",
+    "stats": {
+      "face_count": 1000000,
+      "vertex_count": 500238
+    }
+  },
+  {
+    "id": "ani_00178",
+    "category": "ani",
+    "name": "Ani Box test",
+    "model_file": "objects/ani_00178/model.glb",
+    "renders_dir": "objects/ani_00178",
+    "license": "CC-BY-4.0",
+    "original_uid": "80f58559007b4811a1883123ebd53cf0",
+    "stats": {
+      "face_count": 250,
+      "vertex_count": 500
+    }
+  },
+  {
+    "id": "skayf_00181",
+    "category": "skayf",
+    "name": "skayf-ekran-left-1_2",
+    "model_file": "objects/skayf_00181/model.glb",
+    "renders_dir": "objects/skayf_00181",
+    "license": "CC-BY-4.0",
+    "original_uid": "2b944973dc7c4f449aea6270ec1e42e6",
+    "stats": {
+      "face_count": 1438,
+      "vertex_count": 723
+    }
+  },
+  {
+    "id": "color_00186",
+    "category": "color",
+    "name": "Color Grid",
+    "model_file": "objects/color_00186/model.glb",
+    "renders_dir": "objects/color_00186",
+    "license": "CC-BY-4.0",
+    "original_uid": "6da9ca52a4104f7a89d6cdc2e6f82052",
+    "stats": {
+      "face_count": 3522,
+      "vertex_count": 1814
+    }
+  },
+  {
+    "id": "rio_00188",
+    "category": "rio",
+    "name": "\u00cdrio Conti - Port\u00e3o",
+    "model_file": "objects/rio_00188/model.glb",
+    "renders_dir": "objects/rio_00188",
+    "license": "CC-BY-4.0",
+    "original_uid": "47792ff7f831447db8d4d927749c48d7",
+    "stats": {
+      "face_count": 44411,
+      "vertex_count": 12321
+    }
+  },
+  {
+    "id": "u_00191",
+    "category": "u",
+    "name": "u_\u0414\u0444-70_135Hx19mm_OBJ.obj",
+    "model_file": "objects/u_00191/model.glb",
+    "renders_dir": "objects/u_00191",
+    "license": "CC-BY-4.0",
+    "original_uid": "5c3cad35a77e41e1a9aea6d79a669ff9",
+    "stats": {
+      "face_count": 58962,
+      "vertex_count": 31531
+    }
+  },
+  {
+    "id": "bird_00195",
+    "category": "bird",
+    "name": "Red Eagle [bird model]",
+    "model_file": "objects/bird_00195/model.glb",
+    "renders_dir": "objects/bird_00195",
+    "license": "CC-BY-4.0",
+    "original_uid": "f39aba52e20347b5868ae137dd9c85eb",
+    "stats": {
+      "face_count": 29280,
+      "vertex_count": 14907
+    }
+  },
+  {
+    "id": "nathalia_00198",
+    "category": "nathalia",
+    "name": "Nathalia - Lote 10  - Maragogi",
+    "model_file": "objects/nathalia_00198/model.glb",
+    "renders_dir": "objects/nathalia_00198",
+    "license": "CC-BY-4.0",
+    "original_uid": "8ecad75e75654ffa8d1daaea70bc1c8d",
+    "stats": {
+      "face_count": 7996,
+      "vertex_count": 4562
+    }
+  },
+  {
+    "id": "medieval_00199",
+    "category": "medieval",
+    "name": "Medieval Shovel Final",
+    "model_file": "objects/medieval_00199/model.glb",
+    "renders_dir": "objects/medieval_00199",
+    "license": "CC-BY-4.0",
+    "original_uid": "462d10bcbce04a91850e82bdec997854",
+    "stats": {
+      "face_count": 696,
+      "vertex_count": 701
+    }
+  },
+  {
+    "id": "round_00201",
+    "category": "round",
+    "name": "Round Piece (1)",
+    "model_file": "objects/round_00201/model.glb",
+    "renders_dir": "objects/round_00201",
+    "license": "CC-BY-4.0",
+    "original_uid": "c6cd65185b8d474aa1506481d57f81de",
+    "stats": {
+      "face_count": 636,
+      "vertex_count": 336
+    }
+  },
+  {
+    "id": "sunglasses_00207",
+    "category": "sunglasses",
+    "name": "Sunglasses",
+    "model_file": "objects/sunglasses_00207/model.glb",
+    "renders_dir": "objects/sunglasses_00207",
+    "license": "CC-BY-4.0",
+    "original_uid": "860a92a2881347a18f6cebe94f2ddead",
+    "stats": {
+      "face_count": 84116,
+      "vertex_count": 43102
+    }
+  },
+  {
+    "id": "2_00211",
+    "category": "2",
+    "name": "2",
+    "model_file": "objects/2_00211/model.glb",
+    "renders_dir": "objects/2_00211",
+    "license": "CC-BY-4.0",
+    "original_uid": "7df02701b2244b618e3f2a8a00a5d522",
+    "stats": {
+      "face_count": 42574,
+      "vertex_count": 39058
+    }
+  },
+  {
+    "id": "bed_00212",
+    "category": "bed",
+    "name": "Bed Low",
+    "model_file": "objects/bed_00212/model.glb",
+    "renders_dir": "objects/bed_00212",
+    "license": "CC-BY-4.0",
+    "original_uid": "db8f4008b8354a6b9af02d5293c6180f",
+    "stats": {
+      "face_count": 1702,
+      "vertex_count": 966
+    }
+  },
+  {
+    "id": "3dscannerapp_00213",
+    "category": "3dscannerapp",
+    "name": "0314\u30ca\u30ab\u30d0\u30de_01",
+    "model_file": "objects/3dscannerapp_00213/model.glb",
+    "renders_dir": "objects/3dscannerapp_00213",
+    "license": "CC-BY-4.0",
+    "original_uid": "cc907d8b60e84a88b5a3cf41702a33ed",
+    "stats": {
+      "face_count": 2091155,
+      "vertex_count": 1063737
+    }
+  }
+]

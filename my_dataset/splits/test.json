@@ -1,0 +1,145 @@
+[
+  {
+    "id": "stair_00182",
+    "category": "stair",
+    "name": "L",
+    "model_file": "objects/stair_00182/model.glb",
+    "renders_dir": "objects/stair_00182",
+    "license": "CC-BY-4.0",
+    "original_uid": "dd1bca37d4ce4da49f96404416c9bba7",
+    "stats": {
+      "face_count": 26686,
+      "vertex_count": 13431
+    }
+  },
+  {
+    "id": "characters_creatures_00176",
+    "category": "characters_creatures",
+    "name": "Cat Edit",
+    "model_file": "objects/characters_creatures_00176/model.glb",
+    "renders_dir": "objects/characters_creatures_00176",
+    "license": "CC-BY-4.0",
+    "original_uid": "4016b21e545449e1af722623998ad6b7",
+    "stats": {
+      "face_count": 286490,
+      "vertex_count": 143247
+    }
+  },
+  {
+    "id": "characters_creatures_00065",
+    "category": "characters_creatures",
+    "name": "Knight Unit",
+    "model_file": "objects/characters_creatures_00065/model.glb",
+    "renders_dir": "objects/characters_creatures_00065",
+    "license": "CC-BY-SA-4.0",
+    "original_uid": "060911a8a1a6491686ab27517d9b8c3c",
+    "stats": {
+      "face_count": 5262,
+      "vertex_count": 2765
+    }
+  },
+  {
+    "id": "cultural_heritage_history_00196",
+    "category": "cultural_heritage_history",
+    "name": "Leather Flying Helmet",
+    "model_file": "objects/cultural_heritage_history_00196/model.glb",
+    "renders_dir": "objects/cultural_heritage_history_00196",
+    "license": "CC-BY-4.0",
+    "original_uid": "1c5917c1e9d147a984725886fc917ea7",
+    "stats": {
+      "face_count": 999694,
+      "vertex_count": 499825
+    }
+  },
+  {
+    "id": "animals_pets_00128",
+    "category": "animals_pets",
+    "name": "Simple Boingo",
+    "model_file": "objects/animals_pets_00128/model.glb",
+    "renders_dir": "objects/animals_pets_00128",
+    "license": "CC-BY-4.0",
+    "original_uid": "591db1c22ae442b49c9810dcb50d0ff3",
+    "stats": {
+      "face_count": 11468,
+      "vertex_count": 5756
+    }
+  },
+  {
+    "id": "weapons_military_00032",
+    "category": "weapons_military",
+    "name": "TT-33 (Tokarev TT-33)",
+    "model_file": "objects/weapons_military_00032/model.glb",
+    "renders_dir": "objects/weapons_military_00032",
+    "license": "CC-BY-4.0",
+    "original_uid": "d3578149a0f645ecbb03cfedcef594e9",
+    "stats": {
+      "face_count": 2746,
+      "vertex_count": 1638
+    }
+  },
+  {
+    "id": "architecture_00193",
+    "category": "architecture",
+    "name": "SKETCH 2-ND FLOOR",
+    "model_file": "objects/architecture_00193/model.glb",
+    "renders_dir": "objects/architecture_00193",
+    "license": "CC-BY-4.0",
+    "original_uid": "2f798595ecd446c48eadc747170105cf",
+    "stats": {
+      "face_count": 235487,
+      "vertex_count": 133620
+    }
+  },
+  {
+    "id": "architecture_00110",
+    "category": "architecture",
+    "name": "Graveyard House",
+    "model_file": "objects/architecture_00110/model.glb",
+    "renders_dir": "objects/architecture_00110",
+    "license": "CC-BY-4.0",
+    "original_uid": "aa1d778bd11943eca390e7f8a27884fb",
+    "stats": {
+      "face_count": 14582,
+      "vertex_count": 9108
+    }
+  },
+  {
+    "id": "architecture_00177",
+    "category": "architecture",
+    "name": "Oil Barrels",
+    "model_file": "objects/architecture_00177/model.glb",
+    "renders_dir": "objects/architecture_00177",
+    "license": "CC-BY-4.0",
+    "original_uid": "0c0d404a08604ec0966de31ae11d65cb",
+    "stats": {
+      "face_count": 43680,
+      "vertex_count": 21935
+    }
+  },
+  {
+    "id": "art_abstract_00116",
+    "category": "art_abstract",
+    "name": "Ornament (3d-inktober2019)",
+    "model_file": "objects/art_abstract_00116/model.glb",
+    "renders_dir": "objects/art_abstract_00116",
+    "license": "CC-BY-4.0",
+    "original_uid": "8b936e318cf04390892a7ca443715613",
+    "stats": {
+      "face_count": 203588,
+      "vertex_count": 100302
+    }
+  },
+  {
+    "id": "furniture_home_00054",
+    "category": "furniture_home",
+    "name": "Wooden Crate - Wooden Box",
+    "model_file": "objects/furniture_home_00054/model.glb",
+    "renders_dir": "objects/furniture_home_00054",
+    "license": "CC-BY-4.0",
+    "original_uid": "62411693da734fdd97d37ceab494bfd6",
+    "stats": {
+      "face_count": 324,
+      "vertex_count": 164
+    }
+  }
+]

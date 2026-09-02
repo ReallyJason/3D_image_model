@@ -1,114 +1,120 @@
 # 3D Image Model Dataset Pipeline 🧊📸
 
-An end-to-end data pipeline for downloading, organizing, validating, and rendering 3D models for 3D computer vision and generative 3D modeling (e.g., NeRF, 3D Gaussian Splatting, Multi-view Diffusion).
+An industrial-grade, end-to-end data pipeline for downloading, organizing, validating, deduplicating, filtering, augmenting, rendering, and partitioning 3D models for 3D generative AI and computer vision models (e.g., Multi-View Diffusion, NeRF, 3D Gaussian Splatting, Zero123, TripoSR).
 
 ---
 
-## 🌟 Features
+## 🌟 Key Capabilities
 
-- **Standardized Dataset Organization**: Automatically structures 3D models into clean per-object directories with full provenance tracking (Objaverse UIDs, categories, Creative Commons licensing, authors, Sketchfab source links).
-- **Automated 3D Health Diagnostics**: Inspects geometry integrity, vertex/face counts, NaN coordinates, bounding box extents, and material/texture presence before rendering.
-- **Hardware-Accelerated GPU Multi-View Rendering**: Uses headless **ModernGL** offscreen rendering natively on Apple Silicon GPUs (M1/M2/M3/M4) to generate 12–36+ orbit camera views per object in milliseconds.
-- **Camera Pose Tracking**: Embeds exact camera extrinsics (world-to-camera, camera-to-world) and projection matrices directly into per-object `metadata.json`.
+1. **Standardized Dataset Organization (Part 1)**: Automatically structures 3D models into per-object directories while preserving all source provenance (Objaverse UIDs, categories, Creative Commons licenses, authors, and Sketchfab viewer links).
+2. **Automated 3D Health Diagnostics (Part 2 & 11)**: Detects broken, corrupt, microscopic/gigantic, and non-polygonal (empty or spline-only) models before rendering.
+3. **Realistic Data Augmentation (Part 10)**:
+   - **Camera Randomization**: Azimuth/elevation jitter, variable zoom/distance, and random focal length (FOV).
+   - **Lighting Randomization**: Key, fill, and rim lights with color temperature (warm tungsten, cool daylight, golden sunset, neutral) and intensity modulation.
+   - **Background Randomization**: Studio white, neutral gray, soft indoor room gradient, outdoor sky-ground horizon, and transparent RGBA.
+   - **Object Perturbation**: Random rotation jitter and slight off-center translation.
+4. **Geometric Deduplication (Part 12)**: Uses invariant geometric fingerprinting (vertex/face signatures and aspect ratio hashes) to detect and flag duplicate re-uploads.
+5. **License & Quality Filtering (Part 12)**: Automatically excludes corrupted/empty meshes, duplicates, and non-commercial licenses when needed.
+6. **Dataset Partitioning (Part 12)**: Stratified generation of `train.json` (80%), `val.json` (10%), and `test.json` (10%).
+7. **Hardware-Accelerated GPU Rendering**: Headless **ModernGL** offscreen rendering executing natively on Apple Silicon GPUs (M1/M2/M3/M4) in milliseconds per frame.
 
 ---
 
-## 📁 Dataset Structure
+## 📁 Staged Dataset Architecture
 
 ```
 my_dataset/
-├── objects/
+├── objects/                     # 3D assets and rendered views
 │   ├── stair_00001/
-│   │   ├── model.glb             # 3D Mesh asset
-│   │   ├── metadata.json         # Object metadata + camera poses
-│   │   ├── view_000.png          # Rendered orbit views
+│   │   ├── model.glb            # Original 3D mesh
+│   │   ├── view_000.png         # Rendered camera angles
 │   │   ├── view_001.png
-│   │   └── ...
-│   ├── toy_00002/
-│   │   ├── model.glb
-│   │   └── ...
+│   │   └── metadata.json        # Camera poses, intrinsics, extrinsics, lighting
 │   └── ...
-├── metadata.json                 # Master dataset catalog & provenance
-└── validation_report.json        # Automated health check results
+├── metadata/                    # Catalogs and audit logs
+│   ├── filtered_catalog.json    # Verified, deduplicated, clean models
+│   └── deduplication.json       # Duplicate cluster mappings
+├── splits/                      # ML Training partitions
+│   ├── train.json               # 80% Training split
+│   ├── val.json                 # 10% Validation split
+│   ├── test.json                # 10% Test split
+│   └── summary.json             # Stratification breakdown
+├── metadata.json                # Master index of all objects
+└── validation_report.json       # Full health check results
 ```
 
 ---
 
 ## 🚀 Quickstart
 
-### 1. Environment Setup
+### 1. Installation
 
 ```bash
-# Create virtual environment (Python 3.10+)
+# Create and activate virtual environment
 python3 -m venv .venv
 source .venv/bin/activate
 
-# Install dependencies
-pip install objaverse trimesh moderngl pillow scipy certifi
+# Install requirements
+pip install -r requirements.txt
 ```
 
-### 2. Run the Full Pipeline
+### 2. Run the Full 6-Stage Pipeline
 
-Run organization, health checks, and multi-view rendering in one command:
+Executes download/organize ➔ validate ➔ deduplicate ➔ filter ➔ render (augmented) ➔ split:
 
 ```bash
-python run_pipeline.py --step all --limit 20 --num-views 12
+python main.py --step all --limit 20 --num-views 12 --augment
 ```
 
 ---
 
-## 🛠️ Pipeline Modules
+## 🛠️ Pipeline Stages (Run Individually)
 
-### Step 1: Download & Organize (`dataset_manager.py`)
-Downloads from Objaverse and populates `my_dataset/objects/<category>_<id>/model.glb` while retaining licensing and source metadata.
-
-```bash
-python run_pipeline.py --step organize --limit 50
-```
-
-### Step 2: 3D Model Health Check (`check_objects.py`)
-Scans all downloaded models and flags corrupted files, non-polygonal splines, empty meshes, and extreme scale anomalies:
-
-```bash
-python check_objects.py
-```
-
-### Step 3: Multi-View Rendering (`render_objects.py`)
-Renders camera orbit views around each object and computes camera matrices:
-
-```bash
-python render_objects.py --num-views 12 --resolution 512
-```
+| Stage | Command | Description |
+|---|---|---|
+| **1. Organize** | `python main.py --step organize --limit 100` | Fetches UIDs & GLBs, normalizes directory structure, saves license metadata |
+| **2. Validate** | `python main.py --step validate` | Tests file integrity, vertex/face count, scale, centering, and textures |
+| **3. Deduplicate** | `python main.py --step deduplicate` | Scans geometric signatures and flags duplicate assets |
+| **4. Filter** | `python main.py --step filter --commercial-only` | Filters out failed/duplicate models and applies license constraints |
+| **5. Render** | `python main.py --step render --num-views 12 --augment` | GPU multi-view rendering with realistic lighting, backgrounds, and camera jitter |
+| **6. Split** | `python main.py --step split` | Generates stratified `train.json`, `val.json`, and `test.json` splits |
 
 ---
 
-## 📜 Metadata Schema
+## 📈 Scaling Progression (Part 11)
 
-Each object's `metadata.json` includes:
+Do **not** download 500,000 models immediately:
+1. **Phase 1 (Current)**: 20 – 100 objects (verify pipeline, catch parsing quirks and geometry anomalies).
+2. **Phase 2**: 1,000 objects (profile deduplication, test training on a single GPU).
+3. **Phase 3**: 10,000 objects (distributed rendering, filter for specific categories).
+4. **Phase 4**: 100,000+ objects (full foundation model pretraining).
+
+---
+
+## 📜 Metadata & Camera Pose Schema
+
+Each object's `metadata.json` embeds exact camera extrinsics and intrinsics for each view:
 
 ```json
 {
-  "id": "stair_00001",
-  "category": "stair",
-  "source": "objaverse",
-  "license": "CC-BY-4.0",
-  "original_uid": "8476c4170df24cf5bbe6967222d1a42d",
-  "file": "objects/stair_00001/model.glb",
-  "validation": {
-    "status": "PASS",
-    "num_vertices": 19008,
-    "num_faces": 14337
-  },
-  "views": [
-    {
-      "index": 0,
-      "file": "view_000.png",
-      "azimuth_deg": 0.0,
-      "elevation_deg": 20.0,
-      "camera_pos": [0.0, 0.82, 2.25],
-      "world_to_camera_matrix": [...]
-    }
-  ]
+  "index": 0,
+  "file": "view_000.png",
+  "azimuth_deg": 355.2,
+  "elevation_deg": 18.4,
+  "distance": 2.25,
+  "fov_deg": 48.0,
+  "camera_pos": [-0.19, 0.60, 2.06],
+  "camera_lookat": [0.0, 0.0, 0.0],
+  "lighting_preset": "warm_indoor",
+  "background_preset": "room_gradient",
+  "is_augmented": true,
+  "world_to_camera_matrix": [
+    [0.996, 0.0, 0.083, 0.02],
+    [0.023, 0.96, -0.28, 0.01],
+    [-0.08, 0.28, 0.956, -2.15],
+    [0.0, 0.0, 0.0, 1.0]
+  ],
+  "camera_to_world_matrix": [...]
 }
 ```
 
@@ -116,4 +122,4 @@ Each object's `metadata.json` includes:
 
 ## 📄 License
 
-This repository code is licensed under the MIT License. 3D models downloaded from Objaverse retain their respective Creative Commons licenses as documented in `metadata.json`.
+The code in this repository is licensed under the MIT License. Downloaded 3D objects retain their respective Creative Commons licenses as documented in each object's `metadata.json`.

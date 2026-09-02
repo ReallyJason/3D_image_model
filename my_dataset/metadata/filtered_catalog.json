@@ -31,7 +31,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "toy_00002": {
     "id": "toy_00002",
@@ -63,7 +64,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "p12323a_00003": {
     "id": "p12323a_00003",
@@ -95,7 +97,8 @@
       "warnings": [
         "Model has unusually large dimensions (max extent 1.85e+04)"
       ]
-    }
+    },
+    "is_duplicate": false
   },
   "characters_creatures_00004": {
     "id": "characters_creatures_00004",
@@ -130,7 +133,8 @@
       "warnings": [
         "Model has unusually large dimensions (max extent 2.89e+04)"
       ]
-    }
+    },
+    "is_duplicate": false
   },
   "sketch_00005": {
     "id": "sketch_00005",
@@ -160,7 +164,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "cars_vehicles_00006": {
     "id": "cars_vehicles_00006",
@@ -195,7 +200,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "12135_00007": {
     "id": "12135_00007",
@@ -226,8 +232,9 @@
       "issues": [],
       "warnings": []
     },
-    "num_rendered_views": 12,
-    "is_augmented": true
+    "num_rendered_views": 4,
+    "is_augmented": true,
+    "is_duplicate": false
   },
   "trnio_00008": {
     "id": "trnio_00008",
@@ -260,43 +267,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
-  },
-  "people_00009": {
-    "id": "people_00009",
-    "category": "people",
-    "name": "dtu_scan_39_lighting_2",
-    "source": "objaverse",
-    "license": "CC-BY-4.0",
-    "license_url": "https://creativecommons.org/licenses/by/4.0/",
-    "raw_license": "by",
-    "original_uid": "a7ad32b5d4d84ee5a40ebbd86da4dbe4",
-    "author": "Chris Heinrich",
-    "author_url": "https://sketchfab.com/chrispheinrich",
-    "viewer_url": "https://sketchfab.com/3d-models/a7ad32b5d4d84ee5a40ebbd86da4dbe4",
-    "description": "Prob threshold: 0.05, Disp threshold: 0.1, Num consistent: 6.0",
-    "tags": [
-      "bob",
-      "video-games",
-      "character"
-    ],
-    "file": "objects/people_00009/model.glb",
-    "file_size_bytes": 417096,
-    "stats": {
-      "face_count": 0,
-      "vertex_count": 14839
     },
-    "validation": {
-      "status": "FAIL",
-      "num_vertices": 0,
-      "num_faces": 0,
-      "max_extent": 0.0,
-      "has_textures": false,
-      "issues": [
-        "No 3D polygonal mesh found (only curves/paths/empty)"
-      ],
-      "warnings": []
-    }
+    "is_duplicate": false
   },
   "lorax_00010": {
     "id": "lorax_00010",
@@ -326,7 +298,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "cultural_heritage_history_00011": {
     "id": "cultural_heritage_history_00011",
@@ -356,7 +329,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "places_travel_00012": {
     "id": "places_travel_00012",
@@ -388,7 +362,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "animals_pets_00013": {
     "id": "animals_pets_00013",
@@ -425,8 +400,7 @@
       "issues": [],
       "warnings": []
     },
-    "num_rendered_views": 12,
-    "is_augmented": true
+    "is_duplicate": false
   },
   "bbffbx1_00014": {
     "id": "bbffbx1_00014",
@@ -456,7 +430,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "20th_00015": {
     "id": "20th_00015",
@@ -487,8 +462,7 @@
       "issues": [],
       "warnings": []
     },
-    "num_rendered_views": 12,
-    "is_augmented": true
+    "is_duplicate": false
   },
   "agisoft_00031": {
     "id": "agisoft_00031",
@@ -522,8 +496,7 @@
       "issues": [],
       "warnings": []
     },
-    "num_rendered_views": 12,
-    "is_augmented": true
+    "is_duplicate": false
   },
   "weapons_military_00032": {
     "id": "weapons_military_00032",
@@ -557,7 +530,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "architecture_00033": {
     "id": "architecture_00033",
@@ -589,7 +563,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "test4_00034": {
     "id": "test4_00034",
@@ -619,7 +594,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "pliers_00035": {
     "id": "pliers_00035",
@@ -649,7 +625,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "animals_pets_00036": {
     "id": "animals_pets_00036",
@@ -683,8 +660,7 @@
       "issues": [],
       "warnings": []
     },
-    "num_rendered_views": 12,
-    "is_augmented": true
+    "is_duplicate": false
   },
   "art_abstract_00037": {
     "id": "art_abstract_00037",
@@ -720,7 +696,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "dragon_00038": {
     "id": "dragon_00038",
@@ -750,7 +727,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "modelagem_00039": {
     "id": "modelagem_00039",
@@ -783,7 +761,8 @@
         "Model is placed far from origin (center offset: 2289.03)",
         "No textures or vertex colors detected (geometry only)"
       ]
-    }
+    },
+    "is_duplicate": false
   },
   "architecture_00040": {
     "id": "architecture_00040",
@@ -813,7 +792,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "fashion_style_00041": {
     "id": "fashion_style_00041",
@@ -850,7 +830,8 @@
       "warnings": [
         "No textures or vertex colors detected (geometry only)"
       ]
-    }
+    },
+    "is_duplicate": false
   },
   "scaniverse_00042": {
     "id": "scaniverse_00042",
@@ -882,7 +863,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "characters_creatures_00043": {
     "id": "characters_creatures_00043",
@@ -917,7 +899,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "architecture_00044": {
     "id": "architecture_00044",
@@ -949,7 +932,8 @@
       "warnings": [
         "Model has unusually large dimensions (max extent 1.58e+04)"
       ]
-    }
+    },
+    "is_duplicate": false
   },
   "animals_pets_00045": {
     "id": "animals_pets_00045",
@@ -982,8 +966,7 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "num_rendered_views": 12,
-    "is_augmented": true
+    "is_duplicate": false
   },
   "batu000027_00046": {
     "id": "batu000027_00046",
@@ -1015,7 +998,8 @@
       "warnings": [
         "No textures or vertex colors detected (geometry only)"
       ]
-    }
+    },
+    "is_duplicate": false
   },
   "diboine_00047": {
     "id": "diboine_00047",
@@ -1047,7 +1031,8 @@
       "warnings": [
         "No textures or vertex colors detected (geometry only)"
       ]
-    }
+    },
+    "is_duplicate": false
   },
   "pamir_00048": {
     "id": "pamir_00048",
@@ -1081,7 +1066,8 @@
       "warnings": [
         "Model has unusually large dimensions (max extent 1.45e+04)"
       ]
-    }
+    },
+    "is_duplicate": false
   },
   "nature_plants_00049": {
     "id": "nature_plants_00049",
@@ -1117,7 +1103,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "weapons_military_00050": {
     "id": "weapons_military_00050",
@@ -1147,7 +1134,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "cultural_heritage_history_00051": {
     "id": "cultural_heritage_history_00051",
@@ -1180,7 +1168,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "bench_00052": {
     "id": "bench_00052",
@@ -1212,7 +1201,8 @@
       "warnings": [
         "No textures or vertex colors detected (geometry only)"
       ]
-    }
+    },
+    "is_duplicate": false
   },
   "art_abstract_00053": {
     "id": "art_abstract_00053",
@@ -1253,7 +1243,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "furniture_home_00054": {
     "id": "furniture_home_00054",
@@ -1297,7 +1288,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "architecture_00055": {
     "id": "architecture_00055",
@@ -1329,7 +1321,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "stair_00056": {
     "id": "stair_00056",
@@ -1363,7 +1356,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "cultural_heritage_history_00057": {
     "id": "cultural_heritage_history_00057",
@@ -1399,7 +1393,8 @@
       "warnings": [
         "No textures or vertex colors detected (geometry only)"
       ]
-    }
+    },
+    "is_duplicate": false
   },
   "characters_creatures_00058": {
     "id": "characters_creatures_00058",
@@ -1433,7 +1428,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "architecture_00059": {
     "id": "architecture_00059",
@@ -1468,7 +1464,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "stocksbridge_00060": {
     "id": "stocksbridge_00060",
@@ -1500,7 +1497,8 @@
       "warnings": [
         "Model has unusually large dimensions (max extent 1.27e+04)"
       ]
-    }
+    },
+    "is_duplicate": false
   },
   "cars_vehicles_00061": {
     "id": "cars_vehicles_00061",
@@ -1535,7 +1533,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "electronics_gadgets_00062": {
     "id": "electronics_gadgets_00062",
@@ -1580,7 +1579,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "weapons_military_00063": {
     "id": "weapons_military_00063",
@@ -1614,7 +1614,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "lidar_00064": {
     "id": "lidar_00064",
@@ -1644,7 +1645,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "characters_creatures_00065": {
     "id": "characters_creatures_00065",
@@ -1677,7 +1679,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "mc_00066": {
     "id": "mc_00066",
@@ -1709,7 +1712,8 @@
       "warnings": [
         "37166 degenerate faces (82.5%)"
       ]
-    }
+    },
+    "is_duplicate": false
   },
   "cars_vehicles_00067": {
     "id": "cars_vehicles_00067",
@@ -1741,7 +1745,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "weapons_military_00068": {
     "id": "weapons_military_00068",
@@ -1774,7 +1779,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "cultural_heritage_history_00069": {
     "id": "cultural_heritage_history_00069",
@@ -1844,7 +1850,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "constantine_00070": {
     "id": "constantine_00070",
@@ -1878,7 +1885,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "hw4_00071": {
     "id": "hw4_00071",
@@ -1908,7 +1916,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "cars_vehicles_00072": {
     "id": "cars_vehicles_00072",
@@ -1945,7 +1954,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "sketchup_00073": {
     "id": "sketchup_00073",
@@ -1977,7 +1987,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "characters_creatures_00074": {
     "id": "characters_creatures_00074",
@@ -2012,7 +2023,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "architecture_00075": {
     "id": "architecture_00075",
@@ -2047,7 +2059,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "metashape_00076": {
     "id": "metashape_00076",
@@ -2080,7 +2093,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "object_00077": {
     "id": "object_00077",
@@ -2110,7 +2124,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "au_00078": {
     "id": "au_00078",
@@ -2143,7 +2158,8 @@
         "Model is very small (max extent 0.0212)",
         "20692 degenerate faces (30.5%)"
       ]
-    }
+    },
+    "is_duplicate": false
   },
   "architecture_00079": {
     "id": "architecture_00079",
@@ -2175,7 +2191,8 @@
       "warnings": [
         "No textures or vertex colors detected (geometry only)"
       ]
-    }
+    },
+    "is_duplicate": false
   },
   "furniture_home_00080": {
     "id": "furniture_home_00080",
@@ -2207,7 +2224,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "nature_plants_00081": {
     "id": "nature_plants_00081",
@@ -2258,7 +2276,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "virg_00082": {
     "id": "virg_00082",
@@ -2288,7 +2307,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "3dlivescannerpro_00083": {
     "id": "3dlivescannerpro_00083",
@@ -2322,8 +2342,7 @@
       "issues": [],
       "warnings": []
     },
-    "num_rendered_views": 12,
-    "is_augmented": true
+    "is_duplicate": false
   },
   "ortiz1802_00084": {
     "id": "ortiz1802_00084",
@@ -2355,7 +2374,8 @@
       "warnings": [
         "No textures or vertex colors detected (geometry only)"
       ]
-    }
+    },
+    "is_duplicate": false
   },
   "stair_00085": {
     "id": "stair_00085",
@@ -2389,7 +2409,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "characters_creatures_00086": {
     "id": "characters_creatures_00086",
@@ -2422,7 +2443,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "ch_00087": {
     "id": "ch_00087",
@@ -2452,41 +2474,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
-  },
-  "everypoint_00088": {
-    "id": "everypoint_00088",
-    "category": "everypoint",
-    "name": "Scan_1",
-    "source": "objaverse",
-    "license": "CC-BY-4.0",
-    "license_url": "https://creativecommons.org/licenses/by/4.0/",
-    "raw_license": "by",
-    "original_uid": "8f552bb5160841d896d37ba512d93f2e",
-    "author": "xrispark2021",
-    "author_url": "https://sketchfab.com/xrispark2021",
-    "viewer_url": "https://sketchfab.com/3d-models/8f552bb5160841d896d37ba512d93f2e",
-    "description": "",
-    "tags": [
-      "everypoint"
-    ],
-    "file": "objects/everypoint_00088/model.glb",
-    "file_size_bytes": 15385356,
-    "stats": {
-      "face_count": 0,
-      "vertex_count": 549280
     },
-    "validation": {
-      "status": "FAIL",
-      "num_vertices": 0,
-      "num_faces": 0,
-      "max_extent": 0.0,
-      "has_textures": false,
-      "issues": [
-        "Empty geometry: 0 vertices, 0 faces"
-      ],
-      "warnings": []
-    }
+    "is_duplicate": false
   },
   "animals_pets_00089": {
     "id": "animals_pets_00089",
@@ -2520,8 +2509,7 @@
       "issues": [],
       "warnings": []
     },
-    "num_rendered_views": 12,
-    "is_augmented": true
+    "is_duplicate": false
   },
   "wasp_00090": {
     "id": "wasp_00090",
@@ -2555,7 +2543,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "furniture_home_00091": {
     "id": "furniture_home_00091",
@@ -2595,7 +2584,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "object_00092": {
     "id": "object_00092",
@@ -2625,7 +2615,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "fashion_style_00093": {
     "id": "fashion_style_00093",
@@ -2661,7 +2652,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "weapons_military_00094": {
     "id": "weapons_military_00094",
@@ -2693,7 +2685,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "animals_pets_00095": {
     "id": "animals_pets_00095",
@@ -2731,78 +2724,7 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "num_rendered_views": 12,
-    "is_augmented": true
-  },
-  "test_00096": {
-    "id": "test_00096",
-    "category": "test",
-    "name": "test scene",
-    "source": "objaverse",
-    "license": "CC-BY-4.0",
-    "license_url": "https://creativecommons.org/licenses/by/4.0/",
-    "raw_license": "by",
-    "original_uid": "8225b526e3504ce7aacd813c2c83233e",
-    "author": "Fei.Xia",
-    "author_url": "https://sketchfab.com/Fei.Xia",
-    "viewer_url": "https://sketchfab.com/3d-models/8225b526e3504ce7aacd813c2c83233e",
-    "description": "This is a bob model I made with love and passion",
-    "tags": [],
-    "file": "objects/test_00096/model.glb",
-    "file_size_bytes": 79094740,
-    "stats": {
-      "face_count": 0,
-      "vertex_count": 2823990
-    },
-    "validation": {
-      "status": "FAIL",
-      "num_vertices": 0,
-      "num_faces": 0,
-      "max_extent": 0.0,
-      "has_textures": false,
-      "issues": [
-        "Empty geometry: 0 vertices, 0 faces"
-      ],
-      "warnings": []
-    }
-  },
-  "furniture_home_00097": {
-    "id": "furniture_home_00097",
-    "category": "furniture_home",
-    "name": "Day 40: Fire",
-    "source": "objaverse",
-    "license": "CC-BY-4.0",
-    "license_url": "https://creativecommons.org/licenses/by/4.0/",
-    "raw_license": "by",
-    "original_uid": "fcdb8446c8ef4fc1bdfb1d65fcaf1366",
-    "author": "tomburtonwood",
-    "author_url": "https://sketchfab.com/tomburtonwood",
-    "viewer_url": "https://sketchfab.com/3d-models/fcdb8446c8ef4fc1bdfb1d65fcaf1366",
-    "description": "Poont cloud if Fire pit in backyard. \n\nCreated with SiteScapeAI",
-    "tags": [
-      "fire",
-      "firepit",
-      "sitescape",
-      "sitescapeai",
-      "1scanaday"
-    ],
-    "file": "objects/furniture_home_00097/model.glb",
-    "file_size_bytes": 18158860,
-    "stats": {
-      "face_count": 0,
-      "vertex_count": 648319
-    },
-    "validation": {
-      "status": "FAIL",
-      "num_vertices": 0,
-      "num_faces": 0,
-      "max_extent": 0.0,
-      "has_textures": false,
-      "issues": [
-        "Empty geometry: 0 vertices, 0 faces"
-      ],
-      "warnings": []
-    }
+    "is_duplicate": false
   },
   "testmaja_00098": {
     "id": "testmaja_00098",
@@ -2832,7 +2754,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "weapons_military_00099": {
     "id": "weapons_military_00099",
@@ -2873,7 +2796,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "architecture_00100": {
     "id": "architecture_00100",
@@ -2903,7 +2827,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "architecture_00101": {
     "id": "architecture_00101",
@@ -2940,7 +2865,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "art_abstract_00102": {
     "id": "art_abstract_00102",
@@ -2973,7 +2899,8 @@
       "has_textures": false,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "cultural_heritage_history_00103": {
     "id": "cultural_heritage_history_00103",
@@ -3009,7 +2936,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "characters_creatures_00104": {
     "id": "characters_creatures_00104",
@@ -3041,7 +2969,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "paloma_00105": {
     "id": "paloma_00105",
@@ -3073,7 +3002,8 @@
       "warnings": [
         "No textures or vertex colors detected (geometry only)"
       ]
-    }
+    },
+    "is_duplicate": false
   },
   "gepard_00106": {
     "id": "gepard_00106",
@@ -3103,7 +3033,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "characters_creatures_00107": {
     "id": "characters_creatures_00107",
@@ -3135,7 +3066,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "agisoft_00108": {
     "id": "agisoft_00108",
@@ -3169,8 +3101,7 @@
       "issues": [],
       "warnings": []
     },
-    "num_rendered_views": 12,
-    "is_augmented": true
+    "is_duplicate": false
   },
   "kepler62_00109": {
     "id": "kepler62_00109",
@@ -3202,7 +3133,8 @@
       "warnings": [
         "576448 degenerate faces (98.8%)"
       ]
-    }
+    },
+    "is_duplicate": false
   },
   "architecture_00110": {
     "id": "architecture_00110",
@@ -3245,7 +3177,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "cars_vehicles_00111": {
     "id": "cars_vehicles_00111",
@@ -3277,7 +3210,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "design_00112": {
     "id": "design_00112",
@@ -3311,7 +3245,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "characters_creatures_00113": {
     "id": "characters_creatures_00113",
@@ -3350,7 +3285,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "weapons_military_00114": {
     "id": "weapons_military_00114",
@@ -3386,7 +3322,8 @@
       "has_textures": true,
       "issues": [],
       "warnings": []
-    }
+    },
+    "is_duplicate": false
   },
   "electronics_gadgets_00115": {
     "id": "electronics_gadgets_00115",
@@ -3422,7 +3359,8 @@
       "warnings": [
         "Model is placed far from origin (center offset: 3524.13)"
       ]
-    }
+    },
+    "is_duplicate": false
   },
   "art_abstract_00116": {
     "id": "art_abstract_00116",
@@ -3643,7 +3581,7 @@
       "issues": [],
       "warnings": []
     },
-    "num_rendered_views": 12,
+    "num_rendered_views": 4,
     "is_augmented": true,
     "is_duplicate": false
   },
@@ -3807,9 +3745,7 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false,
-    "num_rendered_views": 12,
-    "is_augmented": true
+    "is_duplicate": false
   },
   "stair_00127": {
     "id": "stair_00127",
@@ -3879,9 +3815,7 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false,
-    "num_rendered_views": 12,
-    "is_augmented": true
+    "is_duplicate": false
   },
   "design_00129": {
     "id": "design_00129",
@@ -4028,41 +3962,6 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false,
-    "num_rendered_views": 12,
-    "is_augmented": true
-  },
-  "test_00132": {
-    "id": "test_00132",
-    "category": "test",
-    "name": "test scene",
-    "source": "objaverse",
-    "license": "CC-BY-4.0",
-    "license_url": "https://creativecommons.org/licenses/by/4.0/",
-    "raw_license": "by",
-    "original_uid": "a7546b977ecc4705b36c2f50d5ca7899",
-    "author": "Fei.Xia",
-    "author_url": "https://sketchfab.com/Fei.Xia",
-    "viewer_url": "https://sketchfab.com/3d-models/a7546b977ecc4705b36c2f50d5ca7899",
-    "description": "This is a bob model I made with love and passion",
-    "tags": [],
-    "file": "objects/test_00132/model.glb",
-    "file_size_bytes": 81447468,
-    "stats": {
-      "face_count": 0,
-      "vertex_count": 2907955
-    },
-    "validation": {
-      "status": "FAIL",
-      "num_vertices": 0,
-      "num_faces": 0,
-      "max_extent": 0.0,
-      "has_textures": false,
-      "issues": [
-        "Empty geometry: 0 vertices, 0 faces"
-      ],
-      "warnings": []
-    },
     "is_duplicate": false
   },
   "agisoft_00133": {
@@ -4097,9 +3996,7 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false,
-    "num_rendered_views": 12,
-    "is_augmented": true
+    "is_duplicate": false
   },
   "palm_00134": {
     "id": "palm_00134",
@@ -4471,9 +4368,7 @@
         "Model is placed far from origin (center offset: 513.66)"
       ]
     },
-    "is_duplicate": false,
-    "num_rendered_views": 12,
-    "is_augmented": true
+    "is_duplicate": false
   },
   "characters_creatures_00145": {
     "id": "characters_creatures_00145",
@@ -5473,9 +5368,7 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false,
-    "num_rendered_views": 12,
-    "is_augmented": true
+    "is_duplicate": false
   },
   "sigma_00174": {
     "id": "sigma_00174",
@@ -5645,9 +5538,7 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false,
-    "num_rendered_views": 12,
-    "is_augmented": true
+    "is_duplicate": false
   },
   "stair_00179": {
     "id": "stair_00179",
@@ -6793,9 +6684,7 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false,
-    "num_rendered_views": 12,
-    "is_augmented": true
+    "is_duplicate": false
   },
   "bed_00212": {
     "id": "bed_00212",
@@ -6859,9 +6748,7 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false,
-    "num_rendered_views": 12,
-    "is_augmented": true
+    "is_duplicate": false
   },
   "science_technology_00214": {
     "id": "science_technology_00214",

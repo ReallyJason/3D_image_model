@@ -1,17 +1,14 @@
 """
-Dataset Organizer for 3D Objects.
+Dataset Organizer: structures raw 3D assets into a standardized dataset directory.
 
-Organizes 3D models into a clean, standardized dataset directory structure:
-
+Format:
 my_dataset/
 ├── objects/
-│   ├── <object_id>/
+│   ├── <category>_<id>/
 │   │   ├── model.glb
 │   │   └── metadata.json
 │   └── ...
 └── metadata.json
-
-Preserves all source IDs, categories, licensing information, and mesh statistics.
 """
 
 import os
@@ -22,13 +19,12 @@ import ssl
 import certifi
 from typing import Dict, List, Optional, Any
 
-# Ensure SSL certificates are configured
 ssl._create_default_https_context = lambda: ssl.create_default_context(cafile=certifi.where())
 
 import objaverse
 
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-DEFAULT_DATASET_DIR = os.path.join(PROJECT_DIR, "my_dataset")
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DEFAULT_DATASET_DIR = os.path.join(PROJECT_ROOT, "my_dataset")
 
 LICENSE_MAP = {
     "by": {"code": "CC-BY-4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
@@ -53,23 +49,19 @@ def sanitize_string(text: str, max_len: int = 30) -> str:
 
 def determine_category(annotation: Dict[str, Any]) -> str:
     """Extract the best category name from Objaverse annotation."""
-    # 1. Check categories list
     categories = annotation.get("categories", [])
     if categories and isinstance(categories, list):
         cat_name = categories[0].get("name") or categories[0].get("slug")
         if cat_name:
             return sanitize_string(cat_name)
-    
-    # 2. Check tags list
+
     tags = annotation.get("tags", [])
     if tags and isinstance(tags, list):
         for tag in tags:
             tag_name = tag.get("name") if isinstance(tag, dict) else str(tag)
-            # Skip noise or generic tags
             if tag_name and not tag_name.isdigit() and len(tag_name) >= 3 and "draftpunk" not in tag_name:
                 return sanitize_string(tag_name)
-    
-    # 3. Use sanitized title
+
     name = annotation.get("name", "")
     if name:
         clean = sanitize_string(name)
@@ -78,7 +70,7 @@ def determine_category(annotation: Dict[str, Any]) -> str:
             if parts:
                 return parts[0]
             return clean
-            
+
     return "object"
 
 def format_license_info(raw_license: Optional[str]) -> Dict[str, str]:
@@ -103,14 +95,12 @@ def organize_dataset(
 ) -> Dict[str, Any]:
     """
     Downloads (if needed) and organizes 3D models into dataset_dir.
-    
     Returns master metadata dictionary.
     """
     objects_dir = os.path.join(dataset_dir, "objects")
     os.makedirs(objects_dir, exist_ok=True)
     master_metadata_path = os.path.join(dataset_dir, "metadata.json")
 
-    # Load existing master metadata if present
     master_metadata: Dict[str, Any] = {}
     if os.path.exists(master_metadata_path):
         try:
@@ -119,7 +109,6 @@ def organize_dataset(
         except Exception:
             master_metadata = {}
 
-    # If UIDs not provided, load initial UIDs from Objaverse
     if uids is None:
         print("Fetching UIDs from Objaverse...")
         all_uids = objaverse.load_uids()
@@ -134,7 +123,6 @@ def organize_dataset(
     print("Fetching/verifying downloaded GLB files...")
     cached_objects = objaverse.load_objects(uids=uids, download_processes=4)
 
-    # Existing count for ID numbering
     existing_ids = set(master_metadata.keys())
     start_index = len(existing_ids) + 1
 
@@ -151,7 +139,7 @@ def organize_dataset(
         category = determine_category(anno)
         object_id = f"{category}_{i:05d}"
 
-        # If this UID is already in master_metadata, reuse its ID
+        # Reuse existing ID if UID was already indexed
         for ex_id, ex_meta in master_metadata.items():
             if ex_meta.get("original_uid") == uid:
                 object_id = ex_id
@@ -192,7 +180,7 @@ def organize_dataset(
             }
         }
 
-        # Preserve any existing validation or views metadata
+        # Preserve existing validation or views metadata
         if object_id in master_metadata:
             if "validation" in master_metadata[object_id]:
                 obj_metadata["validation"] = master_metadata[object_id]["validation"]
@@ -204,12 +192,10 @@ def organize_dataset(
 
         master_metadata[object_id] = obj_metadata
 
-        # Also write local metadata.json inside the object directory
         local_meta_path = os.path.join(object_dir, "metadata.json")
         with open(local_meta_path, "w", encoding="utf-8") as f:
             json.dump(obj_metadata, f, indent=2)
 
-    # Save root metadata.json
     with open(master_metadata_path, "w", encoding="utf-8") as f:
         json.dump(master_metadata, f, indent=2)
 
@@ -222,8 +208,8 @@ def organize_dataset(
 
 if __name__ == "__main__":
     import argparse
-    parser = argparse.ArgumentParser(description="Organize 3D models into my_dataset structure")
-    parser.add_argument("--limit", type=int, default=20, help="Number of objects to organize (default: 20)")
+    parser = argparse.ArgumentParser(description="Organize 3D models into standardized dataset structure")
+    parser.add_argument("--limit", type=int, default=20, help="Number of objects to organize")
     parser.add_argument("--dataset-dir", type=str, default=DEFAULT_DATASET_DIR, help="Target dataset directory")
     args = parser.parse_args()
 

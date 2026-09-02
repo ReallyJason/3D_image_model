@@ -1,0 +1,10 @@
+{
+  "total_verified": 195,
+  "train_count": 163,
+  "val_count": 21,
+  "test_count": 11,
+  "train_percent": 83.6,
+  "val_percent": 10.8,
+  "test_percent": 5.6,
+  "categories_count": 86
+}
