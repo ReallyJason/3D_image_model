@@ -1,0 +1,501 @@
+{
+  "stair_00001": {
+    "id": "stair_00001",
+    "category": "stair",
+    "name": "Iain_Dawson_Kew_Road_Formby",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "8476c4170df24cf5bbe6967222d1a42d",
+    "author": "Alan Grice Staircase Co Ltd",
+    "author_url": "https://sketchfab.com/agrice",
+    "viewer_url": "https://sketchfab.com/3d-models/8476c4170df24cf5bbe6967222d1a42d",
+    "description": "http://staircon.com/ <br>Export by <b>Alan Grice Staircase Co. Ltd</b> (lic 6391)",
+    "tags": [
+      "stair",
+      "staircase",
+      "staircon"
+    ],
+    "file": "objects/stair_00001/model.glb",
+    "file_size_bytes": 1546940,
+    "stats": {
+      "face_count": 14608,
+      "vertex_count": 7309
+    },
+    "validation": {
+      "status": "PASS",
+      "num_vertices": 19008,
+      "num_faces": 14337,
+      "max_extent": 8.508,
+      "has_textures": true,
+      "issues": [],
+      "warnings": []
+    },
+    "num_rendered_views": 12
+  },
+  "toy_00002": {
+    "id": "toy_00002",
+    "category": "toy",
+    "name": "4 Toy",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "8ff7f1f2465347cd8b80c9b206c2781e",
+    "author": "SergeyB",
+    "author_url": "https://sketchfab.com/SergeyB",
+    "viewer_url": "https://sketchfab.com/3d-models/8ff7f1f2465347cd8b80c9b206c2781e",
+    "description": "Home task for XYZ School",
+    "tags": [
+      "xyz-school-draftpunk-3"
+    ],
+    "file": "objects/toy_00002/model.glb",
+    "file_size_bytes": 224304,
+    "stats": {
+      "face_count": 6716,
+      "vertex_count": 3376
+    },
+    "validation": {
+      "status": "PASS",
+      "num_vertices": 4346,
+      "num_faces": 6700,
+      "max_extent": 5.3164,
+      "has_textures": true,
+      "issues": [],
+      "warnings": []
+    },
+    "num_rendered_views": 12
+  },
+  "p12323a_00003": {
+    "id": "p12323a_00003",
+    "category": "p12323a",
+    "name": "P12323A Posi Joist Layout",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "c786b97d08b94d02a1fa3b87d2e86cf1",
+    "author": "valb",
+    "author_url": "https://sketchfab.com/valb",
+    "viewer_url": "https://sketchfab.com/3d-models/c786b97d08b94d02a1fa3b87d2e86cf1",
+    "description": "Posi Joist Layout",
+    "tags": [],
+    "file": "objects/p12323a_00003/model.glb",
+    "file_size_bytes": 8795212,
+    "stats": {
+      "face_count": 169681,
+      "vertex_count": 133835
+    },
+    "validation": {
+      "status": "WARN",
+      "num_vertices": 203579,
+      "num_faces": 169681,
+      "max_extent": 18495.0,
+      "has_textures": true,
+      "issues": [],
+      "warnings": [
+        "Model has unusually large dimensions (max extent 1.85e+04)"
+      ]
+    },
+    "num_rendered_views": 12
+  },
+  "characters_creatures_00004": {
+    "id": "characters_creatures_00004",
+    "category": "characters_creatures",
+    "name": "Golden Whitty ver-2",
+    "source": "objaverse",
+    "license": "CC-BY-NC-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "raw_license": "by-nc",
+    "original_uid": "139331da744542009f146018fd0e05f4",
+    "author": "SunsetShimmer1327",
+    "author_url": "https://sketchfab.com/SunsetShimmer1327",
+    "viewer_url": "https://sketchfab.com/3d-models/139331da744542009f146018fd0e05f4",
+    "description": "There. For free, not selling, credit goes to poppychips. Not selling because he/she said so(i meant by poppychips).  Please understand.",
+    "tags": [
+      "fridaynightfunkin",
+      "whitty"
+    ],
+    "file": "objects/characters_creatures_00004/model.glb",
+    "file_size_bytes": 5247004,
+    "stats": {
+      "face_count": 10208,
+      "vertex_count": 5170
+    },
+    "validation": {
+      "status": "WARN",
+      "num_vertices": 5792,
+      "num_faces": 10208,
+      "max_extent": 28909.2666,
+      "has_textures": true,
+      "issues": [],
+      "warnings": [
+        "Model has unusually large dimensions (max extent 2.89e+04)"
+      ]
+    },
+    "num_rendered_views": 12
+  },
+  "sketch_00005": {
+    "id": "sketch_00005",
+    "category": "sketch",
+    "name": "Sketch Fab Robot",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "be2c02614d774f9da672dfdc44015219",
+    "author": "zakduffy",
+    "author_url": "https://sketchfab.com/zakduffy",
+    "viewer_url": "https://sketchfab.com/3d-models/be2c02614d774f9da672dfdc44015219",
+    "description": "",
+    "tags": [],
+    "file": "objects/sketch_00005/model.glb",
+    "file_size_bytes": 1163764,
+    "stats": {
+      "face_count": 23578,
+      "vertex_count": 10631
+    },
+    "validation": {
+      "status": "PASS",
+      "num_vertices": 22010,
+      "num_faces": 21783,
+      "max_extent": 24.5606,
+      "has_textures": true,
+      "issues": [],
+      "warnings": []
+    },
+    "num_rendered_views": 12
+  },
+  "cars_vehicles_00006": {
+    "id": "cars_vehicles_00006",
+    "category": "cars_vehicles",
+    "name": "Safety Campus 06-2020",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "efd35e7d21ac482688c294e3b6c9f74e",
+    "author": "Robbert Kuijper",
+    "author_url": "https://sketchfab.com/robbertkuijper",
+    "viewer_url": "https://sketchfab.com/3d-models/efd35e7d21ac482688c294e3b6c9f74e",
+    "description": "Twente safety campus",
+    "tags": [
+      "train",
+      "crisis",
+      "photogrammetry-drone",
+      "photogrammetry"
+    ],
+    "file": "objects/cars_vehicles_00006/model.glb",
+    "file_size_bytes": 40000016,
+    "stats": {
+      "face_count": 847486,
+      "vertex_count": 561768
+    },
+    "validation": {
+      "status": "PASS",
+      "num_vertices": 647693,
+      "num_faces": 847486,
+      "max_extent": 127.2101,
+      "has_textures": true,
+      "issues": [],
+      "warnings": []
+    },
+    "num_rendered_views": 12
+  },
+  "12135_00007": {
+    "id": "12135_00007",
+    "category": "12135",
+    "name": "12135",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "21d5f90dbc9f4f229b0faa7b56b67f3e",
+    "author": "sjmtimberdesigns",
+    "author_url": "https://sketchfab.com/sjmtimberdesigns",
+    "viewer_url": "https://sketchfab.com/3d-models/21d5f90dbc9f4f229b0faa7b56b67f3e",
+    "description": "",
+    "tags": [],
+    "file": "objects/12135_00007/model.glb",
+    "file_size_bytes": 2225444,
+    "stats": {
+      "face_count": 12124,
+      "vertex_count": 12516
+    },
+    "validation": {
+      "status": "PASS",
+      "num_vertices": 15002,
+      "num_faces": 8732,
+      "max_extent": 17.0,
+      "has_textures": true,
+      "issues": [],
+      "warnings": []
+    },
+    "num_rendered_views": 12
+  },
+  "trnio_00008": {
+    "id": "trnio_00008",
+    "category": "trnio",
+    "name": "A TRNIO Model",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "dcd33159a0864de388de3a08f55e604a",
+    "author": "Tobias Mixer",
+    "author_url": "https://sketchfab.com/tmixer",
+    "viewer_url": "https://sketchfab.com/3d-models/dcd33159a0864de388de3a08f55e604a",
+    "description": "Get the Trnio app at www.trnio.com",
+    "tags": [
+      "trnio",
+      "3dscan"
+    ],
+    "file": "objects/trnio_00008/model.glb",
+    "file_size_bytes": 8200236,
+    "stats": {
+      "face_count": 202466,
+      "vertex_count": 113324
+    },
+    "validation": {
+      "status": "PASS",
+      "num_vertices": 122619,
+      "num_faces": 202454,
+      "max_extent": 9.0447,
+      "has_textures": true,
+      "issues": [],
+      "warnings": []
+    },
+    "num_rendered_views": 12
+  },
+  "people_00009": {
+    "id": "people_00009",
+    "category": "people",
+    "name": "dtu_scan_39_lighting_2",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "a7ad32b5d4d84ee5a40ebbd86da4dbe4",
+    "author": "Chris Heinrich",
+    "author_url": "https://sketchfab.com/chrispheinrich",
+    "viewer_url": "https://sketchfab.com/3d-models/a7ad32b5d4d84ee5a40ebbd86da4dbe4",
+    "description": "Prob threshold: 0.05, Disp threshold: 0.1, Num consistent: 6.0",
+    "tags": [
+      "bob",
+      "video-games",
+      "character"
+    ],
+    "file": "objects/people_00009/model.glb",
+    "file_size_bytes": 417096,
+    "stats": {
+      "face_count": 0,
+      "vertex_count": 14839
+    },
+    "validation": {
+      "status": "FAIL",
+      "num_vertices": 0,
+      "num_faces": 0,
+      "max_extent": 0.0,
+      "has_textures": false,
+      "issues": [
+        "No 3D polygonal mesh found (only curves/paths/empty)"
+      ],
+      "warnings": []
+    }
+  },
+  "lorax_00010": {
+    "id": "lorax_00010",
+    "category": "lorax",
+    "name": "Lorax Target",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "7d6a14874eed48c2b720f0d1adfe6dd9",
+    "author": "saltoc in training",
+    "author_url": "https://sketchfab.com/saltoc",
+    "viewer_url": "https://sketchfab.com/3d-models/7d6a14874eed48c2b720f0d1adfe6dd9",
+    "description": "",
+    "tags": [],
+    "file": "objects/lorax_00010/model.glb",
+    "file_size_bytes": 574144,
+    "stats": {
+      "face_count": 646,
+      "vertex_count": 329
+    },
+    "validation": {
+      "status": "PASS",
+      "num_vertices": 1069,
+      "num_faces": 646,
+      "max_extent": 70.4506,
+      "has_textures": true,
+      "issues": [],
+      "warnings": []
+    },
+    "num_rendered_views": 12
+  },
+  "cultural_heritage_history_00011": {
+    "id": "cultural_heritage_history_00011",
+    "category": "cultural_heritage_history",
+    "name": "elf_bow",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "71c71dd1dc754a8e9a84d43f5f3af7b9",
+    "author": "lord_DMI",
+    "author_url": "https://sketchfab.com/lord_DMI",
+    "viewer_url": "https://sketchfab.com/3d-models/71c71dd1dc754a8e9a84d43f5f3af7b9",
+    "description": "fantasy bow \nelfs bow made by me \nturn cycles in blender to see the best resolution",
+    "tags": [],
+    "file": "objects/cultural_heritage_history_00011/model.glb",
+    "file_size_bytes": 143996168,
+    "stats": {
+      "face_count": 4704216,
+      "vertex_count": 2353194
+    },
+    "validation": {
+      "status": "PASS",
+      "num_vertices": 3642999,
+      "num_faces": 4704188,
+      "max_extent": 5.5438,
+      "has_textures": true,
+      "issues": [],
+      "warnings": []
+    },
+    "num_rendered_views": 12
+  },
+  "places_travel_00012": {
+    "id": "places_travel_00012",
+    "category": "places_travel",
+    "name": "Hunedoara",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "1ce26e72d2dc4c66aca37a8124671a2f",
+    "author": "FILMARECUDRONA",
+    "author_url": "https://sketchfab.com/FILMARECUDRONA",
+    "viewer_url": "https://sketchfab.com/3d-models/1ce26e72d2dc4c66aca37a8124671a2f",
+    "description": "",
+    "tags": [
+      "hunedoara"
+    ],
+    "file": "objects/places_travel_00012/model.glb",
+    "file_size_bytes": 35128780,
+    "stats": {
+      "face_count": 999999,
+      "vertex_count": 500436
+    },
+    "validation": {
+      "status": "PASS",
+      "num_vertices": 684817,
+      "num_faces": 999999,
+      "max_extent": 1415.725,
+      "has_textures": true,
+      "issues": [],
+      "warnings": []
+    },
+    "num_rendered_views": 12
+  },
+  "animals_pets_00013": {
+    "id": "animals_pets_00013",
+    "category": "animals_pets",
+    "name": "Orange fish",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "3564578cde5c42279ead680df1619e3c",
+    "author": "assetfactory",
+    "author_url": "https://sketchfab.com/assetfactory",
+    "viewer_url": "https://sketchfab.com/3d-models/3564578cde5c42279ead680df1619e3c",
+    "description": "Midpoly model of an orange fish.\n\nThis model is part of a [FISH PACK](https://skfb.ly/o9zLu)",
+    "tags": [
+      "fish",
+      "sealife",
+      "sea",
+      "orangefish",
+      "sea-props"
+    ],
+    "file": "objects/animals_pets_00013/model.glb",
+    "file_size_bytes": 1210048,
+    "stats": {
+      "face_count": 10604,
+      "vertex_count": 5628
+    },
+    "validation": {
+      "status": "PASS",
+      "num_vertices": 5858,
+      "num_faces": 10602,
+      "max_extent": 4.226,
+      "has_textures": true,
+      "issues": [],
+      "warnings": []
+    },
+    "num_rendered_views": 12
+  },
+  "bbffbx1_00014": {
+    "id": "bbffbx1_00014",
+    "category": "bbffbx1",
+    "name": "Bbffbx1",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "f9e1f80dab694ef1a3a85f135266c46f",
+    "author": "Nhermitanio",
+    "author_url": "https://sketchfab.com/Nhermitanio",
+    "viewer_url": "https://sketchfab.com/3d-models/f9e1f80dab694ef1a3a85f135266c46f",
+    "description": "",
+    "tags": [],
+    "file": "objects/bbffbx1_00014/model.glb",
+    "file_size_bytes": 680628,
+    "stats": {
+      "face_count": 4082,
+      "vertex_count": 2043
+    },
+    "validation": {
+      "status": "PASS",
+      "num_vertices": 8137,
+      "num_faces": 4082,
+      "max_extent": 595.2204,
+      "has_textures": true,
+      "issues": [],
+      "warnings": []
+    },
+    "num_rendered_views": 12
+  },
+  "20th_00015": {
+    "id": "20th_00015",
+    "category": "20th",
+    "name": "20th Century Fox logo The Cannonball Run variant",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "1e782aa8ca9e4dada94aabcb463086ae",
+    "author": "BlueTheTCFandFSPandTCSFan2022",
+    "author_url": "https://sketchfab.com/Ilove20thCenturyFox",
+    "viewer_url": "https://sketchfab.com/3d-models/1e782aa8ca9e4dada94aabcb463086ae",
+    "description": "",
+    "tags": [],
+    "file": "objects/20th_00015/model.glb",
+    "file_size_bytes": 714544,
+    "stats": {
+      "face_count": 15978,
+      "vertex_count": 8332
+    },
+    "validation": {
+      "status": "PASS",
+      "num_vertices": 15596,
+      "num_faces": 15974,
+      "max_extent": 11.9548,
+      "has_textures": true,
+      "issues": [],
+      "warnings": []
+    },
+    "num_rendered_views": 12
+  }
+}
