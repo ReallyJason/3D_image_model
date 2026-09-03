@@ -524,6 +524,8 @@ def render_dataset(
     resolution: int = 512,
     only_valid: bool = True,
     augment: bool = False,
+    category: Optional[str] = None,
+    force: bool = False,
     limit: Optional[int] = None
 ) -> None:
     objects_dir = os.path.join(dataset_dir, "objects")
@@ -542,6 +544,10 @@ def render_dataset(
         f for f in os.listdir(objects_dir)
         if os.path.isdir(os.path.join(objects_dir, f)) and not f.startswith('.')
     ])
+
+    if category:
+        cat_clean = category.lower().strip()
+        object_folders = [f for f in object_folders if cat_clean in f.lower()]
 
     if limit is not None:
         object_folders = object_folders[:limit]
@@ -566,6 +572,13 @@ def render_dataset(
         obj_dir = os.path.join(objects_dir, obj_id)
         glb_path = os.path.join(obj_dir, "model.glb")
         obj_meta_path = os.path.join(obj_dir, "metadata.json")
+
+        # Skip if already rendered
+        if not force:
+            existing_views = [f for f in os.listdir(obj_dir) if f.startswith("view_") and f.endswith(".png")]
+            if len(existing_views) >= num_views * len(elevations):
+                skipped_count += 1
+                continue
 
         obj_meta: Dict[str, Any] = {}
         if os.path.exists(obj_meta_path):

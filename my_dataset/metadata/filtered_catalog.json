@@ -232,9 +232,9 @@
       "issues": [],
       "warnings": []
     },
-    "num_rendered_views": 4,
-    "is_augmented": true,
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "trnio_00008": {
     "id": "trnio_00008",
@@ -400,7 +400,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "bbffbx1_00014": {
     "id": "bbffbx1_00014",
@@ -462,7 +464,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "agisoft_00031": {
     "id": "agisoft_00031",
@@ -496,7 +500,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "weapons_military_00032": {
     "id": "weapons_military_00032",
@@ -531,7 +537,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "architecture_00033": {
     "id": "architecture_00033",
@@ -564,7 +572,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "test4_00034": {
     "id": "test4_00034",
@@ -595,7 +605,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "pliers_00035": {
     "id": "pliers_00035",
@@ -626,7 +638,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "animals_pets_00036": {
     "id": "animals_pets_00036",
@@ -660,6 +674,8 @@
       "issues": [],
       "warnings": []
     },
+    "num_rendered_views": 12,
+    "is_augmented": true,
     "is_duplicate": false
   },
   "art_abstract_00037": {
@@ -697,7 +713,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "dragon_00038": {
     "id": "dragon_00038",
@@ -728,7 +746,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "modelagem_00039": {
     "id": "modelagem_00039",
@@ -762,7 +782,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "architecture_00040": {
     "id": "architecture_00040",
@@ -793,7 +815,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "fashion_style_00041": {
     "id": "fashion_style_00041",
@@ -831,7 +855,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "scaniverse_00042": {
     "id": "scaniverse_00042",
@@ -864,7 +890,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "characters_creatures_00043": {
     "id": "characters_creatures_00043",
@@ -900,7 +928,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "architecture_00044": {
     "id": "architecture_00044",
@@ -933,7 +963,9 @@
         "Model has unusually large dimensions (max extent 1.58e+04)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "animals_pets_00045": {
     "id": "animals_pets_00045",
@@ -966,6 +998,8 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
+    "num_rendered_views": 12,
+    "is_augmented": true,
     "is_duplicate": false
   },
   "batu000027_00046": {
@@ -999,7 +1033,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "diboine_00047": {
     "id": "diboine_00047",
@@ -1032,7 +1068,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "pamir_00048": {
     "id": "pamir_00048",
@@ -1067,7 +1105,9 @@
         "Model has unusually large dimensions (max extent 1.45e+04)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "nature_plants_00049": {
     "id": "nature_plants_00049",
@@ -1104,7 +1144,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "weapons_military_00050": {
     "id": "weapons_military_00050",
@@ -1135,7 +1177,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "cultural_heritage_history_00051": {
     "id": "cultural_heritage_history_00051",
@@ -1169,7 +1213,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "bench_00052": {
     "id": "bench_00052",
@@ -1202,7 +1248,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "art_abstract_00053": {
     "id": "art_abstract_00053",
@@ -1244,7 +1292,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "furniture_home_00054": {
     "id": "furniture_home_00054",
@@ -1289,7 +1339,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "architecture_00055": {
     "id": "architecture_00055",
@@ -1322,7 +1374,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "stair_00056": {
     "id": "stair_00056",
@@ -1357,7 +1411,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "cultural_heritage_history_00057": {
     "id": "cultural_heritage_history_00057",
@@ -1394,7 +1450,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "characters_creatures_00058": {
     "id": "characters_creatures_00058",
@@ -1429,7 +1487,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "architecture_00059": {
     "id": "architecture_00059",
@@ -1465,7 +1525,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "stocksbridge_00060": {
     "id": "stocksbridge_00060",
@@ -1498,7 +1560,9 @@
         "Model has unusually large dimensions (max extent 1.27e+04)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "cars_vehicles_00061": {
     "id": "cars_vehicles_00061",
@@ -1534,7 +1598,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "electronics_gadgets_00062": {
     "id": "electronics_gadgets_00062",
@@ -1580,7 +1646,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "weapons_military_00063": {
     "id": "weapons_military_00063",
@@ -1615,7 +1683,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "lidar_00064": {
     "id": "lidar_00064",
@@ -1646,7 +1716,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "characters_creatures_00065": {
     "id": "characters_creatures_00065",
@@ -1680,7 +1752,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "mc_00066": {
     "id": "mc_00066",
@@ -1713,7 +1787,9 @@
         "37166 degenerate faces (82.5%)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "cars_vehicles_00067": {
     "id": "cars_vehicles_00067",
@@ -1746,7 +1822,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "weapons_military_00068": {
     "id": "weapons_military_00068",
@@ -1780,7 +1858,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "cultural_heritage_history_00069": {
     "id": "cultural_heritage_history_00069",
@@ -1851,7 +1931,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "constantine_00070": {
     "id": "constantine_00070",
@@ -1886,7 +1968,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "hw4_00071": {
     "id": "hw4_00071",
@@ -1917,7 +2001,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "cars_vehicles_00072": {
     "id": "cars_vehicles_00072",
@@ -1955,7 +2041,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "sketchup_00073": {
     "id": "sketchup_00073",
@@ -1988,7 +2076,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "characters_creatures_00074": {
     "id": "characters_creatures_00074",
@@ -2024,7 +2114,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "architecture_00075": {
     "id": "architecture_00075",
@@ -2060,7 +2152,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "metashape_00076": {
     "id": "metashape_00076",
@@ -2094,7 +2188,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "object_00077": {
     "id": "object_00077",
@@ -2125,7 +2221,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "au_00078": {
     "id": "au_00078",
@@ -2159,7 +2257,9 @@
         "20692 degenerate faces (30.5%)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "architecture_00079": {
     "id": "architecture_00079",
@@ -2192,7 +2292,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "furniture_home_00080": {
     "id": "furniture_home_00080",
@@ -2225,7 +2327,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "nature_plants_00081": {
     "id": "nature_plants_00081",
@@ -2277,7 +2381,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "virg_00082": {
     "id": "virg_00082",
@@ -2308,7 +2414,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "3dlivescannerpro_00083": {
     "id": "3dlivescannerpro_00083",
@@ -2342,6 +2450,8 @@
       "issues": [],
       "warnings": []
     },
+    "num_rendered_views": 12,
+    "is_augmented": true,
     "is_duplicate": false
   },
   "ortiz1802_00084": {
@@ -2375,7 +2485,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "stair_00085": {
     "id": "stair_00085",
@@ -2410,7 +2522,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "characters_creatures_00086": {
     "id": "characters_creatures_00086",
@@ -2444,7 +2558,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "ch_00087": {
     "id": "ch_00087",
@@ -2475,7 +2591,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "animals_pets_00089": {
     "id": "animals_pets_00089",
@@ -2509,6 +2627,8 @@
       "issues": [],
       "warnings": []
     },
+    "num_rendered_views": 12,
+    "is_augmented": true,
     "is_duplicate": false
   },
   "wasp_00090": {
@@ -2544,7 +2664,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "furniture_home_00091": {
     "id": "furniture_home_00091",
@@ -2585,7 +2707,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "object_00092": {
     "id": "object_00092",
@@ -2616,7 +2740,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "fashion_style_00093": {
     "id": "fashion_style_00093",
@@ -2653,7 +2779,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "weapons_military_00094": {
     "id": "weapons_military_00094",
@@ -2686,7 +2814,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "animals_pets_00095": {
     "id": "animals_pets_00095",
@@ -2724,6 +2854,8 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
+    "num_rendered_views": 12,
+    "is_augmented": true,
     "is_duplicate": false
   },
   "testmaja_00098": {
@@ -2755,7 +2887,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "weapons_military_00099": {
     "id": "weapons_military_00099",
@@ -2797,7 +2931,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "architecture_00100": {
     "id": "architecture_00100",
@@ -2828,7 +2964,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "architecture_00101": {
     "id": "architecture_00101",
@@ -2866,7 +3004,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "art_abstract_00102": {
     "id": "art_abstract_00102",
@@ -2900,7 +3040,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "cultural_heritage_history_00103": {
     "id": "cultural_heritage_history_00103",
@@ -2937,7 +3079,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "characters_creatures_00104": {
     "id": "characters_creatures_00104",
@@ -2970,7 +3114,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "paloma_00105": {
     "id": "paloma_00105",
@@ -3003,7 +3149,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "gepard_00106": {
     "id": "gepard_00106",
@@ -3034,7 +3182,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "characters_creatures_00107": {
     "id": "characters_creatures_00107",
@@ -3067,7 +3217,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "agisoft_00108": {
     "id": "agisoft_00108",
@@ -3101,6 +3253,8 @@
       "issues": [],
       "warnings": []
     },
+    "num_rendered_views": 12,
+    "is_augmented": true,
     "is_duplicate": false
   },
   "kepler62_00109": {
@@ -3134,7 +3288,9 @@
         "576448 degenerate faces (98.8%)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "architecture_00110": {
     "id": "architecture_00110",
@@ -3178,7 +3334,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "cars_vehicles_00111": {
     "id": "cars_vehicles_00111",
@@ -3211,7 +3369,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "design_00112": {
     "id": "design_00112",
@@ -3246,7 +3406,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "characters_creatures_00113": {
     "id": "characters_creatures_00113",
@@ -3286,7 +3448,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "weapons_military_00114": {
     "id": "weapons_military_00114",
@@ -3323,7 +3487,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "electronics_gadgets_00115": {
     "id": "electronics_gadgets_00115",
@@ -3360,7 +3526,9 @@
         "Model is placed far from origin (center offset: 3524.13)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "art_abstract_00116": {
     "id": "art_abstract_00116",
@@ -3394,7 +3562,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "food_drink_00117": {
     "id": "food_drink_00117",
@@ -3431,7 +3601,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "sgd_00118": {
     "id": "sgd_00118",
@@ -3470,7 +3642,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "architecture_00119": {
     "id": "architecture_00119",
@@ -3509,7 +3683,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "art_abstract_00120": {
     "id": "art_abstract_00120",
@@ -3550,7 +3726,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "13165_00121": {
     "id": "13165_00121",
@@ -3581,7 +3759,7 @@
       "issues": [],
       "warnings": []
     },
-    "num_rendered_views": 4,
+    "num_rendered_views": 12,
     "is_augmented": true,
     "is_duplicate": false
   },
@@ -3616,7 +3794,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "figura_00123": {
     "id": "figura_00123",
@@ -3649,7 +3829,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "shoemaker_00124": {
     "id": "shoemaker_00124",
@@ -3680,7 +3862,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "cultural_heritage_history_00125": {
     "id": "cultural_heritage_history_00125",
@@ -3714,7 +3898,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "168_3_00126": {
     "id": "168_3_00126",
@@ -3745,7 +3931,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "stair_00127": {
     "id": "stair_00127",
@@ -3780,7 +3968,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "animals_pets_00128": {
     "id": "animals_pets_00128",
@@ -3815,7 +4005,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "design_00129": {
     "id": "design_00129",
@@ -3850,7 +4042,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "architecture_00130": {
     "id": "architecture_00130",
@@ -3886,7 +4080,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "animals_pets_00131": {
     "id": "animals_pets_00131",
@@ -3962,7 +4158,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "agisoft_00133": {
     "id": "agisoft_00133",
@@ -3996,7 +4194,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "palm_00134": {
     "id": "palm_00134",
@@ -4029,7 +4229,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "barv_00135": {
     "id": "barv_00135",
@@ -4060,7 +4262,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "furniture_home_00136": {
     "id": "furniture_home_00136",
@@ -4093,7 +4297,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "mechanics_00137": {
     "id": "mechanics_00137",
@@ -4126,7 +4332,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "pamir_00138": {
     "id": "pamir_00138",
@@ -4161,7 +4369,9 @@
         "Model has unusually large dimensions (max extent 2.32e+04)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "composite_00139": {
     "id": "composite_00139",
@@ -4192,7 +4402,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "architecture_00140": {
     "id": "architecture_00140",
@@ -4226,7 +4438,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "characters_creatures_00141": {
     "id": "characters_creatures_00141",
@@ -4267,7 +4481,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "metashape_00142": {
     "id": "metashape_00142",
@@ -4301,7 +4517,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "science_technology_00143": {
     "id": "science_technology_00143",
@@ -4335,7 +4553,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "anders_00144": {
     "id": "anders_00144",
@@ -4368,7 +4588,9 @@
         "Model is placed far from origin (center offset: 513.66)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "characters_creatures_00145": {
     "id": "characters_creatures_00145",
@@ -4402,7 +4624,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "fitness_00146": {
     "id": "fitness_00146",
@@ -4448,7 +4672,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "architecture_00147": {
     "id": "architecture_00147",
@@ -4479,7 +4705,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "polycam_00148": {
     "id": "polycam_00148",
@@ -4512,7 +4740,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "design_00149": {
     "id": "design_00149",
@@ -4547,7 +4777,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "characters_creatures_00150": {
     "id": "characters_creatures_00150",
@@ -4583,7 +4815,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "cultural_heritage_history_00151": {
     "id": "cultural_heritage_history_00151",
@@ -4618,7 +4852,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "object_00152": {
     "id": "object_00152",
@@ -4651,7 +4887,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "electronics_gadgets_00153": {
     "id": "electronics_gadgets_00153",
@@ -4685,7 +4923,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "mha21_00154": {
     "id": "mha21_00154",
@@ -4718,7 +4958,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "cultural_heritage_history_00155": {
     "id": "cultural_heritage_history_00155",
@@ -4753,7 +4995,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "architecture_00156": {
     "id": "architecture_00156",
@@ -4789,7 +5033,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "polycam_00157": {
     "id": "polycam_00157",
@@ -4822,7 +5068,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "elevationapi_00158": {
     "id": "elevationapi_00158",
@@ -4858,7 +5106,9 @@
         "Model is placed far from origin (center offset: 5034686.24)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "furniture_home_00159": {
     "id": "furniture_home_00159",
@@ -4895,7 +5145,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "est_00160": {
     "id": "est_00160",
@@ -4926,7 +5178,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "metashape_00161": {
     "id": "metashape_00161",
@@ -4960,7 +5214,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "architecture_00162": {
     "id": "architecture_00162",
@@ -4993,7 +5249,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "nested_00163": {
     "id": "nested_00163",
@@ -5026,7 +5284,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "furniture_home_00164": {
     "id": "furniture_home_00164",
@@ -5059,7 +5319,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "weapons_military_00165": {
     "id": "weapons_military_00165",
@@ -5099,7 +5361,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "furniture_home_00166": {
     "id": "furniture_home_00166",
@@ -5134,7 +5398,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "animals_pets_00167": {
     "id": "animals_pets_00167",
@@ -5169,7 +5435,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "cgt_00168": {
     "id": "cgt_00168",
@@ -5200,7 +5468,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "pamir_00169": {
     "id": "pamir_00169",
@@ -5233,7 +5503,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "parcheggio_00170": {
     "id": "parcheggio_00170",
@@ -5264,7 +5536,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "maya_00171": {
     "id": "maya_00171",
@@ -5299,7 +5573,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "architecture_00172": {
     "id": "architecture_00172",
@@ -5334,7 +5610,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "agisoft_00173": {
     "id": "agisoft_00173",
@@ -5368,7 +5646,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "sigma_00174": {
     "id": "sigma_00174",
@@ -5399,7 +5679,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "art_abstract_00175": {
     "id": "art_abstract_00175",
@@ -5437,7 +5719,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "characters_creatures_00176": {
     "id": "characters_creatures_00176",
@@ -5473,7 +5757,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "architecture_00177": {
     "id": "architecture_00177",
@@ -5507,7 +5793,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "ani_00178": {
     "id": "ani_00178",
@@ -5538,7 +5826,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "stair_00179": {
     "id": "stair_00179",
@@ -5573,7 +5863,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "object_00180": {
     "id": "object_00180",
@@ -5606,7 +5898,9 @@
         "Model is placed far from origin (center offset: 4987.77)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "skayf_00181": {
     "id": "skayf_00181",
@@ -5637,7 +5931,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "stair_00182": {
     "id": "stair_00182",
@@ -5672,7 +5968,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "art_abstract_00183": {
     "id": "art_abstract_00183",
@@ -5709,7 +6007,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "architecture_00184": {
     "id": "architecture_00184",
@@ -5744,7 +6044,9 @@
         "Model has unusually large dimensions (max extent 1.89e+04)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "architecture_00185": {
     "id": "architecture_00185",
@@ -5780,7 +6082,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "color_00186": {
     "id": "color_00186",
@@ -5811,7 +6115,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "furniture_home_00187": {
     "id": "furniture_home_00187",
@@ -5846,7 +6152,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "rio_00188": {
     "id": "rio_00188",
@@ -5879,7 +6187,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "art_abstract_00189": {
     "id": "art_abstract_00189",
@@ -5920,7 +6230,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "animals_pets_00190": {
     "id": "animals_pets_00190",
@@ -5961,7 +6273,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "u_00191": {
     "id": "u_00191",
@@ -5994,7 +6308,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "animals_pets_00192": {
     "id": "animals_pets_00192",
@@ -6032,7 +6348,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "architecture_00193": {
     "id": "architecture_00193",
@@ -6069,7 +6387,9 @@
         "Model is placed far from origin (center offset: 81.15)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "science_technology_00194": {
     "id": "science_technology_00194",
@@ -6112,7 +6432,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "bird_00195": {
     "id": "bird_00195",
@@ -6153,7 +6475,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "cultural_heritage_history_00196": {
     "id": "cultural_heritage_history_00196",
@@ -6184,7 +6508,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "architecture_00197": {
     "id": "architecture_00197",
@@ -6217,7 +6543,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "nathalia_00198": {
     "id": "nathalia_00198",
@@ -6248,7 +6576,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "medieval_00199": {
     "id": "medieval_00199",
@@ -6279,7 +6609,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "science_technology_00200": {
     "id": "science_technology_00200",
@@ -6314,7 +6646,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "round_00201": {
     "id": "round_00201",
@@ -6345,7 +6679,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "pamir_00202": {
     "id": "pamir_00202",
@@ -6380,7 +6716,9 @@
         "Model has unusually large dimensions (max extent 1.72e+04)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "architecture_00203": {
     "id": "architecture_00203",
@@ -6413,7 +6751,9 @@
         "Model is placed far from origin (center offset: 74.75)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "u_00204": {
     "id": "u_00204",
@@ -6446,7 +6786,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "pamir_00205": {
     "id": "pamir_00205",
@@ -6481,7 +6823,9 @@
         "Model has unusually large dimensions (max extent 2.37e+04)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "art_abstract_00206": {
     "id": "art_abstract_00206",
@@ -6514,7 +6858,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "sunglasses_00207": {
     "id": "sunglasses_00207",
@@ -6545,7 +6891,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "furniture_home_00208": {
     "id": "furniture_home_00208",
@@ -6580,7 +6928,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "architecture_00209": {
     "id": "architecture_00209",
@@ -6617,7 +6967,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "cultural_heritage_history_00210": {
     "id": "cultural_heritage_history_00210",
@@ -6653,7 +7005,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "2_00211": {
     "id": "2_00211",
@@ -6684,7 +7038,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "bed_00212": {
     "id": "bed_00212",
@@ -6715,7 +7071,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "3dscannerapp_00213": {
     "id": "3dscannerapp_00213",
@@ -6748,7 +7106,9 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "science_technology_00214": {
     "id": "science_technology_00214",
@@ -6790,7 +7150,9 @@
         "No textures or vertex colors detected (geometry only)"
       ]
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
   },
   "design_00215": {
     "id": "design_00215",
@@ -6825,6 +7187,1589 @@
       "issues": [],
       "warnings": []
     },
-    "is_duplicate": false
+    "is_duplicate": false,
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "shoe_00201": {
+    "id": "shoe_00201",
+    "category": "shoe",
+    "name": "Space Shoe",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "52e1c500b21c44d5901b7ed2917e18cb",
+    "author": "defnotdan",
+    "author_url": "https://sketchfab.com/defnotdan",
+    "viewer_url": "https://sketchfab.com/3d-models/52e1c500b21c44d5901b7ed2917e18cb",
+    "description": "",
+    "tags": [
+      "shoe",
+      "vans",
+      "photogrammetry",
+      "blender"
+    ],
+    "file": "objects/shoe_00201/model.glb",
+    "file_size_bytes": 25282048,
+    "stats": {
+      "face_count": 202673,
+      "vertex_count": 106398
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "fashion_style_00202": {
+    "id": "fashion_style_00202",
+    "category": "fashion_style",
+    "name": "Simple Chelsea Boots For Ray II",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "9e6361a32454492e9104c77b772f9cdd",
+    "author": "ChamberSu1996",
+    "author_url": "https://sketchfab.com/chambersu1996",
+    "viewer_url": "https://sketchfab.com/3d-models/9e6361a32454492e9104c77b772f9cdd",
+    "description": "A Part of the daily suit for Ray II:\n\nMaybe basing on a 3d scan model will be better. I may 3d scan a real chelsea boots for detailing in the future. (Can't afford camera and things as reference...~ Photos from internet are good but not usually good enough, while 3d scan models are shortage or I don't find the way to reach?~ )\n\nShaders base on [Weavr - Procedural Textile Shader] licensed CC-BY by [Simon Thommes]. Thanks so much for the brilliant asset!\n\nSupport me post more free and better models by [Patreon](https://www.patreon.com/chambersu), where you also can get the blender project files for free.\n\nI am also doing 3D modeling commissions, and please contact me by chambersu1996@gmail.com for more information~",
+    "tags": [
+      "shoes",
+      "boots",
+      "procedural",
+      "blender"
+    ],
+    "file": "objects/fashion_style_00202/model.glb",
+    "file_size_bytes": 1771132,
+    "stats": {
+      "face_count": 8624,
+      "vertex_count": 4378
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "fashion_style_00203": {
+    "id": "fashion_style_00203",
+    "category": "fashion_style",
+    "name": "Adidas Gazelle [High poly] Free download",
+    "source": "objaverse",
+    "license": "CC-BY-NC-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "raw_license": "by-nc",
+    "original_uid": "a19627c09cbf475dbac76fca44ddfdc7",
+    "author": "Even Topland",
+    "author_url": "https://sketchfab.com/even572",
+    "viewer_url": "https://sketchfab.com/3d-models/a19627c09cbf475dbac76fca44ddfdc7",
+    "description": "I would be happy if you liked and follow if you download and like this model :D\n\nAn Adidas Gazelle sneaker. Modeled from reference images.",
+    "tags": [
+      "shoe",
+      "style",
+      "white",
+      "high",
+      "high-poly",
+      "nike",
+      "sneaker",
+      "sneakers",
+      "adidas",
+      "gazelle",
+      "jogging",
+      "joggers",
+      "poly",
+      "black"
+    ],
+    "file": "objects/fashion_style_00203/model.glb",
+    "file_size_bytes": 2426992,
+    "stats": {
+      "face_count": 23924,
+      "vertex_count": 23772
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "fashion_style_00204": {
+    "id": "fashion_style_00204",
+    "category": "fashion_style",
+    "name": "Textured Shoe",
+    "source": "objaverse",
+    "license": "CC-BY-NC-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "raw_license": "by-nc",
+    "original_uid": "9bbee48d6dd1428b8ac72ee2672cc181",
+    "author": "TierneyV3",
+    "author_url": "https://sketchfab.com/TierneyV3",
+    "viewer_url": "https://sketchfab.com/3d-models/9bbee48d6dd1428b8ac72ee2672cc181",
+    "description": "Model is not my own. Textured using Substance Painter.\n\nModel I used:\n\"RTFKT Challenge Shoe - By Maxd\" by Maxd_Hunter is licensed under Creative Commons Attribution. https://skfb.ly/6VpYp To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/.",
+    "tags": [
+      "shoes",
+      "shoes-model",
+      "substancepainter",
+      "substance"
+    ],
+    "file": "objects/fashion_style_00204/model.glb",
+    "file_size_bytes": 17480676,
+    "stats": {
+      "face_count": 145609,
+      "vertex_count": 74260
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "fashion_style_00205": {
+    "id": "fashion_style_00205",
+    "category": "fashion_style",
+    "name": "Shoe 3D Scan 06 - Low Definition Quality",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "3edb59b36c0a4f48b1f897511a9e46ae",
+    "author": "3DScanX",
+    "author_url": "https://sketchfab.com/3dscanx",
+    "viewer_url": "https://sketchfab.com/3d-models/3edb59b36c0a4f48b1f897511a9e46ae",
+    "description": "Scanned with a custom-designed scanner",
+    "tags": [
+      "she",
+      "3d_scanning",
+      "3d_scan",
+      "3d_scanner"
+    ],
+    "file": "objects/fashion_style_00205/model.glb",
+    "file_size_bytes": 2565328,
+    "stats": {
+      "face_count": 75000,
+      "vertex_count": 37502
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "fashion_style_00206": {
+    "id": "fashion_style_00206",
+    "category": "fashion_style",
+    "name": "3D Inktober 2019 Day20: Tread",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "0861d1d6c48a4bb6ad30852c9322c012",
+    "author": "Pat Sipes",
+    "author_url": "https://sketchfab.com/pasipes",
+    "viewer_url": "https://sketchfab.com/3d-models/0861d1d6c48a4bb6ad30852c9322c012",
+    "description": "Shoes...just shoes.",
+    "tags": [
+      "shoe",
+      "boot",
+      "shoes",
+      "boots",
+      "blackandwhite",
+      "3dinktober2019",
+      "3dinktober2019-tread"
+    ],
+    "file": "objects/fashion_style_00206/model.glb",
+    "file_size_bytes": 183316,
+    "stats": {
+      "face_count": 1280,
+      "vertex_count": 644
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "fashion_style_00207": {
+    "id": "fashion_style_00207",
+    "category": "fashion_style",
+    "name": "Shoes",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "08158fa3333a4b288bd2746a6ba6f9e5",
+    "author": "Cyril43",
+    "author_url": "https://sketchfab.com/Cyril43",
+    "viewer_url": "https://sketchfab.com/3d-models/08158fa3333a4b288bd2746a6ba6f9e5",
+    "description": "My first footwear model. I hope to hear some critique from you, so i could made my \nsecond shoes better)",
+    "tags": [
+      "shoes",
+      "footwear",
+      "downloadable",
+      "lather",
+      "substancepainter",
+      "blender",
+      "free",
+      "clothing"
+    ],
+    "file": "objects/fashion_style_00207/model.glb",
+    "file_size_bytes": 2560744,
+    "stats": {
+      "face_count": 11984,
+      "vertex_count": 5985
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "fashion_style_00208": {
+    "id": "fashion_style_00208",
+    "category": "fashion_style",
+    "name": "Converse Chuck Taylor All Stars Low Tops",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "3af7027852de4c5f8600a91aa0bf8419",
+    "author": "Reality_3D",
+    "author_url": "https://sketchfab.com/Sbell_Reality3D",
+    "viewer_url": "https://sketchfab.com/3d-models/3af7027852de4c5f8600a91aa0bf8419",
+    "description": "Scan of sneakers done using Artec Space Spider. Each shoe was scanned seprately and then joined together in maya before upload. Scanning took 10 mins with another 10 mins for post processing. For more information on 3D scanning please visit our website www.reality3d.net",
+    "tags": [
+      "3d-scan",
+      "artec",
+      "3d-scanning",
+      "sneakers",
+      "artec3d",
+      "full-color",
+      "artec-space-spider",
+      "3d-asset",
+      "shoescan",
+      "3d-3d-model-3d-scan",
+      "sneakershoes",
+      "design",
+      "full-color-scanning",
+      "sneakerscan",
+      "3d-scanner-pro"
+    ],
+    "file": "objects/fashion_style_00208/model.glb",
+    "file_size_bytes": 24005688,
+    "stats": {
+      "face_count": 199203,
+      "vertex_count": 99612
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "fashion_style_00209": {
+    "id": "fashion_style_00209",
+    "category": "fashion_style",
+    "name": "Kids Shoe",
+    "source": "objaverse",
+    "license": "CC-BY-NC-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "raw_license": "by-nc-sa",
+    "original_uid": "6b6c8580ca5343998fff5a8e7630ca73",
+    "author": "aaa888",
+    "author_url": "https://sketchfab.com/aaa888",
+    "viewer_url": "https://sketchfab.com/3d-models/6b6c8580ca5343998fff5a8e7630ca73",
+    "description": "Created with Polycam",
+    "tags": [
+      "shoes",
+      "polycam"
+    ],
+    "file": "objects/fashion_style_00209/model.glb",
+    "file_size_bytes": 5659248,
+    "stats": {
+      "face_count": 99674,
+      "vertex_count": 49880
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "furniture_home_00210": {
+    "id": "furniture_home_00210",
+    "category": "furniture_home",
+    "name": "IKEA TJUSIG Shoe Rack",
+    "source": "objaverse",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "raw_license": "by-sa",
+    "original_uid": "948a2d3130ea40fbbb2dc0a676580a28",
+    "author": "HairMetalAddict",
+    "author_url": "https://sketchfab.com/hairmetaladdict",
+    "viewer_url": "https://sketchfab.com/3d-models/948a2d3130ea40fbbb2dc0a676580a28",
+    "description": "An exactly measured duplicate of the IKEA TJUSIG Shoe Rack, complete with the screws on the sides. (Note that it\u2019s 10x the \u201cactual size\u201d using blender measurements. Divide the xyz dimensions by 10 if you want exact, or scale all 3 to 0.1)",
+    "tags": [
+      "ikea",
+      "furniture",
+      "shoerack",
+      "tjusig"
+    ],
+    "file": "objects/furniture_home_00210/model.glb",
+    "file_size_bytes": 232084,
+    "stats": {
+      "face_count": 3648,
+      "vertex_count": 2160
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "fashion_style_00211": {
+    "id": "fashion_style_00211",
+    "category": "fashion_style",
+    "name": "Old Blue Vans Shoe",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "46f0a1d8049949cbb2c1b220fefdfe88",
+    "author": "Milkislegit",
+    "author_url": "https://sketchfab.com/milkislegit",
+    "viewer_url": "https://sketchfab.com/3d-models/46f0a1d8049949cbb2c1b220fefdfe88",
+    "description": "Generated with 3DF Zephyr v6.006 processing 65 iPhone images",
+    "tags": [
+      "shoe",
+      "vans",
+      "photoscan",
+      "photogrammetry",
+      "3dscan",
+      "3df-zephyr"
+    ],
+    "file": "objects/fashion_style_00211/model.glb",
+    "file_size_bytes": 4239452,
+    "stats": {
+      "face_count": 70260,
+      "vertex_count": 43259
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "furniture_home_00212": {
+    "id": "furniture_home_00212",
+    "category": "furniture_home",
+    "name": "Retopo 3D-Scan Adidas Sports Shoe",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "1874c623a14c43588e452585cce4e6e6",
+    "author": "Rizochi",
+    "author_url": "https://sketchfab.com/rizochi",
+    "viewer_url": "https://sketchfab.com/3d-models/1874c623a14c43588e452585cce4e6e6",
+    "description": "I made a retopology of the 3D-Scan Adidas Sports Shoe by the 3Digify:https://sketchfab.com/3d-models/scanned-adidas-sports-shoe-17f21b0a2515455f96ad194ad5be9142\n\nPrograms I used:\nZBrush for retopo\nMaya for UV\nPhotoshop for textures",
+    "tags": [
+      "shoe",
+      "retopology",
+      "retopo",
+      "maya",
+      "3d",
+      "texture",
+      "zbrush"
+    ],
+    "file": "objects/furniture_home_00212/model.glb",
+    "file_size_bytes": 1686452,
+    "stats": {
+      "face_count": 7640,
+      "vertex_count": 3808
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "shoe_00213": {
+    "id": "shoe_00213",
+    "category": "shoe",
+    "name": "Shoe - Photogrammetry",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "115dea77972a45f38c8e8d578524f259",
+    "author": "bcds",
+    "author_url": "https://sketchfab.com/bcds",
+    "viewer_url": "https://sketchfab.com/3d-models/115dea77972a45f38c8e8d578524f259",
+    "description": "",
+    "tags": [],
+    "file": "objects/shoe_00213/model.glb",
+    "file_size_bytes": 1331152,
+    "stats": {
+      "face_count": 29892,
+      "vertex_count": 14946
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "art_abstract_00214": {
+    "id": "art_abstract_00214",
+    "category": "art_abstract",
+    "name": "High-heeled Shoes",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "49a7910e22f14451a0c6351891ff011c",
+    "author": "Thunk3D scanner",
+    "author_url": "https://sketchfab.com/Diana123456",
+    "viewer_url": "https://sketchfab.com/3d-models/49a7910e22f14451a0c6351891ff011c",
+    "description": "https://www.facebook.com/profile.php?id=100027655718480\n\nhigh-heeled shoes scan by Thunk3D ArcherS handheld 3D scanner",
+    "tags": [
+      "shoe",
+      "3dscanning",
+      "thunk3d",
+      "thunk3d-fisher"
+    ],
+    "file": "objects/art_abstract_00214/model.glb",
+    "file_size_bytes": 79542520,
+    "stats": {
+      "face_count": 2053441,
+      "vertex_count": 1033254
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "cultural_heritage_history_00215": {
+    "id": "cultural_heritage_history_00215",
+    "category": "cultural_heritage_history",
+    "name": "Keng\u00e4nsolki, Shoe Buckle (SMM877:47)",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "6121f11fbab748d09b624b33cc1f8682",
+    "author": "Museovirasto Museiverket Finnish Heritage Agency",
+    "author_url": "https://sketchfab.com/Museovirasto",
+    "viewer_url": "https://sketchfab.com/3d-models/6121f11fbab748d09b624b33cc1f8682",
+    "description": "Keng\u00e4nsolki, messinki\u00e4.\nL\u00f6ydetty Ruotsinsalmen II meritaistelussa uponneen saaristofregatti st. Nikolain hylyst\u00e4.\n\nSuomen merimuseon kokoelmat, Suomen kansallismuseo\n\nA brass shoe buckle.\nFound from the wreck of frigate st. Nikolai, sunk during the second Battle of Svensksund in 1790.\n\nCollections of the Maritime Museum of Finland , The National Museum of Finland",
+    "tags": [
+      "ships",
+      "buckle",
+      "shoes",
+      "brass",
+      "18th-century",
+      "maritime-archaeology",
+      "soljet",
+      "wrecks",
+      "naval-battles",
+      "1700s",
+      "meriarkeologia",
+      "clothing",
+      "suomen-kansallismuseo",
+      "the-national-museum-of-finland",
+      "maritime-history",
+      "hylyt",
+      "laivat",
+      "merihistoria",
+      "merimuseo",
+      "jalkineet",
+      "meritaistelut",
+      "maritime-museum",
+      "ruotsinsalmi",
+      "man-of-war",
+      "svensksund",
+      "suomen-merimuseo",
+      "shoe_buckle",
+      "vaatetus"
+    ],
+    "file": "objects/cultural_heritage_history_00215/model.glb",
+    "file_size_bytes": 2471976,
+    "stats": {
+      "face_count": 50006,
+      "vertex_count": 24999
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "fashion_style_00216": {
+    "id": "fashion_style_00216",
+    "category": "fashion_style",
+    "name": "Ecco by DigitWorlds.com",
+    "source": "objaverse",
+    "license": "CC-BY-NC-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "raw_license": "by-nc",
+    "original_uid": "c8718985b6804778840006d95dd055b0",
+    "author": "Przemek Gesicki - DigitWorlds",
+    "author_url": "https://sketchfab.com/DigitWorlds",
+    "viewer_url": "https://sketchfab.com/3d-models/c8718985b6804778840006d95dd055b0",
+    "description": "by DigitWorlds.com",
+    "tags": [
+      "shoe",
+      "3d-scan",
+      "ecommerce",
+      "ecco",
+      "3dscan"
+    ],
+    "file": "objects/fashion_style_00216/model.glb",
+    "file_size_bytes": 1030928,
+    "stats": {
+      "face_count": 19849,
+      "vertex_count": 9932
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "skateboarding_00217": {
+    "id": "skateboarding_00217",
+    "category": "skateboarding",
+    "name": "Skateboarding Shoe",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "564fbac9c1bd46748c627619fe9a04e6",
+    "author": "neomek",
+    "author_url": "https://sketchfab.com/neomek",
+    "viewer_url": "https://sketchfab.com/3d-models/564fbac9c1bd46748c627619fe9a04e6",
+    "description": "3D scan of a skateboarding shoe.",
+    "tags": [],
+    "file": "objects/skateboarding_00217/model.glb",
+    "file_size_bytes": 53390464,
+    "stats": {
+      "face_count": 1541008,
+      "vertex_count": 770469
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "shoe2_00218": {
+    "id": "shoe2_00218",
+    "category": "shoe2",
+    "name": "Shoe2",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "218ca6e3e5164dffbb6fc0f886b02054",
+    "author": "Luke._.",
+    "author_url": "https://sketchfab.com/Luke._.",
+    "viewer_url": "https://sketchfab.com/3d-models/218ca6e3e5164dffbb6fc0f886b02054",
+    "description": "It's a shoe :)",
+    "tags": [],
+    "file": "objects/shoe2_00218/model.glb",
+    "file_size_bytes": 1875128,
+    "stats": {
+      "face_count": 6148,
+      "vertex_count": 2986
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "art_abstract_00219": {
+    "id": "art_abstract_00219",
+    "category": "art_abstract",
+    "name": "High-heeled-shoes (1)",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "f566b1652a4146ec8d699c4f64d87f0c",
+    "author": "Thunk3D 3D Scanner",
+    "author_url": "https://sketchfab.com/Lily.Qin1",
+    "viewer_url": "https://sketchfab.com/3d-models/f566b1652a4146ec8d699c4f64d87f0c",
+    "description": "high-heeled shoes scan by Thunk3D ArcherS handheld 3D scanner\n\nWhatsapp:+8618501190887\nTwitter:https://twitter.com/LILYQIN11\nInstagram\uff1ahttps://sketchfab.com/Lily.Qin1\nFacebook: https://www.facebook.com/profile.php?id=100048599976879\nYoutube: https://www.youtube.com/channel/UCdmXM1FhkxCdatkjjw69dsA\nLinkedIn: https://www.linkedin.com/in/lily-qin-61a384174/detail/recent-activity/",
+    "tags": [
+      "archer",
+      "highheeledshoes",
+      "highheeledshoesdesign",
+      "highheelshoesmodel",
+      "thunks3d"
+    ],
+    "file": "objects/art_abstract_00219/model.glb",
+    "file_size_bytes": 79542436,
+    "stats": {
+      "face_count": 2053441,
+      "vertex_count": 1033254
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "fashion_style_00220": {
+    "id": "fashion_style_00220",
+    "category": "fashion_style",
+    "name": "DC Nyjah",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "6bd800d3231b42c9bc55600a3abe3dbe",
+    "author": "Figore",
+    "author_url": "https://sketchfab.com/figore",
+    "viewer_url": "https://sketchfab.com/3d-models/6bd800d3231b42c9bc55600a3abe3dbe",
+    "description": "This model is based on DC Nyjah shoes I own. I did a photogrammetry scan and then remodeled everything first with topogun and then Maya. Everything is baked into a single UV set for the shoe. There are 4 materials: Main shoe, stich black, stitch red, washout (tiny geometry for the side lines).",
+    "tags": [
+      "shoe",
+      "dc",
+      "sneaker",
+      "nyjah"
+    ],
+    "file": "objects/fashion_style_00220/model.glb",
+    "file_size_bytes": 11050604,
+    "stats": {
+      "face_count": 199522,
+      "vertex_count": 106071
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "sports_fitness_00221": {
+    "id": "sports_fitness_00221",
+    "category": "sports_fitness",
+    "name": "Adidas-shoe",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "baf58de7e9114b49934e1e01f5c75341",
+    "author": "Thunk3D 3D Scanner",
+    "author_url": "https://sketchfab.com/Lily.Qin1",
+    "viewer_url": "https://sketchfab.com/3d-models/baf58de7e9114b49934e1e01f5c75341",
+    "description": "Adidas scanned by Thunk3D handheld scanner, sampling at ratio 40%.\n\nFor more information, please kindly check as below,\nWhatsapp:+8618501190887\nSketchfab:\u00a0https://sketchfab.com/Lily.Qin1/models\nYoutube: https://www.youtube.com/channel/UCdmXM1FhkxCdatkjjw69dsA\nInstagram\uff1ahttps://www.instagram.com/3d_scanners/\nFacebook:\u00a0https://www.facebook.com/profile.php?id=100048599976879\nLinkedIn: https://www.linkedin.com/in/lily-qin-61a384174/detail/recent-activity/\nTwitter:https://twitter.com/LILYQIN11",
+    "tags": [
+      "3dscanner",
+      "shoe",
+      "shoes",
+      "handheldscanner",
+      "shoescan",
+      "thunk3d",
+      "shoes3d",
+      "shoesole",
+      "shoes3dmodel",
+      "shoestexturing"
+    ],
+    "file": "objects/sports_fitness_00221/model.glb",
+    "file_size_bytes": 54450996,
+    "stats": {
+      "face_count": 1964346,
+      "vertex_count": 981941
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "fashion_style_00222": {
+    "id": "fashion_style_00222",
+    "category": "fashion_style",
+    "name": "Block-2",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "531e84192d5446af893cb64f7d456355",
+    "author": "Center Additive Manufacturing",
+    "author_url": "https://sketchfab.com/vitebsk3dprint",
+    "viewer_url": "https://sketchfab.com/3d-models/531e84192d5446af893cb64f7d456355",
+    "description": "3D scanner Artec Spider",
+    "tags": [
+      "scanning",
+      "block",
+      "shoes",
+      "footwear",
+      "shoe-design",
+      "artec-spider",
+      "scan"
+    ],
+    "file": "objects/fashion_style_00222/model.glb",
+    "file_size_bytes": 6916024,
+    "stats": {
+      "face_count": 253904,
+      "vertex_count": 126954
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "fashion_style_00223": {
+    "id": "fashion_style_00223",
+    "category": "fashion_style",
+    "name": "MELTING CORTEZ",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "ba3f2827885546888b6cfd1f2cae80e4",
+    "author": "mma1998",
+    "author_url": "https://sketchfab.com/mma1998",
+    "viewer_url": "https://sketchfab.com/3d-models/ba3f2827885546888b6cfd1f2cae80e4",
+    "description": "",
+    "tags": [
+      "shoes",
+      "nike",
+      "cortez"
+    ],
+    "file": "objects/fashion_style_00223/model.glb",
+    "file_size_bytes": 7615536,
+    "stats": {
+      "face_count": 65367,
+      "vertex_count": 32913
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "furniture_home_00224": {
+    "id": "furniture_home_00224",
+    "category": "furniture_home",
+    "name": "Chair",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "18c53c1fe4bc44d3937554830ba59947",
+    "author": "elias.",
+    "author_url": "https://sketchfab.com/elias.",
+    "viewer_url": "https://sketchfab.com/3d-models/18c53c1fe4bc44d3937554830ba59947",
+    "description": "Concept of modern living room chair.\n\nMore at http://telias.free.fr/",
+    "tags": [
+      "chair",
+      "livingroom"
+    ],
+    "file": "objects/furniture_home_00224/model.glb",
+    "file_size_bytes": 103472,
+    "stats": {
+      "face_count": 3622,
+      "vertex_count": 2275
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "architecture_00225": {
+    "id": "architecture_00225",
+    "category": "architecture",
+    "name": "Outdoor chair",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "8d50f071d9054909826b23d6bc2e3bd6",
+    "author": "_simone.rizzi",
+    "author_url": "https://sketchfab.com/simone_rizzi",
+    "viewer_url": "https://sketchfab.com/3d-models/8d50f071d9054909826b23d6bc2e3bd6",
+    "description": "Made in Blender\n\n[My works](https://www.instagram.com/_simone.rizzi/)\n\n![](https://rizzisimone.files.wordpress.com/2020/02/01-post.png?w=320&h=456)",
+    "tags": [
+      "outdoor",
+      "chair"
+    ],
+    "file": "objects/architecture_00225/model.glb",
+    "file_size_bytes": 6680704,
+    "stats": {
+      "face_count": 207488,
+      "vertex_count": 107618
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "art_abstract_00226": {
+    "id": "art_abstract_00226",
+    "category": "art_abstract",
+    "name": "Little Zahra's Armchair",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "9f48d7f42afc49f0acc4c3705c0f8bcf",
+    "author": "Ameretat",
+    "author_url": "https://sketchfab.com/Ameretat",
+    "viewer_url": "https://sketchfab.com/3d-models/9f48d7f42afc49f0acc4c3705c0f8bcf",
+    "description": "There is a room,\nA room for a little girl!\nA girl whose name is Zahra.\nIn that room, there is an armchair by the fireplace,\nZahra likes to sit on that red velvet armchair and relax,\nSometimes she reeds books to little children.",
+    "tags": [
+      "armchair",
+      "littlezahra"
+    ],
+    "file": "objects/art_abstract_00226/model.glb",
+    "file_size_bytes": 12068692,
+    "stats": {
+      "face_count": 153648,
+      "vertex_count": 76944
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "furniture_home_00227": {
+    "id": "furniture_home_00227",
+    "category": "furniture_home",
+    "name": "layout (new friend)",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "31da654f42e1431d996c758c473efddd",
+    "author": "3DWorkbench",
+    "author_url": "https://sketchfab.com/3DWorkbench",
+    "viewer_url": "https://sketchfab.com/3d-models/31da654f42e1431d996c758c473efddd",
+    "description": "layout (new friend)",
+    "tags": [
+      "scene",
+      "room",
+      "ventilator",
+      "toon",
+      "bed",
+      "fan",
+      "windows",
+      "children",
+      "floor",
+      "item",
+      "walls",
+      "window",
+      "furniture",
+      "table",
+      "layout",
+      "story",
+      "toony",
+      "backpack",
+      "smiling",
+      "smile",
+      "items",
+      "cupboard",
+      "cartoon",
+      "chair",
+      "home",
+      "decoration",
+      "door",
+      "environment"
+    ],
+    "file": "objects/furniture_home_00227/model.glb",
+    "file_size_bytes": 14834864,
+    "stats": {
+      "face_count": 277131,
+      "vertex_count": 140555
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "furniture_home_00228": {
+    "id": "furniture_home_00228",
+    "category": "furniture_home",
+    "name": "Chair Trend",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "783311bcd97f474e8d1d8bc16c041568",
+    "author": "Arthur Zenkovich",
+    "author_url": "https://sketchfab.com/arthurzenkovich",
+    "viewer_url": "https://sketchfab.com/3d-models/783311bcd97f474e8d1d8bc16c041568",
+    "description": "Hello!\nThere some  medium poly  furniture with 2k textures (diffuse, normal, roughness and metallic)\n\nMore models you can see there https://www.artstation.com/artwork/VmNVg",
+    "tags": [
+      "lamp",
+      "hat",
+      "sofa",
+      "bed",
+      "armchair",
+      "archviz",
+      "globe",
+      "pillow",
+      "materials",
+      "blanket",
+      "furniture",
+      "fabric",
+      "marmoset",
+      "substance-designer",
+      "marvelousdesigner",
+      "achiviz",
+      "substance",
+      "chair",
+      "substance-painter",
+      "model",
+      "zbrush",
+      "wood"
+    ],
+    "file": "objects/furniture_home_00228/model.glb",
+    "file_size_bytes": 4453044,
+    "stats": {
+      "face_count": 29212,
+      "vertex_count": 14895
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "householdpropschallenge_00229": {
+    "id": "householdpropschallenge_00229",
+    "category": "householdpropschallenge",
+    "name": "Day 3.Chair",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "37f4dc1bae9e42659d13f1fe7586a5cb",
+    "author": "Tevoh Ndingwan",
+    "author_url": "https://sketchfab.com/tevoh",
+    "viewer_url": "https://sketchfab.com/3d-models/37f4dc1bae9e42659d13f1fe7586a5cb",
+    "description": "",
+    "tags": [
+      "householdpropschallenge"
+    ],
+    "file": "objects/householdpropschallenge_00229/model.glb",
+    "file_size_bytes": 993556,
+    "stats": {
+      "face_count": 1990,
+      "vertex_count": 1001
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "furniture_home_00230": {
+    "id": "furniture_home_00230",
+    "category": "furniture_home",
+    "name": "Chair",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "7746e846f7964606988369fc52c28201",
+    "author": "\u041a\u043e\u0440\u0441\u0443\u043d \u0412\u043b\u0430\u0434",
+    "author_url": "https://sketchfab.com/Vlad_Korsun",
+    "viewer_url": "https://sketchfab.com/3d-models/7746e846f7964606988369fc52c28201",
+    "description": "Do you know chair?",
+    "tags": [
+      "chair"
+    ],
+    "file": "objects/furniture_home_00230/model.glb",
+    "file_size_bytes": 122812,
+    "stats": {
+      "face_count": 1606,
+      "vertex_count": 807
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "furniture_home_00231": {
+    "id": "furniture_home_00231",
+    "category": "furniture_home",
+    "name": "Wood Chair",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "b3f96a5e513f444fbcafa36912edc6b5",
+    "author": "Maycho",
+    "author_url": "https://sketchfab.com/feliperceo",
+    "viewer_url": "https://sketchfab.com/3d-models/b3f96a5e513f444fbcafa36912edc6b5",
+    "description": "Lovely!",
+    "tags": [
+      "vintage",
+      "worn",
+      "dirty",
+      "old",
+      "substancevintage",
+      "substancepainter"
+    ],
+    "file": "objects/furniture_home_00231/model.glb",
+    "file_size_bytes": 3026952,
+    "stats": {
+      "face_count": 2560,
+      "vertex_count": 1292
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "furniture_home_00232": {
+    "id": "furniture_home_00232",
+    "category": "furniture_home",
+    "name": "Low Poly Classroom Assets",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "3cdd052414544149a1f4edff9d9198c3",
+    "author": "Paolo Mercogliano",
+    "author_url": "https://sketchfab.com/paolo.mercoglia",
+    "viewer_url": "https://sketchfab.com/3d-models/3cdd052414544149a1f4edff9d9198c3",
+    "description": "These low poly assets are ready to use to populate a classroom. You'll find:\n- two different chairs\n- two different desks\n- a door\n- two bins\n- a blackboard\n- two different bookcases\n- some stationary",
+    "tags": [
+      "clock",
+      "desk",
+      "classroom",
+      "forniture",
+      "maya",
+      "lowpoly",
+      "chair",
+      "door"
+    ],
+    "file": "objects/furniture_home_00232/model.glb",
+    "file_size_bytes": 4818856,
+    "stats": {
+      "face_count": 151726,
+      "vertex_count": 76106
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "architecture_00233": {
+    "id": "architecture_00233",
+    "category": "architecture",
+    "name": "Chair",
+    "source": "objaverse",
+    "license": "CC-BY-NC-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "raw_license": "by-nc",
+    "original_uid": "1df839fda36e4adc99e0b22484aeacce",
+    "author": "Aris Hadisopiyan",
+    "author_url": "https://sketchfab.com/aris.hadisopiyan",
+    "viewer_url": "https://sketchfab.com/3d-models/1df839fda36e4adc99e0b22484aeacce",
+    "description": "",
+    "tags": [
+      "wooden",
+      "chair",
+      "wood"
+    ],
+    "file": "objects/architecture_00233/model.glb",
+    "file_size_bytes": 79852,
+    "stats": {
+      "face_count": 988,
+      "vertex_count": 512
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "furniture_home_00234": {
+    "id": "furniture_home_00234",
+    "category": "furniture_home",
+    "name": "Taburet",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "a537f2d9fea94588bfb53a22c39321e7",
+    "author": "ganic30",
+    "author_url": "https://sketchfab.com/ganic30",
+    "viewer_url": "https://sketchfab.com/3d-models/a537f2d9fea94588bfb53a22c39321e7",
+    "description": "\u0421\u043a\u043b\u0430\u0434\u043d\u043e\u0439 \u0442\u0430\u0431\u0443\u0440\u0435\u0442. \u0418\u0434\u0435\u0430\u043b\u044c\u043d\u043e\u0435 \u0440\u0435\u0448\u0435\u043d\u0438\u0435 \u0434\u043b\u044f \u0445\u043e\u0437\u044f\u0439\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0445 \u043d\u0443\u0436\u0434 \u0432 \u0441\u0430\u0434\u0443, \u043e\u0433\u043e\u0440\u043e\u0434\u0435, \u043c\u0430\u0441\u0442\u0435\u0440\u0441\u043a\u043e\u0439.",
+    "tags": [
+      "table",
+      "dining",
+      "claudio",
+      "freemodel",
+      "chair",
+      "free"
+    ],
+    "file": "objects/furniture_home_00234/model.glb",
+    "file_size_bytes": 673416,
+    "stats": {
+      "face_count": 2792,
+      "vertex_count": 1497
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "architecture_00235": {
+    "id": "architecture_00235",
+    "category": "architecture",
+    "name": "Wheelchair Lift",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "4668c317df3e4d13996d20d97cae8085",
+    "author": "Steven Samuel",
+    "author_url": "https://sketchfab.com/spsvision",
+    "viewer_url": "https://sketchfab.com/3d-models/4668c317df3e4d13996d20d97cae8085",
+    "description": "This wheelchair lift is powered by a computerized mechanism that can be powered for uphill & downhill wheelchair transport. Both uphill & downhill transport is made possible by an extended-out bar that supports the wheelchair in pursuit. Within this bar, there are two support systems that permit. First, there is an adhesive patch angled in a normalized position to the gradient that effectively holds the wheelchairs back in pursuit. Second, there is a hook, attached to the bottom, that retracts to grab the wheelchair. As these holding mechanisms are in check, a motor propels the wheelchair upwards & downwards.\n\nIn efforts to ensure the holding mechanism is relatively tight, rail-equipped proximity sensors detect how far the wheelchair is from the rail. If it exceeds or it comes too close, the adhesive force is enhanced and the retracting hook is restrained to a tighter extent.",
+    "tags": [
+      "lift",
+      "transportation",
+      "wheelchair",
+      "mobility",
+      "sustainaliving"
+    ],
+    "file": "objects/architecture_00235/model.glb",
+    "file_size_bytes": 818216,
+    "stats": {
+      "face_count": 11635,
+      "vertex_count": 3205
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "furniture_home_00236": {
+    "id": "furniture_home_00236",
+    "category": "furniture_home",
+    "name": "My office desk",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "84181ef712684565827474914c4f74ee",
+    "author": "Oscar",
+    "author_url": "https://sketchfab.com/oscartong",
+    "viewer_url": "https://sketchfab.com/3d-models/84181ef712684565827474914c4f74ee",
+    "description": "",
+    "tags": [
+      "office",
+      "computer",
+      "lidar",
+      "desk",
+      "macbookpro",
+      "chair"
+    ],
+    "file": "objects/furniture_home_00236/model.glb",
+    "file_size_bytes": 17050184,
+    "stats": {
+      "face_count": 0,
+      "vertex_count": 608723
+    }
+  },
+  "cultural_heritage_history_00237": {
+    "id": "cultural_heritage_history_00237",
+    "category": "cultural_heritage_history",
+    "name": "Confidant Chairs (Las Sillas Confidentes)",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "66e077568c7b419c96e05f2bfb9a0189",
+    "author": "TrentPierce",
+    "author_url": "https://sketchfab.com/TrentPierce",
+    "viewer_url": "https://sketchfab.com/3d-models/66e077568c7b419c96e05f2bfb9a0189",
+    "description": "These chairs were installed in the \u201cPlaza de la Independencia\u201d or \u201c Plaza Grande\u201d of M\u00e9rida when it was remodeled in 1915. The then governor of Yucat\u00e1n, General Salvador Alvarado, placed a central octagonal platform in the plaza along with other new designs, including a few pairs of these chairs.\n\nIt is thought that their form and design are inspired by the \u201cbutacas confidentes\u201d (confidant armchairs) from the French Renaissance period; a sense of abundance dominated everything and royalty used the most exquisite objects of design. These armchairs were a type of interior furniture designed for intimate conversation; they are very similar to the \u201csillas t\u00fa y yo\u201d.\n\nToday you can find these chairs all over the parks of the historic Centro of M\u00e9rida. On your next visit to our city, don\u2019t forget to enjoy them in the parks and on Paseo de Montejo, to rest and to take a few \u201cselfies\u201d while chatting with a friend or your partner; they are an ideal way to be transported to a romantic and personal space.",
+    "tags": [
+      "mexico",
+      "yucatan",
+      "merida",
+      "chair",
+      "history",
+      "confidant",
+      "confidentes"
+    ],
+    "file": "objects/cultural_heritage_history_00237/model.glb",
+    "file_size_bytes": 1658024,
+    "stats": {
+      "face_count": 5620,
+      "vertex_count": 2766
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "chair_00238": {
+    "id": "chair_00238",
+    "category": "chair",
+    "name": "Chair",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "f2987088df934f91b9ba13e83608ef00",
+    "author": "jasia.stuart",
+    "author_url": "https://sketchfab.com/jasia.stuart",
+    "viewer_url": "https://sketchfab.com/3d-models/f2987088df934f91b9ba13e83608ef00",
+    "description": "First test with Scaniverse and Lidar on iPhone 12 Pro.",
+    "tags": [],
+    "file": "objects/chair_00238/model.glb",
+    "file_size_bytes": 20561752,
+    "stats": {
+      "face_count": 0,
+      "vertex_count": 734064
+    }
+  },
+  "cars_vehicles_00239": {
+    "id": "cars_vehicles_00239",
+    "category": "cars_vehicles",
+    "name": "mobile elevator",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "2c4443fd4323400da55929dce28d63c1",
+    "author": "FFeller",
+    "author_url": "https://sketchfab.com/FFeller",
+    "viewer_url": "https://sketchfab.com/3d-models/2c4443fd4323400da55929dce28d63c1",
+    "description": "a simple mobile elevator",
+    "tags": [
+      "lifter",
+      "jacks"
+    ],
+    "file": "objects/cars_vehicles_00239/model.glb",
+    "file_size_bytes": 4427108,
+    "stats": {
+      "face_count": 18278,
+      "vertex_count": 9980
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "cars_vehicles_00240": {
+    "id": "cars_vehicles_00240",
+    "category": "cars_vehicles",
+    "name": "/dbsg/ Void Born FF",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "0a99f6301a02450090dad490c1daa9a5",
+    "author": "durendal5150",
+    "author_url": "https://sketchfab.com/durendal5150",
+    "viewer_url": "https://sketchfab.com/3d-models/0a99f6301a02450090dad490c1daa9a5",
+    "description": "",
+    "tags": [
+      "miniature",
+      "spaceship"
+    ],
+    "file": "objects/cars_vehicles_00240/model.glb",
+    "file_size_bytes": 172504,
+    "stats": {
+      "face_count": 5390,
+      "vertex_count": 2721
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "characters_creatures_00241": {
+    "id": "characters_creatures_00241",
+    "category": "characters_creatures",
+    "name": "Morph Mk1",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "b43bc490e7ec4022b67b3d3212be972e",
+    "author": "Huuxloc",
+    "author_url": "https://sketchfab.com/rjh41",
+    "viewer_url": "https://sketchfab.com/3d-models/b43bc490e7ec4022b67b3d3212be972e",
+    "description": "Morph is a clay stop-motion comedy animation character, featuring the eponymous character that appeared with Tony Hart, beginning in 1977, on several of his UK TV programmes, notably Take Hart and Hartbeat.\n\n![](https://s-media-cache-ak0.pinimg.com/originals/b0/0f/6a/b00f6ae5fdfb505d4986131587153969.jpg)",
+    "tags": [
+      "morph",
+      "clay",
+      "tvshow",
+      "cartoon",
+      "blender",
+      "blender3d"
+    ],
+    "file": "objects/characters_creatures_00241/model.glb",
+    "file_size_bytes": 1594224,
+    "stats": {
+      "face_count": 6830,
+      "vertex_count": 4332
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "cars_vehicles_00242": {
+    "id": "cars_vehicles_00242",
+    "category": "cars_vehicles",
+    "name": "JNR D51",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "b42756245d814b10b8b859642d5c888d",
+    "author": "Stormer332",
+    "author_url": "https://sketchfab.com/Stormer332",
+    "viewer_url": "https://sketchfab.com/3d-models/b42756245d814b10b8b859642d5c888d",
+    "description": "A Japanese National Railway D51 locmotive model I made on Roblox.",
+    "tags": [
+      "train",
+      "roblox",
+      "locmotive",
+      "steam"
+    ],
+    "file": "objects/cars_vehicles_00242/model.glb",
+    "file_size_bytes": 12083420,
+    "stats": {
+      "face_count": 278257,
+      "vertex_count": 142903
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "weapons_military_00243": {
+    "id": "weapons_military_00243",
+    "category": "weapons_military",
+    "name": "FN Scar Low-Poly",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "4f969022437a446caaae2301be1c34e2",
+    "author": "wallon",
+    "author_url": "https://sketchfab.com/realwallon",
+    "viewer_url": "https://sketchfab.com/3d-models/4f969022437a446caaae2301be1c34e2",
+    "description": "I made an FN Scar, along with some attachments. You could use to make some kind of weapon attachment/customization system? I'm a beginner, so please let me know of anything that'll help me better my craft. I'm not sure if I optimized it well, let me know how I could well optimize for next time.\n\nEverything attached to gun is rigged, however the additional attachments aren't rigged at all, I assume you could just parent it to a bone in the game engine?",
+    "tags": [
+      "scar",
+      "fn",
+      "attachments",
+      "fnscar",
+      "weapon",
+      "low-poly",
+      "model",
+      "gun",
+      "rigged"
+    ],
+    "file": "objects/weapons_military_00243/model.glb",
+    "file_size_bytes": 1273792,
+    "stats": {
+      "face_count": 20474,
+      "vertex_count": 9986
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "pear_00244": {
+    "id": "pear_00244",
+    "category": "pear",
+    "name": "Y1_D2_Patrick_Pear_1",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "15e10bc9299344138b5804c17c091b14",
+    "author": "pearchntrm",
+    "author_url": "https://sketchfab.com/pearchntrm",
+    "viewer_url": "https://sketchfab.com/3d-models/15e10bc9299344138b5804c17c091b14",
+    "description": "",
+    "tags": [
+      "pear",
+      "patrick",
+      "inda",
+      "year1",
+      "chalisachantramee",
+      "follyforcarts"
+    ],
+    "file": "objects/pear_00244/model.glb",
+    "file_size_bytes": 54441944,
+    "stats": {
+      "face_count": 634206,
+      "vertex_count": 320375
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "characters_creatures_00245": {
+    "id": "characters_creatures_00245",
+    "category": "characters_creatures",
+    "name": "The Tyrant King",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "762341e28945438cb4430c9db42ca16a",
+    "author": "peeblo",
+    "author_url": "https://sketchfab.com/drweedad",
+    "viewer_url": "https://sketchfab.com/3d-models/762341e28945438cb4430c9db42ca16a",
+    "description": "If you don't know where he is from, you had no childhood",
+    "tags": [
+      "world",
+      "friends",
+      "foster",
+      "imaginary",
+      "cartoonnetwork",
+      "imaginaryfriends"
+    ],
+    "file": "objects/characters_creatures_00245/model.glb",
+    "file_size_bytes": 17260384,
+    "stats": {
+      "face_count": 329504,
+      "vertex_count": 164830
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "cars_vehicles_00246": {
+    "id": "cars_vehicles_00246",
+    "category": "cars_vehicles",
+    "name": "Rocket",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "e5547844725b49b9aab651b63c99564b",
+    "author": "wamblee",
+    "author_url": "https://sketchfab.com/wamblee",
+    "viewer_url": "https://sketchfab.com/3d-models/e5547844725b49b9aab651b63c99564b",
+    "description": "",
+    "tags": [
+      "rocket",
+      "speedmodeling",
+      "lowpoly"
+    ],
+    "file": "objects/cars_vehicles_00246/model.glb",
+    "file_size_bytes": 94160,
+    "stats": {
+      "face_count": 1466,
+      "vertex_count": 940
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "cars_vehicles_00247": {
+    "id": "cars_vehicles_00247",
+    "category": "cars_vehicles",
+    "name": "Jaguar 20 Spoke Wheel",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "b133644163d54c94a2598abcc9262491",
+    "author": "Fishboe",
+    "author_url": "https://sketchfab.com/ministephen",
+    "viewer_url": "https://sketchfab.com/3d-models/b133644163d54c94a2598abcc9262491",
+    "description": "A wheel that is on the xj40 and the x300s. its not perfect but vroom vroom.<br>\n\nMay 2021 - I remodelled it. Its almost perfect now :) This is also on my XJ12 model",
+    "tags": [
+      "wheel",
+      "rim",
+      "tire",
+      "tyre",
+      "jaguar",
+      "daimler",
+      "vehicle",
+      "car"
+    ],
+    "file": "objects/cars_vehicles_00247/model.glb",
+    "file_size_bytes": 4322356,
+    "stats": {
+      "face_count": 11804,
+      "vertex_count": 6317
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "cars_vehicles_00248": {
+    "id": "cars_vehicles_00248",
+    "category": "cars_vehicles",
+    "name": "Kamaz 6520-B2",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "4dd8ff756a8f43939ca22ea5f2706d16",
+    "author": "mickeleanjelo",
+    "author_url": "https://sketchfab.com/mickeleanjelo",
+    "viewer_url": "https://sketchfab.com/3d-models/4dd8ff756a8f43939ca22ea5f2706d16",
+    "description": "Kamaz 3d model dowlads free",
+    "tags": [
+      "kamaz",
+      "dowlads",
+      "3d",
+      "model",
+      "free"
+    ],
+    "file": "objects/cars_vehicles_00248/model.glb",
+    "file_size_bytes": 59280820,
+    "stats": {
+      "face_count": 506363,
+      "vertex_count": 512061
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "patrimonio_00249": {
+    "id": "patrimonio_00249",
+    "category": "patrimonio",
+    "name": "Estaci\u00f3n El Salado",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "7d15cf483e964503bafe571c6841ebb4",
+    "author": "Karen Cardona",
+    "author_url": "https://sketchfab.com/KarenCardona",
+    "viewer_url": "https://sketchfab.com/3d-models/7d15cf483e964503bafe571c6841ebb4",
+    "description": "Virtualizaci\u00f3n de las antiguas Estaciones del Ferrocarril de C\u00facuta en Norte de Santander/ Colombia como parte de un proyecto de grado de la Facultad de Arquitectura en la Universidad de Pamplona de los estudiantes Jairo A. Duran Perez y Karen J. Cardona Pedraza.",
+    "tags": [
+      "patrimonio",
+      "colombia",
+      "cucuta",
+      "virtualizacion",
+      "tics",
+      "sketchup",
+      "estacionesdelferrocarril"
+    ],
+    "file": "objects/patrimonio_00249/model.glb",
+    "file_size_bytes": 21191992,
+    "stats": {
+      "face_count": 321550,
+      "vertex_count": 85533
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "electronics_gadgets_00250": {
+    "id": "electronics_gadgets_00250",
+    "category": "electronics_gadgets",
+    "name": "Low poly RC Car",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "7a8e5161d33d4b3fa285a14c948ac192",
+    "author": "N3on_BlVD",
+    "author_url": "https://sketchfab.com/N3on_BlVD",
+    "viewer_url": "https://sketchfab.com/3d-models/7a8e5161d33d4b3fa285a14c948ac192",
+    "description": "created this in blender for a horror game that I am currently working on in Unity,",
+    "tags": [
+      "rc",
+      "rccar",
+      "horrorgame",
+      "lowpolymodel",
+      "unity",
+      "blender",
+      "car"
+    ],
+    "file": "objects/electronics_gadgets_00250/model.glb",
+    "file_size_bytes": 110768,
+    "stats": {
+      "face_count": 1348,
+      "vertex_count": 827
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "cars_vehicles_00251": {
+    "id": "cars_vehicles_00251",
+    "category": "cars_vehicles",
+    "name": "Buggy20180330T2153",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "18e0609a890b45d7a4795f96353b768c",
+    "author": "arnero",
+    "author_url": "https://sketchfab.com/arnero",
+    "viewer_url": "https://sketchfab.com/3d-models/18e0609a890b45d7a4795f96353b768c",
+    "description": "Corrected orientation of U-joint. Gave spherical joint the other part. Sketched all other joins needed for bullet. Still looking for the vanishing wheels.\n\nI wonder how I animate the wheels because bullet fails to simulate ground contact.\n\nToDo: virtual pivot below street for camber",
+    "tags": [
+      "blender"
+    ],
+    "file": "objects/cars_vehicles_00251/model.glb",
+    "file_size_bytes": 2736828,
+    "stats": {
+      "face_count": 76911,
+      "vertex_count": 41732
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "characters_creatures_00252": {
+    "id": "characters_creatures_00252",
+    "category": "characters_creatures",
+    "name": "Gromflomite",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "7627b654d25b47f7968e0c9c845effea",
+    "author": "ElSalawwy",
+    "author_url": "https://sketchfab.com/andressalazar264",
+    "viewer_url": "https://sketchfab.com/3d-models/7627b654d25b47f7968e0c9c845effea",
+    "description": "ArtStation : https://www.artstation.com/elsalaz",
+    "tags": [
+      "and",
+      "alien",
+      "rick",
+      "morty",
+      "cartoon",
+      "gromflomite"
+    ],
+    "file": "objects/characters_creatures_00252/model.glb",
+    "file_size_bytes": 4361880,
+    "stats": {
+      "face_count": 84080,
+      "vertex_count": 44314
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
+  },
+  "cars_vehicles_00253": {
+    "id": "cars_vehicles_00253",
+    "category": "cars_vehicles",
+    "name": "bootje",
+    "source": "objaverse",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "raw_license": "by",
+    "original_uid": "4af78f2b464c43a092e5fe87f01634fe",
+    "author": "philippe.hofman",
+    "author_url": "https://sketchfab.com/philippe.hofman",
+    "viewer_url": "https://sketchfab.com/3d-models/4af78f2b464c43a092e5fe87f01634fe",
+    "description": "",
+    "tags": [
+      "laser"
+    ],
+    "file": "objects/cars_vehicles_00253/model.glb",
+    "file_size_bytes": 292852,
+    "stats": {
+      "face_count": 10774,
+      "vertex_count": 5382
+    },
+    "num_rendered_views": 12,
+    "is_augmented": true
   }
 }

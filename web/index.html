@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Vision Lab — Neural Image-to-3D Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Three.js + OrbitControls + OBJLoader -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="app-header">
+    <div class="logo-group">
+      <div class="logo-icon">🧊</div>
+      <div>
+        <h1 class="logo-title">3D Vision Lab</h1>
+        <p class="logo-subtitle">Real-Time Single Image to 3D Mesh Generator</p>
+      </div>
+    </div>
+    <div class="status-badges">
+      <span class="badge badge-mps"><span class="pulse-dot"></span> Apple Silicon MPS Active</span>
+      <span class="badge badge-model">Model: TinyImageToVoxelNet (6.5M)</span>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="app-layout">
+    <!-- Left Sidebar: Controls & Input -->
+    <aside class="sidebar-panel">
+      <!-- Input Section -->
+      <div class="card panel-section">
+        <h2 class="section-title">1. Input 2D Image</h2>
+        <div id="dropzone" class="dropzone">
+          <input type="file" id="fileInput" accept="image/*" class="file-input-hidden">
+          <div id="dropzoneEmpty" class="dropzone-content">
+            <div class="upload-icon">📸</div>
+            <p class="dropzone-text"><strong>Drag & Drop</strong> any photo here</p>
+            <p class="dropzone-subtext">or click to browse from your Mac</p>
+          </div>
+          <div id="dropzonePreview" class="dropzone-preview hidden">
+            <img id="previewImage" alt="Input preview">
+            <button id="clearImageBtn" class="clear-btn" title="Remove image">&times;</button>
+          </div>
+        </div>
+
+        <!-- Sample Gallery -->
+        <div class="samples-container">
+          <div class="samples-header">
+            <span>Or test with a sample:</span>
+          </div>
+          <div id="samplesList" class="samples-grid">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section -->
+      <div class="card panel-section">
+        <h2 class="section-title">2. Reconstruction Parameters</h2>
+        <div class="setting-row">
+          <div class="setting-label-row">
+            <label for="thresholdSlider">Voxel Density Threshold</label>
+            <span id="thresholdValue" class="mono-value">0.45</span>
+          </div>
+          <input type="range" id="thresholdSlider" min="0.25" max="0.75" step="0.01" value="0.45" class="slider">
+          <div class="slider-ticks">
+            <span>Sparse (0.25)</span>
+            <span>Balanced (0.45)</span>
+            <span>Dense (0.75)</span>
+          </div>
+        </div>
+
+        <button id="generateBtn" class="primary-btn" disabled>
+          <span class="btn-icon">🔮</span>
+          <span class="btn-text">Reconstruct 3D Mesh</span>
+        </button>
+      </div>
+
+      <!-- Telemetry & Metrics -->
+      <div class="card panel-section telemetry-card">
+        <h2 class="section-title">Inference Telemetry</h2>
+        <div class="metrics-grid">
+          <div class="metric-box">
+            <span class="metric-label">Neural Inference</span>
+            <span id="inferenceMetric" class="metric-val">-- ms</span>
+          </div>
+          <div class="metric-box">
+            <span class="metric-label">Marching Cubes</span>
+            <span id="mcMetric" class="metric-val">-- ms</span>
+          </div>
+          <div class="metric-box">
+            <span class="metric-label">3D Vertices</span>
+            <span id="verticesMetric" class="metric-val">--</span>
+          </div>
+          <div class="metric-box">
+            <span class="metric-label">Triangles</span>
+            <span id="facesMetric" class="metric-val">--</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Right: 3D Viewport -->
+    <section class="viewport-panel">
+      <div class="viewport-header">
+        <div class="viewport-title-group">
+          <h2 class="viewport-title">Interactive 3D Viewport</h2>
+          <span id="meshStatus" class="viewport-status">Awaiting input image...</span>
+        </div>
+        <div class="viewport-actions">
+          <button id="rotateBtn" class="tool-btn active" title="Toggle Auto Rotation">🔄 Auto-Rotate</button>
+          <button id="wireframeBtn" class="tool-btn" title="Toggle Wireframe">🕸️ Wireframe</button>
+          <button id="resetCamBtn" class="tool-btn" title="Reset Camera View">🎯 Reset View</button>
+        </div>
+      </div>
+
+      <!-- 3D Canvas Container -->
+      <div id="viewportContainer" class="viewport-container">
+        <div id="loadingOverlay" class="loading-overlay hidden">
+          <div class="spinner"></div>
+          <p class="loading-text">Neural Network Predicting 3D Space...</p>
+        </div>
+
+        <!-- Three.js renders into this canvas -->
+        <canvas id="canvas3d"></canvas>
+
+        <!-- Interaction Helper Overlay -->
+        <div class="viewport-hint">
+          <span>🖱️ Left Drag: Orbit</span>
+          <span>🖱️ Right Drag: Pan</span>
+          <span>🔍 Scroll: Zoom</span>
+        </div>
+
+        <!-- Download Floating Bar -->
+        <div id="downloadBar" class="download-bar hidden">
+          <a id="downloadObjBtn" href="#" download="reconstructed_model.obj" class="download-btn btn-obj">
+            📥 Download .OBJ
+          </a>
+          <a id="downloadGlbBtn" href="#" download="reconstructed_model.glb" class="download-btn btn-glb">
+            📦 Download .GLB
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

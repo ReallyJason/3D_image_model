@@ -1,0 +1,7 @@
+{
+  "test_samples": 21,
+  "mean_3d_iou": 28.69,
+  "mean_latency_ms": 28.13,
+  "fps": 35.6,
+  "reconstruction_rate": 100.0
+}

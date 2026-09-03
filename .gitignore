@@ -41,6 +41,11 @@ my_dataset/objects/
 
 # Rendered images & test renders
 test_render*.png
+checkpoints/
+reconstructions/
+*.npy
+*.pt
+*.pth
 
 # Objaverse local cache (if in project)
 .objaverse/

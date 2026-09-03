@@ -13,16 +13,16 @@
     }
   },
   {
-    "id": "characters_creatures_00176",
+    "id": "characters_creatures_00058",
     "category": "characters_creatures",
-    "name": "Cat Edit",
-    "model_file": "objects/characters_creatures_00176/model.glb",
-    "renders_dir": "objects/characters_creatures_00176",
+    "name": "BULLET BILL",
+    "model_file": "objects/characters_creatures_00058/model.glb",
+    "renders_dir": "objects/characters_creatures_00058",
     "license": "CC-BY-4.0",
-    "original_uid": "4016b21e545449e1af722623998ad6b7",
+    "original_uid": "6cfb55bd41d24db298b52b11ad74aa0a",
     "stats": {
-      "face_count": 286490,
-      "vertex_count": 143247
+      "face_count": 32122,
+      "vertex_count": 16398
     }
   },
   {
@@ -39,81 +39,146 @@
     }
   },
   {
-    "id": "cultural_heritage_history_00196",
+    "id": "characters_creatures_00107",
+    "category": "characters_creatures",
+    "name": "Lucantor Alien Ambassador",
+    "model_file": "objects/characters_creatures_00107/model.glb",
+    "renders_dir": "objects/characters_creatures_00107",
+    "license": "CC-BY-4.0",
+    "original_uid": "2f12bb2287b747089e82a4296d333946",
+    "stats": {
+      "face_count": 15152,
+      "vertex_count": 7609
+    }
+  },
+  {
+    "id": "cars_vehicles_00072",
+    "category": "cars_vehicles",
+    "name": "Z\u00fcndapp KS 750",
+    "model_file": "objects/cars_vehicles_00072/model.glb",
+    "renders_dir": "objects/cars_vehicles_00072",
+    "license": "CC-BY-4.0",
+    "original_uid": "928847ca88d746dfaf27a5e296ef71a1",
+    "stats": {
+      "face_count": 8425,
+      "vertex_count": 5895
+    }
+  },
+  {
+    "id": "cars_vehicles_00246",
+    "category": "cars_vehicles",
+    "name": "Rocket",
+    "model_file": "objects/cars_vehicles_00246/model.glb",
+    "renders_dir": "objects/cars_vehicles_00246",
+    "license": "CC-BY-4.0",
+    "original_uid": "e5547844725b49b9aab651b63c99564b",
+    "stats": {
+      "face_count": 1466,
+      "vertex_count": 940
+    }
+  },
+  {
+    "id": "cultural_heritage_history_00103",
     "category": "cultural_heritage_history",
-    "name": "Leather Flying Helmet",
-    "model_file": "objects/cultural_heritage_history_00196/model.glb",
-    "renders_dir": "objects/cultural_heritage_history_00196",
+    "name": "Monolito Edafol\u00f3gicos N\u00ba 20",
+    "model_file": "objects/cultural_heritage_history_00103/model.glb",
+    "renders_dir": "objects/cultural_heritage_history_00103",
     "license": "CC-BY-4.0",
-    "original_uid": "1c5917c1e9d147a984725886fc917ea7",
+    "original_uid": "39a16b32565045399e2cbedc2ae60833",
     "stats": {
-      "face_count": 999694,
-      "vertex_count": 499825
+      "face_count": 331580,
+      "vertex_count": 167289
     }
   },
   {
-    "id": "animals_pets_00128",
+    "id": "cultural_heritage_history_00125",
+    "category": "cultural_heritage_history",
+    "name": "The portcullis slab nub of the Great Pyramid",
+    "model_file": "objects/cultural_heritage_history_00125/model.glb",
+    "renders_dir": "objects/cultural_heritage_history_00125",
+    "license": "CC-BY-4.0",
+    "original_uid": "531c2d38e6ca4c6a809155c3569121db",
+    "stats": {
+      "face_count": 142357,
+      "vertex_count": 71398
+    }
+  },
+  {
+    "id": "animals_pets_00192",
     "category": "animals_pets",
-    "name": "Simple Boingo",
-    "model_file": "objects/animals_pets_00128/model.glb",
-    "renders_dir": "objects/animals_pets_00128",
+    "name": "Coloful Hen -by Archer S",
+    "model_file": "objects/animals_pets_00192/model.glb",
+    "renders_dir": "objects/animals_pets_00192",
     "license": "CC-BY-4.0",
-    "original_uid": "591db1c22ae442b49c9810dcb50d0ff3",
+    "original_uid": "8b7b47ddf6c34891a0663c8c00e5184c",
     "stats": {
-      "face_count": 11468,
-      "vertex_count": 5756
+      "face_count": 4299611,
+      "vertex_count": 2149806
     }
   },
   {
-    "id": "weapons_military_00032",
+    "id": "weapons_military_00068",
     "category": "weapons_military",
-    "name": "TT-33 (Tokarev TT-33)",
-    "model_file": "objects/weapons_military_00032/model.glb",
-    "renders_dir": "objects/weapons_military_00032",
+    "name": "Gripen NG",
+    "model_file": "objects/weapons_military_00068/model.glb",
+    "renders_dir": "objects/weapons_military_00068",
     "license": "CC-BY-4.0",
-    "original_uid": "d3578149a0f645ecbb03cfedcef594e9",
+    "original_uid": "be94bc8bdab14385b67442df3eaa34ae",
     "stats": {
-      "face_count": 2746,
-      "vertex_count": 1638
+      "face_count": 5652,
+      "vertex_count": 3039
     }
   },
   {
-    "id": "architecture_00193",
+    "id": "architecture_00156",
     "category": "architecture",
-    "name": "SKETCH 2-ND FLOOR",
-    "model_file": "objects/architecture_00193/model.glb",
-    "renders_dir": "objects/architecture_00193",
+    "name": "Dynamite",
+    "model_file": "objects/architecture_00156/model.glb",
+    "renders_dir": "objects/architecture_00156",
     "license": "CC-BY-4.0",
-    "original_uid": "2f798595ecd446c48eadc747170105cf",
+    "original_uid": "87a71b45e3904d8aac3d4c2516db769e",
     "stats": {
-      "face_count": 235487,
-      "vertex_count": 133620
+      "face_count": 4594,
+      "vertex_count": 1866
     }
   },
   {
-    "id": "architecture_00110",
+    "id": "architecture_00101",
     "category": "architecture",
-    "name": "Graveyard House",
-    "model_file": "objects/architecture_00110/model.glb",
-    "renders_dir": "objects/architecture_00110",
+    "name": "Kiev1983 apartments from aerial footage",
+    "model_file": "objects/architecture_00101/model.glb",
+    "renders_dir": "objects/architecture_00101",
     "license": "CC-BY-4.0",
-    "original_uid": "aa1d778bd11943eca390e7f8a27884fb",
+    "original_uid": "cd4db430210544c892ada5d708fcd40f",
     "stats": {
-      "face_count": 14582,
-      "vertex_count": 9108
+      "face_count": 19999,
+      "vertex_count": 10341
     }
   },
   {
-    "id": "architecture_00177",
+    "id": "architecture_00140",
     "category": "architecture",
-    "name": "Oil Barrels",
-    "model_file": "objects/architecture_00177/model.glb",
-    "renders_dir": "objects/architecture_00177",
+    "name": "RESID\u00caNCIA D&G",
+    "model_file": "objects/architecture_00140/model.glb",
+    "renders_dir": "objects/architecture_00140",
     "license": "CC-BY-4.0",
-    "original_uid": "0c0d404a08604ec0966de31ae11d65cb",
+    "original_uid": "124515cdbe234139bfdc1ca66c68441c",
     "stats": {
-      "face_count": 43680,
-      "vertex_count": 21935
+      "face_count": 20532,
+      "vertex_count": 12854
+    }
+  },
+  {
+    "id": "architecture_00055",
+    "category": "architecture",
+    "name": "\u062a\u0633\u0644\u064a\u0645 \u0627\u0644\u0641\u0627\u0646\u0648\u0633 \u0628\u062d\u0645\u062f \u0627\u0644\u0644\u0647",
+    "model_file": "objects/architecture_00055/model.glb",
+    "renders_dir": "objects/architecture_00055",
+    "license": "CC-BY-4.0",
+    "original_uid": "0e53a38a3c92499e81f28d0e1c6207ce",
+    "stats": {
+      "face_count": 325200,
+      "vertex_count": 161337
     }
   },
   {
@@ -130,16 +195,81 @@
     }
   },
   {
-    "id": "furniture_home_00054",
-    "category": "furniture_home",
-    "name": "Wooden Crate - Wooden Box",
-    "model_file": "objects/furniture_home_00054/model.glb",
-    "renders_dir": "objects/furniture_home_00054",
-    "license": "CC-BY-4.0",
-    "original_uid": "62411693da734fdd97d37ceab494bfd6",
+    "id": "art_abstract_00037",
+    "category": "art_abstract",
+    "name": "Day 83 - Utility box - 1scanaday",
+    "model_file": "objects/art_abstract_00037/model.glb",
+    "renders_dir": "objects/art_abstract_00037",
+    "license": "CC-BY-NC-SA-4.0",
+    "original_uid": "8f3be836a9a74e859ef467cdc7eca90e",
     "stats": {
-      "face_count": 324,
-      "vertex_count": 164
+      "face_count": 27781,
+      "vertex_count": 14091
+    }
+  },
+  {
+    "id": "fashion_style_00211",
+    "category": "fashion_style",
+    "name": "Old Blue Vans Shoe",
+    "model_file": "objects/fashion_style_00211/model.glb",
+    "renders_dir": "objects/fashion_style_00211",
+    "license": "CC-BY-4.0",
+    "original_uid": "46f0a1d8049949cbb2c1b220fefdfe88",
+    "stats": {
+      "face_count": 70260,
+      "vertex_count": 43259
+    }
+  },
+  {
+    "id": "fashion_style_00206",
+    "category": "fashion_style",
+    "name": "3D Inktober 2019 Day20: Tread",
+    "model_file": "objects/fashion_style_00206/model.glb",
+    "renders_dir": "objects/fashion_style_00206",
+    "license": "CC-BY-4.0",
+    "original_uid": "0861d1d6c48a4bb6ad30852c9322c012",
+    "stats": {
+      "face_count": 1280,
+      "vertex_count": 644
+    }
+  },
+  {
+    "id": "furniture_home_00228",
+    "category": "furniture_home",
+    "name": "Chair Trend",
+    "model_file": "objects/furniture_home_00228/model.glb",
+    "renders_dir": "objects/furniture_home_00228",
+    "license": "CC-BY-4.0",
+    "original_uid": "783311bcd97f474e8d1d8bc16c041568",
+    "stats": {
+      "face_count": 29212,
+      "vertex_count": 14895
+    }
+  },
+  {
+    "id": "furniture_home_00164",
+    "category": "furniture_home",
+    "name": "\u0421\u0432\u0435\u0442\u0438\u043b\u044c\u043d\u0438\u043a 31612 Eglo",
+    "model_file": "objects/furniture_home_00164/model.glb",
+    "renders_dir": "objects/furniture_home_00164",
+    "license": "CC-BY-4.0",
+    "original_uid": "897dc58901a54174adc9ba30b3d63eb0",
+    "stats": {
+      "face_count": 6032,
+      "vertex_count": 3248
+    }
+  },
+  {
+    "id": "furniture_home_00159",
+    "category": "furniture_home",
+    "name": "Bowling pin",
+    "model_file": "objects/furniture_home_00159/model.glb",
+    "renders_dir": "objects/furniture_home_00159",
+    "license": "CC-BY-4.0",
+    "original_uid": "6f4789c7c0f74c55adfedc57c73dba60",
+    "stats": {
+      "face_count": 45696,
+      "vertex_count": 23426
     }
   }
 ]

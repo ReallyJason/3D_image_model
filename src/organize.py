@@ -91,10 +91,12 @@ def format_license_info(raw_license: Optional[str]) -> Dict[str, str]:
 def organize_dataset(
     uids: Optional[List[str]] = None,
     dataset_dir: str = DEFAULT_DATASET_DIR,
+    category: Optional[str] = None,
     limit: Optional[int] = None
 ) -> Dict[str, Any]:
     """
     Downloads (if needed) and organizes 3D models into dataset_dir.
+    Optionally filters for a specific category (e.g. 'shoe', 'chair', 'car').
     Returns master metadata dictionary.
     """
     objects_dir = os.path.join(dataset_dir, "objects")
@@ -109,10 +111,39 @@ def organize_dataset(
         except Exception:
             master_metadata = {}
 
+    existing_uids = {m.get("original_uid") for m in master_metadata.values() if m.get("original_uid")}
+    print(f"Existing objects in dataset: {len(existing_uids)}")
+
     if uids is None:
         print("Fetching UIDs from Objaverse...")
         all_uids = objaverse.load_uids()
-        uids = all_uids[:limit] if limit else all_uids[:50]
+        new_uids = [u for u in all_uids if u not in existing_uids]
+
+        if category:
+            cat_clean = category.lower().strip()
+            print(f"Filtering Objaverse models for category: '{cat_clean}' ...")
+            # Batch scan annotations to find matching items
+            matched_uids = []
+            chunk_size = 500
+            for start in range(0, min(len(new_uids), 10000), chunk_size):
+                chunk = new_uids[start:start + chunk_size]
+                chunk_annos = objaverse.load_annotations(chunk)
+                for uid, anno in chunk_annos.items():
+                    name = anno.get("name", "").lower()
+                    tags = [t.get("name", "").lower() if isinstance(t, dict) else str(t).lower() for t in anno.get("tags", [])]
+                    categories = [c.get("name", "").lower() if isinstance(c, dict) else str(c).lower() for c in anno.get("categories", [])]
+
+                    if (cat_clean in name) or any(cat_clean in t for t in tags) or any(cat_clean in c for c in categories):
+                        matched_uids.append(uid)
+                        if limit and len(matched_uids) >= limit:
+                            break
+                if limit and len(matched_uids) >= limit:
+                    break
+            uids = matched_uids
+            print(f"Found {len(uids)} models matching '{cat_clean}'.")
+        else:
+            uids = new_uids[:limit] if limit else new_uids[:50]
+            print(f"Selected {len(uids)} NEW UIDs to download...")
     elif limit is not None:
         uids = uids[:limit]
 
@@ -120,7 +151,7 @@ def organize_dataset(
     print("Loading annotations...")
     annotations = objaverse.load_annotations(uids)
 
-    print("Fetching/verifying downloaded GLB files...")
+    print("Downloading/verifying GLB files (multiprocessed)...")
     cached_objects = objaverse.load_objects(uids=uids, download_processes=4)
 
     existing_ids = set(master_metadata.keys())

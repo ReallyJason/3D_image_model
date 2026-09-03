@@ -13,42 +13,42 @@
     }
   },
   {
-    "id": "characters_creatures_00058",
+    "id": "characters_creatures_00150",
     "category": "characters_creatures",
-    "name": "BULLET BILL",
-    "model_file": "objects/characters_creatures_00058/model.glb",
-    "renders_dir": "objects/characters_creatures_00058",
+    "name": "Wattson Apex Legends",
+    "model_file": "objects/characters_creatures_00150/model.glb",
+    "renders_dir": "objects/characters_creatures_00150",
     "license": "CC-BY-4.0",
-    "original_uid": "6cfb55bd41d24db298b52b11ad74aa0a",
+    "original_uid": "c5f34f56eb9f4855aba37f2806301fd7",
     "stats": {
-      "face_count": 32122,
-      "vertex_count": 16398
+      "face_count": 51632,
+      "vertex_count": 27239
     }
   },
   {
-    "id": "cars_vehicles_00061",
+    "id": "cars_vehicles_00248",
     "category": "cars_vehicles",
-    "name": "Wooden Toy Locomotive",
-    "model_file": "objects/cars_vehicles_00061/model.glb",
-    "renders_dir": "objects/cars_vehicles_00061",
+    "name": "Kamaz 6520-B2",
+    "model_file": "objects/cars_vehicles_00248/model.glb",
+    "renders_dir": "objects/cars_vehicles_00248",
     "license": "CC-BY-4.0",
-    "original_uid": "3fff5bbe42bf4ffeb95bbcddb5d39688",
+    "original_uid": "4dd8ff756a8f43939ca22ea5f2706d16",
     "stats": {
-      "face_count": 36680,
-      "vertex_count": 18712
+      "face_count": 506363,
+      "vertex_count": 512061
     }
   },
   {
-    "id": "cultural_heritage_history_00151",
+    "id": "cultural_heritage_history_00057",
     "category": "cultural_heritage_history",
-    "name": "COADS_56-15",
-    "model_file": "objects/cultural_heritage_history_00151/model.glb",
-    "renders_dir": "objects/cultural_heritage_history_00151",
-    "license": "CC-BY-SA-4.0",
-    "original_uid": "8c4fece7abbf4b1d99545e223e9cbbf0",
+    "name": "PNRP F.1.30.134.1.b",
+    "model_file": "objects/cultural_heritage_history_00057/model.glb",
+    "renders_dir": "objects/cultural_heritage_history_00057",
+    "license": "CC-BY-4.0",
+    "original_uid": "a38b6658117e4135ab0374cca4d745b9",
     "stats": {
-      "face_count": 1305886,
-      "vertex_count": 857050
+      "face_count": 239444,
+      "vertex_count": 119724
     }
   },
   {
@@ -78,16 +78,16 @@
     }
   },
   {
-    "id": "weapons_military_00099",
+    "id": "weapons_military_00050",
     "category": "weapons_military",
-    "name": "Kunai",
-    "model_file": "objects/weapons_military_00099/model.glb",
-    "renders_dir": "objects/weapons_military_00099",
+    "name": "Axe",
+    "model_file": "objects/weapons_military_00050/model.glb",
+    "renders_dir": "objects/weapons_military_00050",
     "license": "CC-BY-4.0",
-    "original_uid": "a646531842584f9eb18cb926fdc2effe",
+    "original_uid": "19e61b54ffc146b1aea489f8261100b3",
     "stats": {
-      "face_count": 25748,
-      "vertex_count": 12920
+      "face_count": 7694,
+      "vertex_count": 3921
     }
   },
   {
@@ -104,81 +104,81 @@
     }
   },
   {
-    "id": "architecture_00185",
+    "id": "architecture_00193",
     "category": "architecture",
-    "name": "Modelo #68",
-    "model_file": "objects/architecture_00185/model.glb",
-    "renders_dir": "objects/architecture_00185",
+    "name": "SKETCH 2-ND FLOOR",
+    "model_file": "objects/architecture_00193/model.glb",
+    "renders_dir": "objects/architecture_00193",
     "license": "CC-BY-4.0",
-    "original_uid": "eb9a16e819ee4b089a626061319f3d84",
+    "original_uid": "2f798595ecd446c48eadc747170105cf",
     "stats": {
-      "face_count": 488,
-      "vertex_count": 246
+      "face_count": 235487,
+      "vertex_count": 133620
     }
   },
   {
-    "id": "art_abstract_00120",
+    "id": "art_abstract_00226",
     "category": "art_abstract",
-    "name": "Stylized Mushrooms",
-    "model_file": "objects/art_abstract_00120/model.glb",
-    "renders_dir": "objects/art_abstract_00120",
+    "name": "Little Zahra's Armchair",
+    "model_file": "objects/art_abstract_00226/model.glb",
+    "renders_dir": "objects/art_abstract_00226",
     "license": "CC-BY-4.0",
-    "original_uid": "ffc842bb25cb40cba2eb8d5a4a6f34c7",
+    "original_uid": "9f48d7f42afc49f0acc4c3705c0f8bcf",
     "stats": {
-      "face_count": 508658,
-      "vertex_count": 254508
+      "face_count": 153648,
+      "vertex_count": 76944
     }
   },
   {
-    "id": "fashion_style_00041",
+    "id": "fashion_style_00207",
     "category": "fashion_style",
-    "name": "Le Biscuit \" Miss Emmy \" ( STL )",
-    "model_file": "objects/fashion_style_00041/model.glb",
-    "renders_dir": "objects/fashion_style_00041",
+    "name": "Shoes",
+    "model_file": "objects/fashion_style_00207/model.glb",
+    "renders_dir": "objects/fashion_style_00207",
     "license": "CC-BY-4.0",
-    "original_uid": "ac02e94e10cf4e35b80701ab8655130b",
+    "original_uid": "08158fa3333a4b288bd2746a6ba6f9e5",
     "stats": {
-      "face_count": 1582759,
-      "vertex_count": 791381
+      "face_count": 11984,
+      "vertex_count": 5985
     }
   },
   {
-    "id": "pamir_00202",
+    "id": "pamir_00138",
     "category": "pamir",
-    "name": "23111B",
-    "model_file": "objects/pamir_00202/model.glb",
-    "renders_dir": "objects/pamir_00202",
+    "name": "BINO",
+    "model_file": "objects/pamir_00138/model.glb",
+    "renders_dir": "objects/pamir_00138",
     "license": "CC-BY-4.0",
-    "original_uid": "c082e79901ef4c3e9cc2df55fe872f19",
+    "original_uid": "d02b9a8e2e324440ac606d549883e3e4",
     "stats": {
-      "face_count": 5110,
-      "vertex_count": 3902
+      "face_count": 24189,
+      "vertex_count": 19595
     }
   },
   {
-    "id": "nature_plants_00081",
+    "id": "nature_plants_00049",
     "category": "nature_plants",
-    "name": "Icicle Diorama",
-    "model_file": "objects/nature_plants_00081/model.glb",
-    "renders_dir": "objects/nature_plants_00081",
+    "name": "Yellow Barrel",
+    "model_file": "objects/nature_plants_00049/model.glb",
+    "renders_dir": "objects/nature_plants_00049",
     "license": "CC-BY-4.0",
-    "original_uid": "4fd65ced9aac4c1a9cc974fed30a987e",
+    "original_uid": "4636284e977d4579ac033a42299bde48",
     "stats": {
-      "face_count": 346304,
-      "vertex_count": 173283
+      "face_count": 1156,
+      "vertex_count": 580
     }
   },
   {
-    "id": "furniture_home_00136",
+    "id": "furniture_home_00091",
     "category": "furniture_home",
-    "name": "\u041b\u044e\u0441\u0442\u0440\u0430 2306-8P Favourite",
-    "model_file": "objects/furniture_home_00136/model.glb",
-    "renders_dir": "objects/furniture_home_00136",
-    "license": "CC-BY-4.0",
-    "original_uid": "b2393385990a48239bd6797f22bffa6f",
+    "name": "Dirty cooker",
+    "model_file": "objects/furniture_home_00091/model.glb",
+    "renders_dir": "objects/furniture_home_00091",
+    "license": "CC-BY-SA-4.0",
+    "original_uid": "a0c216a7de774aba903f441d7899aa02",
     "stats": {
-      "face_count": 348908,
-      "vertex_count": 217075
+      "face_count": 1890,
+      "vertex_count": 1123
     }
   },
   {
@@ -208,16 +208,16 @@
     }
   },
   {
-    "id": "object_00180",
+    "id": "object_00077",
     "category": "object",
-    "name": "Object 10",
-    "model_file": "objects/object_00180/model.glb",
-    "renders_dir": "objects/object_00180",
+    "name": "\u536f",
+    "model_file": "objects/object_00077/model.glb",
+    "renders_dir": "objects/object_00077",
     "license": "CC-BY-4.0",
-    "original_uid": "71f123c49a5042348243ff409062ba47",
+    "original_uid": "d4b1bdd4467d43f4b4a9f59aed18ff1d",
     "stats": {
-      "face_count": 6088,
-      "vertex_count": 3410
+      "face_count": 3528,
+      "vertex_count": 1766
     }
   },
   {
@@ -234,29 +234,29 @@
     }
   },
   {
-    "id": "science_technology_00194",
+    "id": "science_technology_00200",
     "category": "science_technology",
-    "name": "Kriss Vector",
-    "model_file": "objects/science_technology_00194/model.glb",
-    "renders_dir": "objects/science_technology_00194",
+    "name": "I_21_2",
+    "model_file": "objects/science_technology_00200/model.glb",
+    "renders_dir": "objects/science_technology_00200",
     "license": "CC-BY-4.0",
-    "original_uid": "3a2892e5c7d64ac08ec3ada42c64aa65",
+    "original_uid": "5250476c811746c88531af87d3994b55",
     "stats": {
-      "face_count": 83899,
-      "vertex_count": 42743
+      "face_count": 75589,
+      "vertex_count": 40801
     }
   },
   {
-    "id": "polycam_00157",
+    "id": "polycam_00148",
     "category": "polycam",
-    "name": "Albeit Dock Statue",
-    "model_file": "objects/polycam_00157/model.glb",
-    "renders_dir": "objects/polycam_00157",
+    "name": "23CH 9",
+    "model_file": "objects/polycam_00148/model.glb",
+    "renders_dir": "objects/polycam_00148",
     "license": "CC-BY-NC-SA-4.0",
-    "original_uid": "7654064ccf2845f699175657a581f8bd",
+    "original_uid": "0d71a058290344e3aa13ce69d9393d38",
     "stats": {
-      "face_count": 212144,
-      "vertex_count": 106417
+      "face_count": 175848,
+      "vertex_count": 101463
     }
   },
   {
@@ -270,6 +270,19 @@
     "stats": {
       "face_count": 32760,
       "vertex_count": 19080
+    }
+  },
+  {
+    "id": "shoe_00201",
+    "category": "shoe",
+    "name": "Space Shoe",
+    "model_file": "objects/shoe_00201/model.glb",
+    "renders_dir": "objects/shoe_00201",
+    "license": "CC-BY-4.0",
+    "original_uid": "52e1c500b21c44d5901b7ed2917e18cb",
+    "stats": {
+      "face_count": 202673,
+      "vertex_count": 106398
     }
   }
 ]
