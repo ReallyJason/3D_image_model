@@ -75,6 +75,9 @@ class TripoSREngine:
             print(f"⚠️ TripoSR local engine not available: {e}")
 
     def predict_mesh(self, img: Image.Image, resolution: int = 192, remove_bg: bool = True) -> Dict[str, Any]:
+        if not self.available:
+            raise RuntimeError("TripoSR local engine is not available or failed to initialize.")
+
         t0 = time.perf_counter()
         img_rgb = img.convert("RGB")
         prep_t0 = time.perf_counter()
@@ -149,6 +152,8 @@ class InstantMeshEngine:
         shutil.copy(res[1], glb_path)
 
         mesh = trimesh.load(glb_path, force="mesh")
+        if isinstance(mesh, trimesh.Scene):
+            mesh = trimesh.util.concatenate([g for g in mesh.geometry.values() if isinstance(g, trimesh.Trimesh)])
         total_ms = (time.perf_counter() - t0) * 1000.0
 
         return {
@@ -211,6 +216,8 @@ class TrellisEngine:
 
         shutil.copy(res_glb[0], glb_path)
         mesh = trimesh.load(glb_path, force="mesh")
+        if isinstance(mesh, trimesh.Scene):
+            mesh = trimesh.util.concatenate([g for g in mesh.geometry.values() if isinstance(g, trimesh.Trimesh)])
         mesh.export(obj_path)
 
         total_ms = (time.perf_counter() - t0) * 1000.0
@@ -313,7 +320,13 @@ class WebViewerHandler(BaseHTTPRequestHandler):
         self.send_header("Access-Control-Allow-Headers", "Content-Type")
         self.end_headers()
 
+    def do_HEAD(self):
+        self.handle_get_or_head(is_head=True)
+
     def do_GET(self):
+        self.handle_get_or_head(is_head=False)
+
+    def handle_get_or_head(self, is_head: bool = False):
         parsed = urlparse(self.path)
         path = parsed.path
 
@@ -335,20 +348,21 @@ class WebViewerHandler(BaseHTTPRequestHandler):
             return
 
         if path.startswith("/reconstructions/"):
-            filename = os.path.basename(path)
-            file_path = os.path.join(RECONSTRUCTIONS_DIR, filename)
-            if os.path.exists(file_path):
+            rel_path = path[len("/reconstructions/"):].lstrip("/")
+            file_path = os.path.normpath(os.path.join(RECONSTRUCTIONS_DIR, rel_path))
+            if file_path.startswith(os.path.normpath(RECONSTRUCTIONS_DIR)) and os.path.exists(file_path):
                 query = parse_qs(parsed.query)
                 is_download = "download" in query or "download" in parsed.query
-                self.serve_file(file_path, as_attachment=is_download)
+                self.serve_file(file_path, as_attachment=is_download, is_head=is_head)
             else:
                 self.send_error(404, "Reconstruction file not found")
             return
 
         if path.startswith("/my_dataset/"):
-            file_path = os.path.join(PROJECT_ROOT, path.lstrip("/"))
-            if os.path.exists(file_path):
-                self.serve_file(file_path)
+            rel_path = path.lstrip("/")
+            file_path = os.path.normpath(os.path.join(PROJECT_ROOT, rel_path))
+            if file_path.startswith(os.path.normpath(PROJECT_ROOT)) and os.path.exists(file_path):
+                self.serve_file(file_path, is_head=is_head)
             else:
                 self.send_error(404, "Dataset image not found")
             return
@@ -356,10 +370,10 @@ class WebViewerHandler(BaseHTTPRequestHandler):
         if path == "/" or path == "/index.html":
             file_path = os.path.join(WEB_DIR, "index.html")
         else:
-            file_path = os.path.join(WEB_DIR, path.lstrip("/"))
+            file_path = os.path.normpath(os.path.join(WEB_DIR, path.lstrip("/")))
 
-        if os.path.exists(file_path) and os.path.isfile(file_path):
-            self.serve_file(file_path)
+        if file_path.startswith(os.path.normpath(WEB_DIR)) and os.path.exists(file_path) and os.path.isfile(file_path):
+            self.serve_file(file_path, is_head=is_head)
         else:
             self.send_error(404, "Not Found")
 
@@ -426,7 +440,7 @@ class WebViewerHandler(BaseHTTPRequestHandler):
         else:
             self.send_error(404, "Endpoint Not Found")
 
-    def serve_file(self, file_path: str, as_attachment: bool = False):
+    def serve_file(self, file_path: str, as_attachment: bool = False, is_head: bool = False):
         mime_type, _ = mimetypes.guess_type(file_path)
         if not mime_type:
             if file_path.endswith(".obj"):
@@ -437,17 +451,18 @@ class WebViewerHandler(BaseHTTPRequestHandler):
                 mime_type = "application/octet-stream"
 
         try:
-            with open(file_path, "rb") as f:
-                content = f.read()
+            file_size = os.path.getsize(file_path)
             self.send_response(200)
             self.send_header("Content-Type", mime_type)
-            self.send_header("Content-Length", str(len(content)))
+            self.send_header("Content-Length", str(file_size))
             self.send_header("Access-Control-Allow-Origin", "*")
             if as_attachment:
                 filename = os.path.basename(file_path)
                 self.send_header("Content-Disposition", f'attachment; filename="{filename}"')
             self.end_headers()
-            self.wfile.write(content)
+            if not is_head:
+                with open(file_path, "rb") as f:
+                    shutil.copyfileobj(f, self.wfile)
         except Exception as e:
             self.send_error(500, f"Error reading file: {e}")
 

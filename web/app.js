@@ -345,7 +345,7 @@ async function triggerReconstruction() {
 
     // Prefer Colored GLB if available, else OBJ
     if (data.glb_url) {
-      loadGlbMesh(data.glb_url);
+      loadGlbMesh(data.glb_url, data.obj_url);
     } else {
       loadObjMesh(data.obj_url);
     }
@@ -376,13 +376,13 @@ async function triggerReconstruction() {
 const gltfLoader = new THREE.GLTFLoader();
 const objLoader = new THREE.OBJLoader();
 
-function loadGlbMesh(url) {
+function loadGlbMesh(url, fallbackObjUrl) {
   gltfLoader.load(url, (gltf) => {
     const object = gltf.scene;
     applyMeshToScene(object, true);
   }, undefined, (err) => {
     console.warn('GLB load failed, falling back to OBJ:', err);
-    if (data && data.obj_url) loadObjMesh(data.obj_url);
+    if (fallbackObjUrl) loadObjMesh(fallbackObjUrl);
   });
 }
 
@@ -394,6 +394,18 @@ function loadObjMesh(url) {
 
 function applyMeshToScene(object, isColored) {
   if (currentMesh) {
+    currentMesh.traverse((child) => {
+      if (child.isMesh) {
+        if (child.geometry) child.geometry.dispose();
+        if (child.material) {
+          if (Array.isArray(child.material)) {
+            child.material.forEach(m => m.dispose());
+          } else {
+            child.material.dispose();
+          }
+        }
+      }
+    });
     scene.remove(currentMesh);
   }
   if (placeholderMesh) {
