@@ -1,6 +1,6 @@
 /**
- * 3D Vision Lab — Interactive Web Viewer Client (Option 2).
- * Three.js 3D Viewport + Real-Time Neural Mesh Inference.
+ * 3D Vision Lab — Interactive Web Viewer Client with Foundation Model Support.
+ * Renders Photorealistic Colored GLB & OBJ Meshes via Three.js.
  */
 
 // -------------------------------------------------------------
@@ -22,11 +22,21 @@ const dropzonePreview = document.getElementById('dropzonePreview');
 const previewImage = document.getElementById('previewImage');
 const clearImageBtn = document.getElementById('clearImageBtn');
 const samplesList = document.getElementById('samplesList');
+
+const engineSelect = document.getElementById('engineSelect');
+const triposrControls = document.getElementById('triposrControls');
+const voxelControls = document.getElementById('voxelControls');
+const resolutionSelect = document.getElementById('resolutionSelect');
+const removeBgCheck = document.getElementById('removeBgCheck');
 const thresholdSlider = document.getElementById('thresholdSlider');
 const thresholdValue = document.getElementById('thresholdValue');
+
 const generateBtn = document.getElementById('generateBtn');
 const loadingOverlay = document.getElementById('loadingOverlay');
+const loadingStatusText = document.getElementById('loadingStatusText');
 const meshStatus = document.getElementById('meshStatus');
+const activeModelBadge = document.getElementById('activeModelBadge');
+
 const rotateBtn = document.getElementById('rotateBtn');
 const wireframeBtn = document.getElementById('wireframeBtn');
 const resetCamBtn = document.getElementById('resetCamBtn');
@@ -40,6 +50,40 @@ const mcMetric = document.getElementById('mcMetric');
 const verticesMetric = document.getElementById('verticesMetric');
 const facesMetric = document.getElementById('facesMetric');
 
+const hfTokenRow = document.getElementById('hfTokenRow');
+const hfTokenInput = document.getElementById('hfTokenInput');
+
+// -------------------------------------------------------------
+// Engine Switcher UI Logic
+// -------------------------------------------------------------
+engineSelect.addEventListener('change', () => {
+  const engine = engineSelect.value;
+  if (engine === 'trellis') {
+    hfTokenRow.classList.remove('hidden');
+    triposrControls.classList.add('hidden');
+    voxelControls.classList.add('hidden');
+    activeModelBadge.textContent = 'Engine: Microsoft TRELLIS.2 (SOTA)';
+  } else if (engine === 'instantmesh') {
+    hfTokenRow.classList.remove('hidden');
+    triposrControls.classList.add('hidden');
+    voxelControls.classList.add('hidden');
+    activeModelBadge.textContent = 'Engine: Tencent InstantMesh';
+  } else if (engine === 'triposr') {
+    hfTokenRow.classList.add('hidden');
+    triposrControls.classList.remove('hidden');
+    voxelControls.classList.add('hidden');
+    activeModelBadge.textContent = 'Engine: TripoSR (Local Mac GPU)';
+  } else {
+    hfTokenRow.classList.add('hidden');
+    triposrControls.classList.add('hidden');
+    voxelControls.classList.remove('hidden');
+    activeModelBadge.textContent = 'Engine: TinyImageToVoxelNet (Custom Baseline)';
+  }
+  if (currentImageBase64 || currentImageUrl) {
+    triggerReconstruction();
+  }
+});
+
 // -------------------------------------------------------------
 // Three.js 3D Viewport Setup
 // -------------------------------------------------------------
@@ -47,16 +91,17 @@ const canvas = document.getElementById('canvas3d');
 const container = document.getElementById('viewportContainer');
 
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x0a0c12);
+scene.background = new THREE.Color(0x08090d);
 
 const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.05, 100);
-camera.position.set(1.6, 1.2, 2.0);
+camera.position.set(1.8, 1.4, 2.2);
 
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: false });
 renderer.setSize(container.clientWidth, container.clientHeight);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 1.2;
+renderer.toneMappingExposure = 1.25;
+renderer.outputEncoding = THREE.sRGBEncoding;
 
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
@@ -64,28 +109,28 @@ controls.dampingFactor = 0.05;
 controls.autoRotate = autoRotate;
 controls.autoRotateSpeed = 2.0;
 
-// Lighting Rig
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.65);
+// Studio 3-Point Lighting Rig
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.75);
 scene.add(ambientLight);
 
-const keyLight = new THREE.DirectionalLight(0xfff5ea, 1.2);
-keyLight.position.set(3, 5, 2);
+const keyLight = new THREE.DirectionalLight(0xfffaed, 1.4);
+keyLight.position.set(4, 6, 3);
 scene.add(keyLight);
 
-const fillLight = new THREE.DirectionalLight(0x90b0ff, 0.6);
-fillLight.position.set(-3, 2, -2);
+const fillLight = new THREE.DirectionalLight(0x8cb4ff, 0.7);
+fillLight.position.set(-4, 3, -3);
 scene.add(fillLight);
 
-const rimLight = new THREE.DirectionalLight(0x6366f1, 0.8);
-rimLight.position.set(0, -3, -3);
+const rimLight = new THREE.DirectionalLight(0x6366f1, 0.9);
+rimLight.position.set(0, -4, -4);
 scene.add(rimLight);
 
-// Floor Grid & Shadow Plane
-const gridHelper = new THREE.GridHelper(4, 20, 0x6366f1, 0x1e2436);
-gridHelper.position.y = -0.55;
+// Circular Ground Grid
+const gridHelper = new THREE.GridHelper(4, 24, 0x6366f1, 0x1a2133);
+gridHelper.position.y = -0.5;
 scene.add(gridHelper);
 
-// Default Placeholder Geometric Preview
+// Placeholder Geometry
 const placeholderGeom = new THREE.IcosahedronGeometry(0.45, 1);
 const placeholderMat = new THREE.MeshStandardMaterial({
   color: 0x272f44,
@@ -97,7 +142,7 @@ const placeholderMesh = new THREE.Mesh(placeholderGeom, placeholderMat);
 scene.add(placeholderMesh);
 
 // -------------------------------------------------------------
-// Render Loop & Resize
+// Render Loop
 // -------------------------------------------------------------
 function animate() {
   requestAnimationFrame(animate);
@@ -119,9 +164,8 @@ window.addEventListener('resize', () => {
 });
 
 // -------------------------------------------------------------
-// Image Input Handling (Upload, Drag-and-Drop, Clipboard)
+// Image Input Handling
 // -------------------------------------------------------------
-
 dropzone.addEventListener('click', () => fileInput.click());
 
 fileInput.addEventListener('change', (e) => {
@@ -150,7 +194,6 @@ dropzone.addEventListener('drop', (e) => {
   }
 });
 
-// Paste from clipboard
 window.addEventListener('paste', (e) => {
   const items = e.clipboardData?.items;
   if (!items) return;
@@ -184,9 +227,7 @@ function setImageSource(base64Data, url) {
   dropzonePreview.classList.remove('hidden');
   generateBtn.disabled = false;
 
-  meshStatus.textContent = 'Image loaded. Ready to reconstruct.';
-
-  // Trigger reconstruction automatically on image selection for instant gratification!
+  meshStatus.textContent = 'Image loaded. Generating 3D model...';
   triggerReconstruction();
 }
 
@@ -203,7 +244,7 @@ clearImageBtn.addEventListener('click', (e) => {
 });
 
 // -------------------------------------------------------------
-// Pre-Loaded Sample Gallery
+// Sample Gallery
 // -------------------------------------------------------------
 async function loadSampleGallery() {
   try {
@@ -241,26 +282,38 @@ async function loadSampleGallery() {
 }
 loadSampleGallery();
 
-// -------------------------------------------------------------
-// Slider & Settings
-// -------------------------------------------------------------
 thresholdSlider.addEventListener('input', (e) => {
   thresholdValue.textContent = Number(e.target.value).toFixed(2);
 });
 
 // -------------------------------------------------------------
-// Neural Reconstruction API Request
+// Neural Reconstruction API
 // -------------------------------------------------------------
 generateBtn.addEventListener('click', triggerReconstruction);
 
 async function triggerReconstruction() {
   if (!currentImageBase64 && !currentImageUrl) return;
 
+  const engine = engineSelect.value;
+  if (engine === 'trellis') {
+    loadingStatusText.textContent = 'Microsoft TRELLIS.2 Synthesizing 3D Flow Model...';
+  } else if (engine === 'instantmesh') {
+    loadingStatusText.textContent = 'InstantMesh Multi-View Diffusion & FlexiCubes...';
+  } else if (engine === 'triposr') {
+    loadingStatusText.textContent = 'TripoSR Local Neural Engine Inferring on Apple Silicon...';
+  } else {
+    loadingStatusText.textContent = 'TinyImageToVoxelNet Predicting Voxel Occupancy...';
+  }
+
   loadingOverlay.classList.remove('hidden');
   generateBtn.disabled = true;
-  meshStatus.textContent = 'Neural network inferring 3D shape on Apple Silicon GPU...';
+  meshStatus.textContent = `Running ${engineSelect.options[engineSelect.selectedIndex].text}...`;
 
   const payload = {
+    engine: engine,
+    hf_token: hfTokenInput ? hfTokenInput.value.trim() : '',
+    resolution: parseInt(resolutionSelect.value) || 192,
+    remove_bg: removeBgCheck.checked,
     threshold: parseFloat(thresholdSlider.value)
   };
 
@@ -282,21 +335,25 @@ async function triggerReconstruction() {
       throw new Error(data.error || 'Reconstruction failed');
     }
 
-    // Update Telemetry Metrics
+    // Telemetry Update
     inferenceMetric.textContent = `${data.inference_ms} ms`;
-    mcMetric.textContent = `${data.marching_cubes_ms} ms`;
+    mcMetric.textContent = `${data.total_latency_ms} ms`;
     verticesMetric.textContent = Number(data.vertices).toLocaleString();
     facesMetric.textContent = Number(data.faces).toLocaleString();
 
-    meshStatus.textContent = `Done in ${data.total_latency_ms} ms (${data.vertices.toLocaleString()} verts, ${data.faces.toLocaleString()} faces)`;
+    meshStatus.textContent = `${data.engine} • ${data.vertices.toLocaleString()} verts, ${data.faces.toLocaleString()} faces (${data.total_latency_ms} ms)`;
 
-    // Load Reconstructed OBJ into 3D Viewport
-    loadObjMesh(data.obj_url);
-
-    // Setup Download Links
-    downloadObjBtn.href = data.obj_url;
+    // Prefer Colored GLB if available, else OBJ
     if (data.glb_url) {
-      downloadGlbBtn.href = data.glb_url;
+      loadGlbMesh(data.glb_url);
+    } else {
+      loadObjMesh(data.obj_url);
+    }
+
+    // Download Links
+    downloadObjBtn.href = `${data.obj_url}?download=1`;
+    if (data.glb_url) {
+      downloadGlbBtn.href = `${data.glb_url}?download=1`;
       downloadGlbBtn.classList.remove('hidden');
     } else {
       downloadGlbBtn.classList.add('hidden');
@@ -314,51 +371,66 @@ async function triggerReconstruction() {
 }
 
 // -------------------------------------------------------------
-// Three.js OBJ Mesh Loader
+// Loaders: GLTF (Colored) & OBJ
 // -------------------------------------------------------------
+const gltfLoader = new THREE.GLTFLoader();
 const objLoader = new THREE.OBJLoader();
+
+function loadGlbMesh(url) {
+  gltfLoader.load(url, (gltf) => {
+    const object = gltf.scene;
+    applyMeshToScene(object, true);
+  }, undefined, (err) => {
+    console.warn('GLB load failed, falling back to OBJ:', err);
+    if (data && data.obj_url) loadObjMesh(data.obj_url);
+  });
+}
 
 function loadObjMesh(url) {
   objLoader.load(url, (object) => {
-    // Remove previous mesh
-    if (currentMesh) {
-      scene.remove(currentMesh);
-    }
-    if (placeholderMesh) {
-      placeholderMesh.visible = false;
-    }
-
-    // Apply sleek modern ceramic material
-    const material = new THREE.MeshStandardMaterial({
-      color: 0x7c8ba1,
-      roughness: 0.35,
-      metalness: 0.2,
-      wireframe: isWireframe,
-      side: THREE.DoubleSide
-    });
-
-    object.traverse((child) => {
-      if (child.isMesh) {
-        child.material = material;
-        child.geometry.computeVertexNormals();
-      }
-    });
-
-    // Compute bounding box & center mesh perfectly
-    const box = new THREE.Box3().setFromObject(object);
-    const center = box.getCenter(new THREE.Vector3());
-    const size = box.getSize(new THREE.Vector3());
-
-    object.position.sub(center);
-    // Align base with ground grid
-    object.position.y += size.y / 2 - 0.5;
-
-    currentMesh = object;
-    scene.add(currentMesh);
-
-    // Smooth camera reset
-    resetCamera(size);
+    applyMeshToScene(object, false);
   });
+}
+
+function applyMeshToScene(object, isColored) {
+  if (currentMesh) {
+    scene.remove(currentMesh);
+  }
+  if (placeholderMesh) {
+    placeholderMesh.visible = false;
+  }
+
+  object.traverse((child) => {
+    if (child.isMesh) {
+      if (!isColored || !child.material) {
+        child.material = new THREE.MeshStandardMaterial({
+          color: 0x8898aa,
+          roughness: 0.4,
+          metalness: 0.15,
+          wireframe: isWireframe,
+          side: THREE.DoubleSide
+        });
+      } else {
+        child.material.wireframe = isWireframe;
+        child.material.side = THREE.DoubleSide;
+        child.material.needsUpdate = true;
+      }
+      child.geometry.computeVertexNormals();
+    }
+  });
+
+  // Center Mesh
+  const box = new THREE.Box3().setFromObject(object);
+  const center = box.getCenter(new THREE.Vector3());
+  const size = box.getSize(new THREE.Vector3());
+
+  object.position.sub(center);
+  object.position.y += size.y / 2 - 0.5;
+
+  currentMesh = object;
+  scene.add(currentMesh);
+
+  resetCamera(size);
 }
 
 function resetCamera(size) {
@@ -382,7 +454,7 @@ wireframeBtn.addEventListener('click', () => {
 
   if (currentMesh) {
     currentMesh.traverse((child) => {
-      if (child.isMesh) {
+      if (child.isMesh && child.material) {
         child.material.wireframe = isWireframe;
       }
     });

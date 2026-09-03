@@ -9,10 +9,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   
-  <!-- Three.js + OrbitControls + OBJLoader -->
+  <!-- Three.js + OrbitControls + OBJLoader + GLTFLoader -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
 </head>
 <body>
   <!-- Header -->
@@ -25,8 +26,8 @@
       </div>
     </div>
     <div class="status-badges">
-      <span class="badge badge-mps"><span class="pulse-dot"></span> Apple Silicon MPS Active</span>
-      <span class="badge badge-model">Model: TinyImageToVoxelNet (6.5M)</span>
+      <span class="badge badge-mps"><span class="pulse-dot"></span> Acceleration Active</span>
+      <span id="activeModelBadge" class="badge badge-model">Engine: TRELLIS.2</span>
     </div>
   </header>
 
@@ -63,24 +64,72 @@
 
       <!-- Settings Section -->
       <div class="card panel-section">
-        <h2 class="section-title">2. Reconstruction Parameters</h2>
+        <h2 class="section-title">2. Model & Engine Settings</h2>
+        
+        <!-- Engine Selector -->
         <div class="setting-row">
+          <label for="engineSelect" class="setting-label">3D AI Architecture</label>
+          <select id="engineSelect" class="select-input">
+            <option value="trellis" selected>🏆 Microsoft TRELLIS.2 (Best Quality / SOTA)</option>
+            <option value="instantmesh">🥈 Tencent InstantMesh (Clean Topology / FlexiCubes)</option>
+            <option value="triposr">⚡ StabilityAI TripoSR (100% Local Mac GPU)</option>
+            <option value="tiny_voxel">🔬 TinyImageToVoxelNet (Custom 32³ Baseline)</option>
+          </select>
+        </div>
+
+        <!-- Optional HF Token for ZeroGPU -->
+        <div class="setting-row" id="hfTokenRow">
           <div class="setting-label-row">
-            <label for="thresholdSlider">Voxel Density Threshold</label>
-            <span id="thresholdValue" class="mono-value">0.45</span>
+            <label for="hfTokenInput">Hugging Face Token (Optional)</label>
+            <a href="https://huggingface.co/settings/tokens" target="_blank" class="token-link">Get Free Token ↗</a>
           </div>
-          <input type="range" id="thresholdSlider" min="0.25" max="0.75" step="0.01" value="0.45" class="slider">
-          <div class="slider-ticks">
-            <span>Sparse (0.25)</span>
-            <span>Balanced (0.45)</span>
-            <span>Dense (0.75)</span>
+          <input type="password" id="hfTokenInput" placeholder="hf_... (for unlimited free ZeroGPU)" class="text-input">
+        </div>
+
+        <!-- Local TripoSR Options -->
+        <div id="triposrControls" class="hidden">
+          <div class="setting-row">
+            <label for="resolutionSelect" class="setting-label">Mesh Detail Level</label>
+            <select id="resolutionSelect" class="select-input">
+              <option value="128">Standard (~20,000 polygons)</option>
+              <option value="192" selected>High Detail (~40,000 polygons)</option>
+              <option value="256">Ultra Sharp (~80,000 polygons)</option>
+            </select>
+          </div>
+
+          <div class="setting-row checkbox-row">
+            <label class="checkbox-label">
+              <input type="checkbox" id="removeBgCheck" checked>
+              <span>Auto-Remove Background (rembg)</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Custom Voxel Options -->
+        <div id="voxelControls" class="hidden">
+          <div class="setting-row">
+            <div class="setting-label-row">
+              <label for="thresholdSlider">Voxel Threshold</label>
+              <span id="thresholdValue" class="mono-value">0.45</span>
+            </div>
+            <input type="range" id="thresholdSlider" min="0.25" max="0.75" step="0.01" value="0.45" class="slider">
           </div>
         </div>
 
         <button id="generateBtn" class="primary-btn" disabled>
           <span class="btn-icon">🔮</span>
-          <span class="btn-text">Reconstruct 3D Mesh</span>
+          <span class="btn-text">Reconstruct 3D Model</span>
         </button>
+
+        <!-- Direct Cloud Links -->
+        <div class="cloud-links-group">
+          <a href="https://huggingface.co/spaces/microsoft/TRELLIS.2" target="_blank" class="link-chip">
+            🌐 Open TRELLIS.2 Web Space ↗
+          </a>
+          <a href="https://huggingface.co/spaces/TencentARC/InstantMesh" target="_blank" class="link-chip">
+            🌐 Open InstantMesh Space ↗
+          </a>
+        </div>
       </div>
 
       <!-- Telemetry & Metrics -->
@@ -88,11 +137,11 @@
         <h2 class="section-title">Inference Telemetry</h2>
         <div class="metrics-grid">
           <div class="metric-box">
-            <span class="metric-label">Neural Inference</span>
+            <span class="metric-label">Inference Time</span>
             <span id="inferenceMetric" class="metric-val">-- ms</span>
           </div>
           <div class="metric-box">
-            <span class="metric-label">Marching Cubes</span>
+            <span class="metric-label">Total Latency</span>
             <span id="mcMetric" class="metric-val">-- ms</span>
           </div>
           <div class="metric-box">
@@ -100,7 +149,7 @@
             <span id="verticesMetric" class="metric-val">--</span>
           </div>
           <div class="metric-box">
-            <span class="metric-label">Triangles</span>
+            <span class="metric-label">Polygons (Faces)</span>
             <span id="facesMetric" class="metric-val">--</span>
           </div>
         </div>
@@ -125,26 +174,23 @@
       <div id="viewportContainer" class="viewport-container">
         <div id="loadingOverlay" class="loading-overlay hidden">
           <div class="spinner"></div>
-          <p class="loading-text">Neural Network Predicting 3D Space...</p>
+          <p id="loadingStatusText" class="loading-text">Neural Network Generating 3D Model...</p>
         </div>
 
-        <!-- Three.js renders into this canvas -->
         <canvas id="canvas3d"></canvas>
 
-        <!-- Interaction Helper Overlay -->
         <div class="viewport-hint">
           <span>🖱️ Left Drag: Orbit</span>
           <span>🖱️ Right Drag: Pan</span>
           <span>🔍 Scroll: Zoom</span>
         </div>
 
-        <!-- Download Floating Bar -->
         <div id="downloadBar" class="download-bar hidden">
-          <a id="downloadObjBtn" href="#" download="reconstructed_model.obj" class="download-btn btn-obj">
+          <a id="downloadObjBtn" href="#" class="download-btn btn-obj">
             📥 Download .OBJ
           </a>
-          <a id="downloadGlbBtn" href="#" download="reconstructed_model.glb" class="download-btn btn-glb">
-            📦 Download .GLB
+          <a id="downloadGlbBtn" href="#" class="download-btn btn-glb">
+            📦 Download .GLB (Textured)
           </a>
         </div>
       </div>
