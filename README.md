@@ -78,6 +78,10 @@ python main.py --step all --limit 20 --num-views 12 --augment
 | **4. Filter** | `python main.py --step filter --commercial-only` | Filters out failed/duplicate models and applies license constraints |
 | **5. Render** | `python main.py --step render --num-views 12 --augment` | GPU multi-view rendering with realistic lighting, backgrounds, and camera jitter |
 | **6. Split** | `python main.py --step split` | Generates stratified `train.json`, `val.json`, and `test.json` splits |
+| **7. Train** | `python main.py --step train --epochs 15` | Trains 2D-to-3D neural network with Apple Silicon GPU (MPS) acceleration |
+| **8. Reconstruct** | `python main.py --step reconstruct --image path/to/img.png` | Reconstructs 3D mesh (.obj / .glb) from a single 2D image via Marching Cubes |
+| **9. Benchmark** | `python main.py --step benchmark` | Automated evaluation on test set (Mean 3D IoU, latency ms, throughput FPS) |
+| **10. Web Viewer** | `python main.py --step serve` | Launches interactive 3D Three.js web app at `http://localhost:8080` |
 
 ---
 
