@@ -43,6 +43,7 @@ my_dataset/objects/
 test_render*.png
 checkpoints/
 reconstructions/
+models/
 *.npy
 *.pt
 *.pth

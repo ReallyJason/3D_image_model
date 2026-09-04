@@ -602,17 +602,24 @@ class WebViewerHandler(BaseHTTPRequestHandler):
         except Exception as e:
             self.send_error(500, f"Error reading file: {e}")
 
-def run_server(port: int = 8080):
-    server_address = ("127.0.0.1", port)
+def run_server(port: int = None):
+    # Support Railway dynamic $PORT and cloud environments
+    env_port = os.environ.get("PORT")
+    final_port = int(env_port) if env_port else (port or 8080)
+    # Bind to 0.0.0.0 for Railway/Cloud so edge proxy routes incoming traffic
+    host = "0.0.0.0" if (env_port or os.environ.get("RAILWAY_ENVIRONMENT") or os.environ.get("DOCKER")) else "127.0.0.1"
+    
+    server_address = (host, final_port)
     httpd = ThreadingHTTPServer(server_address, WebViewerHandler)
-    url = f"http://localhost:{port}"
+    url = f"http://localhost:{final_port}"
 
     print("\n" + "=" * 65)
     print("      🌐 3D VISION LAB — MULTI-ENGINE 3D VIEWER")
     print("=" * 65)
-    print(f"  Server URL:       {url}")
+    print(f"  Server URL:       {url} (Host: {host})")
     print(f"  Engines:          WebGPU | TRELLIS.2 | InstantMesh | TripoSR")
     print(f"  Security:         Active (Rate Limiting + Concurrency Semaphore)")
+    print(f"  Deployment:       {'Cloud / Railway Ready' if host == '0.0.0.0' else 'Local Development'}")
     print("=" * 65 + "\n", flush=True)
 
     try:
@@ -622,5 +629,5 @@ def run_server(port: int = 8080):
         httpd.server_close()
 
 if __name__ == "__main__":
-    port = int(sys.argv[1]) if len(sys.argv) > 1 else 8080
+    port = int(sys.argv[1]) if len(sys.argv) > 1 else None
     run_server(port=port)
