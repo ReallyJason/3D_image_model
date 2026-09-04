@@ -70,15 +70,39 @@
         <div class="setting-row">
           <label for="engineSelect" class="setting-label">3D AI Architecture</label>
           <select id="engineSelect" class="select-input">
-            <option value="trellis" selected>🏆 Microsoft TRELLIS.2 (Best Quality / SOTA)</option>
+            <option value="client_webgpu" selected>💻 In-Browser WebGPU (100% Client-Side, 0 Server Cost)</option>
+            <option value="trellis">🏆 Microsoft TRELLIS.2 (Best Quality / SOTA Cloud)</option>
             <option value="instantmesh">🥈 Tencent InstantMesh (Clean Topology / FlexiCubes)</option>
-            <option value="triposr">⚡ StabilityAI TripoSR (100% Local Mac GPU)</option>
+            <option value="triposr">⚡ StabilityAI TripoSR (Local Mac Python Engine)</option>
             <option value="tiny_voxel">🔬 TinyImageToVoxelNet (Custom 32³ Baseline)</option>
           </select>
         </div>
 
+        <!-- In-Browser WebGPU Controls (Client-Side, 0 Host Cost) -->
+        <div id="webgpuControls">
+          <div class="setting-row">
+            <div class="setting-label-row">
+              <label for="webgpuDepthSlider">3D Depth Extrusion</label>
+              <span id="webgpuDepthValue" class="mono-value">0.45</span>
+            </div>
+            <input type="range" id="webgpuDepthSlider" min="0.1" max="1.0" step="0.05" value="0.45" class="slider">
+          </div>
+          <div class="setting-row">
+            <label for="webgpuResSelect" class="setting-label">Mesh Detail Density</label>
+            <select id="webgpuResSelect" class="select-input">
+              <option value="96">Fast (~18,000 Polygons)</option>
+              <option value="144" selected>High Detail (~41,000 Polygons)</option>
+              <option value="192">Ultra Dense (~73,000 Polygons)</option>
+            </select>
+          </div>
+          <div class="serverless-callout">
+            <span class="shield-icon">🛡️</span>
+            <span><strong>Zero Host Resources:</strong> Computation executes directly on visitor's device GPU.</span>
+          </div>
+        </div>
+
         <!-- Optional HF Token for ZeroGPU -->
-        <div class="setting-row" id="hfTokenRow">
+        <div class="setting-row hidden" id="hfTokenRow">
           <div class="setting-label-row">
             <label for="hfTokenInput">Hugging Face Token (Optional)</label>
             <a href="https://huggingface.co/settings/tokens" target="_blank" class="token-link">Get Free Token ↗</a>
@@ -196,6 +220,42 @@
       </div>
     </section>
   </main>
+
+  <!-- In-Browser Resource Warning Modal -->
+  <div id="warningModal" class="modal-backdrop hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-icon-badge">⚠️</div>
+        <div>
+          <h3 class="modal-title">High Device Resource Notice</h3>
+          <p class="modal-subtitle">100% In-Browser Client Inference (0 Host Cost)</p>
+        </div>
+      </div>
+      
+      <div class="modal-body">
+        <p class="modal-text">
+          Running 3D neural reconstruction directly in your browser tab uses your device's <strong>local GPU and CPU shaders (WebGPU & WebAssembly)</strong>.
+        </p>
+        <div class="modal-warning-box">
+          <ul>
+            <li>⏱️ <strong>Execution Time:</strong> Depending on your device, initial model weight compilation (~25MB) may take <strong>a long time</strong>.</li>
+            <li>⚡ <strong>Performance:</strong> It may cause temporary <strong>browser lag or responsiveness stutter</strong> while computing depth geometry.</li>
+            <li>🔋 <strong>Hardware:</strong> May cause laptop battery drain or spin up cooling fans.</li>
+          </ul>
+        </div>
+        
+        <label class="modal-checkbox-label">
+          <input type="checkbox" id="dontRemindCheck">
+          <span>Don't remind me again on this device</span>
+        </label>
+      </div>
+
+      <div class="modal-footer">
+        <button id="cancelModalBtn" class="secondary-btn">Cancel</button>
+        <button id="confirmModalBtn" class="primary-btn-sm">Proceed with In-Browser AI</button>
+      </div>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>

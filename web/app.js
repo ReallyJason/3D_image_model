@@ -53,34 +53,61 @@ const facesMetric = document.getElementById('facesMetric');
 const hfTokenRow = document.getElementById('hfTokenRow');
 const hfTokenInput = document.getElementById('hfTokenInput');
 
+const webgpuControls = document.getElementById('webgpuControls');
+const webgpuDepthSlider = document.getElementById('webgpuDepthSlider');
+const webgpuDepthValue = document.getElementById('webgpuDepthValue');
+const webgpuResSelect = document.getElementById('webgpuResSelect');
+
+// Warning Modal Elements
+const warningModal = document.getElementById('warningModal');
+const dontRemindCheck = document.getElementById('dontRemindCheck');
+const cancelModalBtn = document.getElementById('cancelModalBtn');
+const confirmModalBtn = document.getElementById('confirmModalBtn');
+
+if (webgpuDepthSlider && webgpuDepthValue) {
+  webgpuDepthSlider.addEventListener('input', (e) => {
+    webgpuDepthValue.textContent = Number(e.target.value).toFixed(2);
+  });
+}
+
 // -------------------------------------------------------------
 // Engine Switcher UI Logic
 // -------------------------------------------------------------
 engineSelect.addEventListener('change', () => {
   const engine = engineSelect.value;
-  if (engine === 'trellis') {
-    hfTokenRow.classList.remove('hidden');
+  if (engine === 'client_webgpu') {
+    if (webgpuControls) webgpuControls.classList.remove('hidden');
+    if (hfTokenRow) hfTokenRow.classList.add('hidden');
     triposrControls.classList.add('hidden');
     voxelControls.classList.add('hidden');
-    activeModelBadge.textContent = 'Engine: Microsoft TRELLIS.2 (SOTA)';
+    activeModelBadge.textContent = 'Engine: In-Browser WebGPU (0 Host Cost)';
+  } else if (engine === 'trellis') {
+    if (webgpuControls) webgpuControls.classList.add('hidden');
+    if (hfTokenRow) hfTokenRow.classList.remove('hidden');
+    triposrControls.classList.add('hidden');
+    voxelControls.classList.add('hidden');
+    activeModelBadge.textContent = 'Engine: Microsoft TRELLIS.2 (SOTA Cloud)';
   } else if (engine === 'instantmesh') {
-    hfTokenRow.classList.remove('hidden');
+    if (webgpuControls) webgpuControls.classList.add('hidden');
+    if (hfTokenRow) hfTokenRow.classList.remove('hidden');
     triposrControls.classList.add('hidden');
     voxelControls.classList.add('hidden');
     activeModelBadge.textContent = 'Engine: Tencent InstantMesh';
   } else if (engine === 'triposr') {
-    hfTokenRow.classList.add('hidden');
+    if (webgpuControls) webgpuControls.classList.add('hidden');
+    if (hfTokenRow) hfTokenRow.classList.add('hidden');
     triposrControls.classList.remove('hidden');
     voxelControls.classList.add('hidden');
     activeModelBadge.textContent = 'Engine: TripoSR (Local Mac GPU)';
   } else {
-    hfTokenRow.classList.add('hidden');
+    if (webgpuControls) webgpuControls.classList.add('hidden');
+    if (hfTokenRow) hfTokenRow.classList.add('hidden');
     triposrControls.classList.add('hidden');
     voxelControls.classList.remove('hidden');
     activeModelBadge.textContent = 'Engine: TinyImageToVoxelNet (Custom Baseline)';
   }
   if (currentImageBase64 || currentImageUrl) {
-    triggerReconstruction();
+    checkAndTriggerReconstruction();
   }
 });
 
@@ -227,8 +254,8 @@ function setImageSource(base64Data, url) {
   dropzonePreview.classList.remove('hidden');
   generateBtn.disabled = false;
 
-  meshStatus.textContent = 'Image loaded. Generating 3D model...';
-  triggerReconstruction();
+  meshStatus.textContent = 'Image loaded. Ready to reconstruct.';
+  checkAndTriggerReconstruction();
 }
 
 clearImageBtn.addEventListener('click', (e) => {
@@ -287,14 +314,48 @@ thresholdSlider.addEventListener('input', (e) => {
 });
 
 // -------------------------------------------------------------
-// Neural Reconstruction API
+// Warning Modal & Reconstruction Trigger Logic
 // -------------------------------------------------------------
-generateBtn.addEventListener('click', triggerReconstruction);
+function checkAndTriggerReconstruction() {
+  if (!currentImageBase64 && !currentImageUrl) return;
+
+  const engine = engineSelect.value;
+  const isSuppressed = localStorage.getItem('suppress_webgpu_warning') === 'true';
+
+  if (engine === 'client_webgpu' && !isSuppressed && warningModal) {
+    warningModal.classList.remove('hidden');
+  } else {
+    triggerReconstruction();
+  }
+}
+
+if (cancelModalBtn) {
+  cancelModalBtn.addEventListener('click', () => {
+    warningModal.classList.add('hidden');
+  });
+}
+
+if (confirmModalBtn) {
+  confirmModalBtn.addEventListener('click', () => {
+    if (dontRemindCheck && dontRemindCheck.checked) {
+      localStorage.setItem('suppress_webgpu_warning', 'true');
+    }
+    warningModal.classList.add('hidden');
+    triggerReconstruction();
+  });
+}
+
+generateBtn.addEventListener('click', checkAndTriggerReconstruction);
 
 async function triggerReconstruction() {
   if (!currentImageBase64 && !currentImageUrl) return;
 
   const engine = engineSelect.value;
+  if (engine === 'client_webgpu') {
+    await executeInBrowserWebGPU();
+    return;
+  }
+
   if (engine === 'trellis') {
     loadingStatusText.textContent = 'Microsoft TRELLIS.2 Synthesizing 3D Flow Model...';
   } else if (engine === 'instantmesh') {
@@ -368,6 +429,235 @@ async function triggerReconstruction() {
     loadingOverlay.classList.add('hidden');
     generateBtn.disabled = false;
   }
+}
+
+// -------------------------------------------------------------
+// In-Browser WebGPU AI Pipeline (100% Client-Side, 0 Server Cost)
+// -------------------------------------------------------------
+let clientDepthPipeline = null;
+
+async function executeInBrowserWebGPU() {
+  const t0 = performance.now();
+  loadingStatusText.textContent = 'Initializing In-Browser Neural Model (WebGPU)...';
+  loadingOverlay.classList.remove('hidden');
+  generateBtn.disabled = true;
+  meshStatus.textContent = 'Computing 3D geometry locally on your device GPU (0 Host Resource)...';
+
+  try {
+    if (!clientDepthPipeline) {
+      loadingStatusText.textContent = 'Downloading ONNX WebGPU Model (~25MB, cached in browser)...';
+      const { pipeline, env } = await import('https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.3.3');
+      env.allowLocalModels = false;
+      try {
+        clientDepthPipeline = await pipeline('depth-estimation', 'onnx-community/depth-anything-v2-small', {
+          device: 'webgpu',
+          dtype: 'q4'
+        });
+      } catch (gpuErr) {
+        console.warn('WebGPU fallback to wasm/cpu:', gpuErr);
+        clientDepthPipeline = await pipeline('depth-estimation', 'onnx-community/depth-anything-v2-small', {
+          device: 'wasm',
+          dtype: 'q4'
+        });
+      }
+    }
+
+    loadingStatusText.textContent = 'Inferring 3D Depth Map on your Device GPU...';
+    const inputSrc = previewImage.src;
+    const output = await clientDepthPipeline(inputSrc);
+    const inferMs = performance.now() - t0;
+
+    loadingStatusText.textContent = 'Generating 3D Solid Watertight Geometry...';
+    const meshRes = parseInt(webgpuResSelect ? webgpuResSelect.value : 144) || 144;
+    const depthScale = parseFloat(webgpuDepthSlider ? webgpuDepthSlider.value : 0.45) || 0.45;
+
+    const meshResult = createSolid3DMeshFromDepth(output.depth, previewImage, meshRes, depthScale);
+
+    applyMeshToScene(meshResult.mesh, true);
+
+    const totalMs = performance.now() - t0;
+
+    // Telemetry Update
+    inferenceMetric.textContent = `${Math.round(inferMs)} ms`;
+    mcMetric.textContent = `${Math.round(totalMs)} ms`;
+    verticesMetric.textContent = meshResult.vertices.toLocaleString();
+    facesMetric.textContent = meshResult.faces.toLocaleString();
+
+    meshStatus.textContent = `In-Browser WebGPU • ${meshResult.vertices.toLocaleString()} verts, ${meshResult.faces.toLocaleString()} faces (0 Server Resource Used)`;
+
+    // Export client-side OBJ directly as Blob with 0 server bandwidth
+    const objBlobUrl = exportMeshToOBJBlob(meshResult.geometry);
+    downloadObjBtn.href = objBlobUrl;
+    downloadObjBtn.download = `model_client_${Date.now()}.obj`;
+    downloadGlbBtn.classList.add('hidden');
+    downloadBar.classList.remove('hidden');
+
+  } catch (err) {
+    console.error('Client WebGPU Error:', err);
+    meshStatus.textContent = `Client Error: ${err.message}`;
+    alert(`In-Browser WebGPU error: ${err.message}`);
+  } finally {
+    loadingOverlay.classList.add('hidden');
+    generateBtn.disabled = false;
+  }
+}
+
+function createSolid3DMeshFromDepth(rawDepth, imgElement, gridResolution, depthScale) {
+  const depthW = rawDepth.width;
+  const depthH = rawDepth.height;
+  const depthData = rawDepth.data;
+
+  const aspect = (imgElement.naturalHeight || 1) / (imgElement.naturalWidth || 1);
+  const cols = gridResolution;
+  const rows = Math.round(gridResolution * aspect);
+
+  let minD = Infinity, maxD = -Infinity;
+  for (let i = 0; i < depthData.length; i++) {
+    if (depthData[i] < minD) minD = depthData[i];
+    if (depthData[i] > maxD) maxD = depthData[i];
+  }
+  const rangeD = (maxD - minD) || 1.0;
+
+  function getDepth(u, v) {
+    const px = Math.min(depthW - 1, Math.max(0, Math.floor(u * depthW)));
+    const py = Math.min(depthH - 1, Math.max(0, Math.floor(v * depthH)));
+    const val = depthData[py * depthW + px];
+    return (val - minD) / rangeD;
+  }
+
+  const positions = [];
+  const uvs = [];
+  const indices = [];
+  const stride = cols + 1;
+
+  // Front displaced 3D surface
+  for (let r = 0; r <= rows; r++) {
+    const v = r / rows;
+    const y = (0.5 - v) * (2 * aspect);
+    for (let c = 0; c <= cols; c++) {
+      const u = c / cols;
+      const x = (u - 0.5) * 2;
+      const z = getDepth(u, v) * depthScale;
+      positions.push(x, y, z);
+      uvs.push(u, 1 - v);
+    }
+  }
+
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < cols; c++) {
+      const a = r * stride + c;
+      const b = (r + 1) * stride + c;
+      const d = r * stride + (c + 1);
+      const e = (r + 1) * stride + (c + 1);
+      indices.push(a, b, d);
+      indices.push(d, b, e);
+    }
+  }
+
+  // Back plate (solid watertight base)
+  const backBaseIndex = positions.length / 3;
+  const backZ = -0.06;
+  for (let r = 0; r <= rows; r++) {
+    const v = r / rows;
+    const y = (0.5 - v) * (2 * aspect);
+    for (let c = 0; c <= cols; c++) {
+      const u = c / cols;
+      const x = (u - 0.5) * 2;
+      positions.push(x, y, backZ);
+      uvs.push(u, 1 - v);
+    }
+  }
+
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < cols; c++) {
+      const a = backBaseIndex + r * stride + c;
+      const b = backBaseIndex + (r + 1) * stride + c;
+      const d = backBaseIndex + r * stride + (c + 1);
+      const e = backBaseIndex + (r + 1) * stride + (c + 1);
+      indices.push(a, d, b);
+      indices.push(d, e, b);
+    }
+  }
+
+  // Side bevel walls
+  // Top
+  for (let c = 0; c < cols; c++) {
+    const f1 = c, f2 = c + 1;
+    const b1 = backBaseIndex + c, b2 = backBaseIndex + c + 1;
+    indices.push(f1, f2, b1);
+    indices.push(f2, b2, b1);
+  }
+  // Bottom
+  for (let c = 0; c < cols; c++) {
+    const f1 = rows * stride + c, f2 = rows * stride + c + 1;
+    const b1 = backBaseIndex + rows * stride + c, b2 = backBaseIndex + rows * stride + c + 1;
+    indices.push(f1, b1, f2);
+    indices.push(f2, b1, b2);
+  }
+  // Left
+  for (let r = 0; r < rows; r++) {
+    const f1 = r * stride, f2 = (r + 1) * stride;
+    const b1 = backBaseIndex + r * stride, b2 = backBaseIndex + (r + 1) * stride;
+    indices.push(f1, b1, f2);
+    indices.push(f2, b1, b2);
+  }
+  // Right
+  for (let r = 0; r < rows; r++) {
+    const f1 = r * stride + cols, f2 = (r + 1) * stride + cols;
+    const b1 = backBaseIndex + r * stride + cols, b2 = backBaseIndex + (r + 1) * stride + cols;
+    indices.push(f1, f2, b1);
+    indices.push(f2, b2, b1);
+  }
+
+  const geometry = new THREE.BufferGeometry();
+  geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+  geometry.setAttribute('uv', new THREE.Float32BufferAttribute(uvs, 2));
+  geometry.setIndex(indices);
+  geometry.computeVertexNormals();
+
+  const texture = new THREE.Texture(imgElement);
+  texture.needsUpdate = true;
+  texture.encoding = THREE.sRGBEncoding;
+
+  const material = new THREE.MeshStandardMaterial({
+    map: texture,
+    roughness: 0.4,
+    metalness: 0.1,
+    side: THREE.DoubleSide
+  });
+
+  const mesh = new THREE.Mesh(geometry, material);
+  return {
+    mesh,
+    geometry,
+    vertices: positions.length / 3,
+    faces: indices.length / 3
+  };
+}
+
+function exportMeshToOBJBlob(geometry) {
+  const pos = geometry.attributes.position;
+  const uvs = geometry.attributes.uv;
+  let obj = "# 3D Vision Lab Client-Side WebGPU OBJ Export\n";
+  for (let i = 0; i < pos.count; i++) {
+    obj += `v ${pos.getX(i).toFixed(4)} ${pos.getY(i).toFixed(4)} ${pos.getZ(i).toFixed(4)}\n`;
+  }
+  if (uvs) {
+    for (let i = 0; i < uvs.count; i++) {
+      obj += `vt ${uvs.getX(i).toFixed(4)} ${uvs.getY(i).toFixed(4)}\n`;
+    }
+  }
+  const index = geometry.index;
+  if (index) {
+    for (let i = 0; i < index.count; i += 3) {
+      const a = index.getX(i) + 1;
+      const b = index.getX(i + 1) + 1;
+      const c = index.getX(i + 2) + 1;
+      obj += `f ${a}/${a} ${b}/${b} ${c}/${c}\n`;
+    }
+  }
+  const blob = new Blob([obj], { type: 'text/plain' });
+  return URL.createObjectURL(blob);
 }
 
 // -------------------------------------------------------------
