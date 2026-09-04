@@ -1,81 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3D Vision Lab — Neural Image-to-3D Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>3D Vision Lab — Real-Time Neural 2D Image to 3D Mesh Generator</title>
+  
+  <!-- Primary SEO Meta Tags -->
+  <meta name="title" content="3D Vision Lab — Real-Time Neural 2D Image to 3D Mesh Generator">
+  <meta name="description" content="Generate high-fidelity watertight 3D meshes from single 2D photos using in-browser WebGPU (0 server cost) or cloud TRELLIS.2 architectures. Export clean .OBJ and .GLB models instantly.">
+  <meta name="keywords" content="3D generator, image to 3d, WebGPU 3D, TRELLIS, single image 3D, watertight mesh, 3D vision, AI mesh generation, GLB export, OBJ export">
+  <meta name="author" content="Jason Hu | 3D Vision Lab">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="/">
+
+  <!-- Theme & PWA Capabilities -->
+  <meta name="theme-color" content="#0b0f19" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#0b0f19" media="(prefers-color-scheme: light)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="3D Vision Lab">
+  <meta name="application-name" content="3D Vision Lab">
+
+  <!-- Favicons & App Icons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Open Graph / Facebook / LinkedIn / Discord -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/">
+  <meta property="og:title" content="3D Vision Lab — Real-Time Neural 2D Image to 3D Mesh Generator">
+  <meta property="og:description" content="Generate watertight 3D meshes from any photo directly on your browser GPU. 100% In-Browser WebGPU + Cloud TRELLIS.2.">
+  <meta property="og:image" content="/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="3D Vision Lab Neural Mesh Generator Preview">
+  <meta property="og:site_name" content="3D Vision Lab">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="/">
+  <meta name="twitter:title" content="3D Vision Lab — Real-Time Neural 2D Image to 3D Mesh Generator">
+  <meta name="twitter:description" content="Generate watertight 3D models from any photo directly on your browser GPU. Zero host server load.">
+  <meta name="twitter:image" content="/og-image.png">
+
+  <!-- Google Fonts Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   
-  <!-- Three.js + OrbitControls + OBJLoader + GLTFLoader -->
+  <!-- Structured Data: Schema.org WebApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "3D Vision Lab",
+    "url": "https://3dvisionlab.app/",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Any modern browser supporting WebGPU or WebGL",
+    "browserRequirements": "Requires WebGPU, WebGL, or HTML5 Canvas support",
+    "description": "Real-time AI single-image 3D reconstruction platform featuring client-side WebGPU acceleration and Microsoft TRELLIS.2 cloud pipelines.",
+    "screenshot": "/og-image.png",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "100% In-Browser WebGPU Client Inference (Zero Host Cost)",
+      "Watertight Solid 3D Relief Mesh Generation",
+      "One-Click .OBJ and Textured .GLB Export",
+      "Cloud AI Integration with Microsoft TRELLIS.2 and Tencent InstantMesh",
+      "Interactive 3D Viewport with Orbit, Pan, Zoom, and Wireframe inspection"
+    ]
+  }
+  </script>
+
+  <!-- External Libraries: Three.js Ecosystem -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
 </head>
 <body>
+  <!-- Accessible Skip Link for Keyboard Users -->
+  <a href="#viewportContainer" class="skip-link">Skip to 3D Viewport</a>
+
+  <!-- Live Announcer for Screen Readers -->
+  <div id="a11yAnnouncer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="toast-container" aria-live="polite" aria-atomic="false" role="region" aria-label="Notifications"></div>
+
   <!-- Header -->
-  <header class="app-header">
+  <header class="app-header" role="banner">
     <div class="logo-group">
-      <div class="logo-icon">🧊</div>
+      <div class="logo-icon" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 64 64" fill="none">
+          <polygon points="32,13 49,23 32,33 15,23" fill="#38bdf8" />
+          <polygon points="15,23 32,33 32,51 15,41" fill="#818cf8" />
+          <polygon points="32,33 49,23 49,41 32,51" fill="#c084fc" />
+          <circle cx="32" cy="33" r="2.5" fill="#ffffff" />
+        </svg>
+      </div>
       <div>
         <h1 class="logo-title">3D Vision Lab</h1>
         <p class="logo-subtitle">Real-Time Single Image to 3D Mesh Generator</p>
       </div>
     </div>
-    <div class="status-badges">
-      <span class="badge badge-mps"><span class="pulse-dot"></span> Acceleration Active</span>
-      <span id="activeModelBadge" class="badge badge-model">Engine: TRELLIS.2</span>
+    <div class="status-badges" role="region" aria-label="System Status">
+      <span id="hardwareBadge" class="badge badge-mps"><span class="pulse-dot"></span> WebGPU Ready</span>
+      <span id="activeModelBadge" class="badge badge-model">Engine: In-Browser WebGPU</span>
     </div>
   </header>
 
+  <!-- WebGPU Compatibility Notice Banner (shown if browser lacks WebGPU) -->
+  <aside id="webgpuNoticeBanner" class="compatibility-banner hidden" role="alert">
+    <span class="banner-icon">ℹ️</span>
+    <span class="banner-text">
+      <strong>Notice:</strong> Your current browser or device has not enabled <strong>WebGPU</strong>. The app has smoothly switched to <strong>Cloud AI (TRELLIS.2 / InstantMesh)</strong> for seamless generation.
+    </span>
+    <button id="dismissBannerBtn" class="banner-dismiss" aria-label="Dismiss notice">&times;</button>
+  </aside>
+
   <!-- Main Container -->
-  <main class="app-layout">
+  <main class="app-layout" id="mainLayout" role="main">
     <!-- Left Sidebar: Controls & Input -->
-    <aside class="sidebar-panel">
+    <aside class="sidebar-panel" aria-label="Generation Controls">
       <!-- Input Section -->
-      <div class="card panel-section">
-        <h2 class="section-title">1. Input 2D Image</h2>
-        <div id="dropzone" class="dropzone">
-          <input type="file" id="fileInput" accept="image/*" class="file-input-hidden">
+      <section class="card panel-section" aria-labelledby="headingInput">
+        <h2 id="headingInput" class="section-title">1. Input 2D Image</h2>
+        <div id="dropzone" class="dropzone" role="button" tabindex="0" aria-label="Upload photo. Click or drag and drop an image here.">
+          <input type="file" id="fileInput" accept="image/png, image/jpeg, image/webp" class="file-input-hidden" aria-label="Choose image file">
           <div id="dropzoneEmpty" class="dropzone-content">
-            <div class="upload-icon">📸</div>
+            <div class="upload-icon" aria-hidden="true">📸</div>
             <p class="dropzone-text"><strong>Drag & Drop</strong> any photo here</p>
-            <p class="dropzone-subtext">or click to browse from your Mac</p>
+            <p class="dropzone-subtext">PNG, JPG, or WEBP (Max 12MB)</p>
           </div>
           <div id="dropzonePreview" class="dropzone-preview hidden">
-            <img id="previewImage" alt="Input preview">
-            <button id="clearImageBtn" class="clear-btn" title="Remove image">&times;</button>
+            <img id="previewImage" alt="Uploaded input image preview">
+            <button id="clearImageBtn" class="clear-btn" title="Remove image" aria-label="Remove uploaded image">&times;</button>
           </div>
         </div>
 
         <!-- Sample Gallery -->
         <div class="samples-container">
           <div class="samples-header">
-            <span>Or test with a sample:</span>
+            <span id="samplesHeading">Or test with a sample:</span>
           </div>
-          <div id="samplesList" class="samples-grid">
+          <div id="samplesList" class="samples-grid" role="group" aria-labelledby="samplesHeading">
             <!-- Dynamically populated -->
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- Settings Section -->
-      <div class="card panel-section">
-        <h2 class="section-title">2. Model & Engine Settings</h2>
+      <section class="card panel-section" aria-labelledby="headingSettings">
+        <h2 id="headingSettings" class="section-title">2. Model & Engine Settings</h2>
         
         <!-- Engine Selector -->
         <div class="setting-row">
           <label for="engineSelect" class="setting-label">3D AI Architecture</label>
-          <select id="engineSelect" class="select-input">
+          <select id="engineSelect" class="select-input" aria-describedby="engineHint">
             <option value="client_webgpu" selected>💻 In-Browser WebGPU (100% Client-Side, 0 Server Cost)</option>
             <option value="trellis">🏆 Microsoft TRELLIS.2 (Best Quality / SOTA Cloud)</option>
             <option value="instantmesh">🥈 Tencent InstantMesh (Clean Topology / FlexiCubes)</option>
             <option value="triposr">⚡ StabilityAI TripoSR (Local Mac Python Engine)</option>
             <option value="tiny_voxel">🔬 TinyImageToVoxelNet (Custom 32³ Baseline)</option>
           </select>
+          <span id="engineHint" class="sr-only">Select which neural architecture generates your 3D mesh.</span>
         </div>
 
         <!-- In-Browser WebGPU Controls (Client-Side, 0 Host Cost) -->
@@ -85,7 +181,7 @@
               <label for="webgpuDepthSlider">3D Depth Extrusion</label>
               <span id="webgpuDepthValue" class="mono-value">0.45</span>
             </div>
-            <input type="range" id="webgpuDepthSlider" min="0.1" max="1.0" step="0.05" value="0.45" class="slider">
+            <input type="range" id="webgpuDepthSlider" min="0.1" max="1.0" step="0.05" value="0.45" class="slider" aria-valuemin="0.1" aria-valuemax="1.0" aria-valuenow="0.45">
           </div>
           <div class="setting-row">
             <label for="webgpuResSelect" class="setting-label">Mesh Detail Density</label>
@@ -95,9 +191,9 @@
               <option value="192">Ultra Dense (~73,000 Polygons)</option>
             </select>
           </div>
-          <div class="serverless-callout">
-            <span class="shield-icon">🛡️</span>
-            <span><strong>Zero Host Resources:</strong> Computation executes directly on visitor's device GPU.</span>
+          <div class="serverless-callout" role="status">
+            <span class="shield-icon" aria-hidden="true">🛡️</span>
+            <span><strong>Zero Host Resources:</strong> Computation executes 100% on your device's GPU.</span>
           </div>
         </div>
 
@@ -105,9 +201,9 @@
         <div class="setting-row hidden" id="hfTokenRow">
           <div class="setting-label-row">
             <label for="hfTokenInput">Hugging Face Token (Optional)</label>
-            <a href="https://huggingface.co/settings/tokens" target="_blank" class="token-link">Get Free Token ↗</a>
+            <a href="https://huggingface.co/settings/tokens" target="_blank" rel="noopener noreferrer" class="token-link">Get Free Token ↗</a>
           </div>
-          <input type="password" id="hfTokenInput" placeholder="hf_... (for unlimited free ZeroGPU)" class="text-input">
+          <input type="password" id="hfTokenInput" placeholder="hf_... (for unlimited cloud ZeroGPU)" class="text-input" autocomplete="off" spellcheck="false">
         </div>
 
         <!-- Local TripoSR Options -->
@@ -122,7 +218,7 @@
           </div>
 
           <div class="setting-row checkbox-row">
-            <label class="checkbox-label">
+            <label class="checkbox-label" for="removeBgCheck">
               <input type="checkbox" id="removeBgCheck" checked>
               <span>Auto-Remove Background (rembg)</span>
             </label>
@@ -140,26 +236,26 @@
           </div>
         </div>
 
-        <button id="generateBtn" class="primary-btn" disabled>
-          <span class="btn-icon">🔮</span>
+        <button id="generateBtn" class="primary-btn" disabled aria-label="Reconstruct 3D Model">
+          <span class="btn-icon" aria-hidden="true">🔮</span>
           <span class="btn-text">Reconstruct 3D Model</span>
         </button>
 
         <!-- Direct Cloud Links -->
-        <div class="cloud-links-group">
-          <a href="https://huggingface.co/spaces/microsoft/TRELLIS.2" target="_blank" class="link-chip">
+        <div class="cloud-links-group" role="region" aria-label="Official Web Spaces">
+          <a href="https://huggingface.co/spaces/microsoft/TRELLIS.2" target="_blank" rel="noopener noreferrer" class="link-chip">
             🌐 Open TRELLIS.2 Web Space ↗
           </a>
-          <a href="https://huggingface.co/spaces/TencentARC/InstantMesh" target="_blank" class="link-chip">
+          <a href="https://huggingface.co/spaces/TencentARC/InstantMesh" target="_blank" rel="noopener noreferrer" class="link-chip">
             🌐 Open InstantMesh Space ↗
           </a>
         </div>
-      </div>
+      </section>
 
       <!-- Telemetry & Metrics -->
-      <div class="card panel-section telemetry-card">
-        <h2 class="section-title">Inference Telemetry</h2>
-        <div class="metrics-grid">
+      <section class="card panel-section telemetry-card" aria-labelledby="headingTelemetry">
+        <h2 id="headingTelemetry" class="section-title">Inference Telemetry</h2>
+        <div class="metrics-grid" role="region" aria-label="Performance Metrics">
           <div class="metric-box">
             <span class="metric-label">Inference Time</span>
             <span id="inferenceMetric" class="metric-val">-- ms</span>
@@ -177,43 +273,43 @@
             <span id="facesMetric" class="metric-val">--</span>
           </div>
         </div>
-      </div>
+      </section>
     </aside>
 
     <!-- Right: 3D Viewport -->
-    <section class="viewport-panel">
+    <section class="viewport-panel" aria-labelledby="headingViewport">
       <div class="viewport-header">
         <div class="viewport-title-group">
-          <h2 class="viewport-title">Interactive 3D Viewport</h2>
-          <span id="meshStatus" class="viewport-status">Awaiting input image...</span>
+          <h2 id="headingViewport" class="viewport-title">Interactive 3D Viewport</h2>
+          <span id="meshStatus" class="viewport-status" role="status">Awaiting input image...</span>
         </div>
-        <div class="viewport-actions">
-          <button id="rotateBtn" class="tool-btn active" title="Toggle Auto Rotation">🔄 Auto-Rotate</button>
-          <button id="wireframeBtn" class="tool-btn" title="Toggle Wireframe">🕸️ Wireframe</button>
-          <button id="resetCamBtn" class="tool-btn" title="Reset Camera View">🎯 Reset View</button>
+        <div class="viewport-actions" role="toolbar" aria-label="Viewport Controls">
+          <button id="rotateBtn" class="tool-btn active" title="Toggle Auto Rotation" aria-label="Toggle Auto Rotation" aria-pressed="true">🔄 Auto-Rotate</button>
+          <button id="wireframeBtn" class="tool-btn" title="Toggle Wireframe" aria-label="Toggle Wireframe" aria-pressed="false">🕸️ Wireframe</button>
+          <button id="resetCamBtn" class="tool-btn" title="Reset Camera View" aria-label="Reset Camera to default angle">🎯 Reset View</button>
         </div>
       </div>
 
       <!-- 3D Canvas Container -->
-      <div id="viewportContainer" class="viewport-container">
-        <div id="loadingOverlay" class="loading-overlay hidden">
-          <div class="spinner"></div>
+      <div id="viewportContainer" class="viewport-container" tabindex="0" aria-label="Interactive 3D Scene. Use mouse or touch to orbit and inspect.">
+        <div id="loadingOverlay" class="loading-overlay hidden" role="status" aria-live="assertive">
+          <div class="spinner" aria-hidden="true"></div>
           <p id="loadingStatusText" class="loading-text">Neural Network Generating 3D Model...</p>
         </div>
 
-        <canvas id="canvas3d"></canvas>
+        <canvas id="canvas3d" aria-label="3D polygonal canvas"></canvas>
 
-        <div class="viewport-hint">
+        <div class="viewport-hint" aria-hidden="true">
           <span>🖱️ Left Drag: Orbit</span>
           <span>🖱️ Right Drag: Pan</span>
           <span>🔍 Scroll: Zoom</span>
         </div>
 
-        <div id="downloadBar" class="download-bar hidden">
-          <a id="downloadObjBtn" href="#" class="download-btn btn-obj">
+        <div id="downloadBar" class="download-bar hidden" role="region" aria-label="Download generated 3D assets">
+          <a id="downloadObjBtn" href="#" class="download-btn btn-obj" download="model_3d.obj" aria-label="Download Wavefront OBJ 3D Model">
             📥 Download .OBJ
           </a>
-          <a id="downloadGlbBtn" href="#" class="download-btn btn-glb">
+          <a id="downloadGlbBtn" href="#" class="download-btn btn-glb" download="model_3d.glb" aria-label="Download Binary GLTF Textured 3D Model">
             📦 Download .GLB (Textured)
           </a>
         </div>
@@ -222,17 +318,17 @@
   </main>
 
   <!-- In-Browser Resource Warning Modal -->
-  <div id="warningModal" class="modal-backdrop hidden">
+  <div id="warningModal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
     <div class="modal-card">
       <div class="modal-header">
-        <div class="modal-icon-badge">⚠️</div>
+        <div class="modal-icon-badge" aria-hidden="true">⚠️</div>
         <div>
-          <h3 class="modal-title">High Device Resource Notice</h3>
+          <h3 id="modalTitle" class="modal-title">High Device Resource Notice</h3>
           <p class="modal-subtitle">100% In-Browser Client Inference (0 Host Cost)</p>
         </div>
       </div>
       
-      <div class="modal-body">
+      <div class="modal-body" id="modalDesc">
         <p class="modal-text">
           Running 3D neural reconstruction directly in your browser tab uses your device's <strong>local GPU and CPU shaders (WebGPU & WebAssembly)</strong>.
         </p>
@@ -244,18 +340,28 @@
           </ul>
         </div>
         
-        <label class="modal-checkbox-label">
+        <label class="modal-checkbox-label" for="dontRemindCheck">
           <input type="checkbox" id="dontRemindCheck">
           <span>Don't remind me again on this device</span>
         </label>
       </div>
 
       <div class="modal-footer">
-        <button id="cancelModalBtn" class="secondary-btn">Cancel</button>
-        <button id="confirmModalBtn" class="primary-btn-sm">Proceed with In-Browser AI</button>
+        <button id="cancelModalBtn" class="secondary-btn" aria-label="Cancel WebGPU generation">Cancel</button>
+        <button id="confirmModalBtn" class="primary-btn-sm" aria-label="Proceed with in-browser AI generation">Proceed with In-Browser AI</button>
       </div>
     </div>
   </div>
+
+  <footer class="app-footer" role="contentinfo">
+    <div class="footer-inner">
+      <span>3D Vision Lab &bull; Production Ready</span>
+      <span class="footer-separator">&bull;</span>
+      <span>In-Browser WebGPU &bull; Microsoft TRELLIS.2</span>
+      <span class="footer-separator">&bull;</span>
+      <a href="https://github.com/ReallyJason/3D_image_model" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub Repository ↗</a>
+    </div>
+  </footer>
 
   <script src="app.js"></script>
 </body>

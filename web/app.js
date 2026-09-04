@@ -64,6 +64,62 @@ const dontRemindCheck = document.getElementById('dontRemindCheck');
 const cancelModalBtn = document.getElementById('cancelModalBtn');
 const confirmModalBtn = document.getElementById('confirmModalBtn');
 
+// -------------------------------------------------------------
+// Accessibility & Toast Notification System
+// -------------------------------------------------------------
+function announceA11y(text) {
+  const announcer = document.getElementById('a11yAnnouncer');
+  if (announcer) {
+    announcer.textContent = text;
+  }
+}
+
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str || '';
+  return div.innerHTML;
+}
+
+function showToast(title, message, type = 'info', duration = 4500) {
+  const container = document.getElementById('toastContainer');
+  if (!container) return;
+
+  const icons = {
+    success: '✅',
+    error: '❌',
+    warning: '⚠️',
+    info: 'ℹ️'
+  };
+
+  const toast = document.createElement('div');
+  toast.className = `toast toast-${type}`;
+  toast.setAttribute('role', 'alert');
+
+  toast.innerHTML = `
+    <span class="toast-icon">${icons[type] || 'ℹ️'}</span>
+    <div class="toast-body">
+      <div class="toast-title">${escapeHtml(title)}</div>
+      <div class="toast-msg">${escapeHtml(message)}</div>
+    </div>
+    <button class="toast-close" aria-label="Close notification">&times;</button>
+  `;
+
+  const closeBtn = toast.querySelector('.toast-close');
+  const removeToast = () => {
+    toast.classList.add('toast-exit');
+    setTimeout(() => {
+      if (toast.parentNode) toast.parentNode.removeChild(toast);
+    }, 260);
+  };
+
+  closeBtn.addEventListener('click', removeToast);
+  container.appendChild(toast);
+
+  if (duration > 0) {
+    setTimeout(removeToast, duration);
+  }
+}
+
 if (webgpuDepthSlider && webgpuDepthValue) {
   webgpuDepthSlider.addEventListener('input', (e) => {
     webgpuDepthValue.textContent = Number(e.target.value).toFixed(2);
@@ -233,14 +289,30 @@ window.addEventListener('paste', (e) => {
 });
 
 function handleFile(file) {
-  if (!file.type.startsWith('image/')) {
-    alert('Please upload an image file.');
+  if (!file) return;
+
+  // Maximum upload size validation (12 MB)
+  const maxBytes = 12 * 1024 * 1024;
+  if (file.size > maxBytes) {
+    showToast('File Too Large', `Image is ${(file.size / (1024 * 1024)).toFixed(1)}MB. Maximum allowed is 12MB.`, 'error', 5000);
+    announceA11y('Error: Selected image exceeds 12MB limit.');
+    return;
+  }
+
+  const validMimes = ['image/png', 'image/jpeg', 'image/jpg', 'image/webp'];
+  if (!validMimes.includes(file.type.toLowerCase()) && !file.type.startsWith('image/')) {
+    showToast('Unsupported Format', 'Please upload a PNG, JPG, or WEBP image.', 'warning', 4000);
     return;
   }
 
   const reader = new FileReader();
   reader.onload = (e) => {
     setImageSource(e.target.result, null);
+    showToast('Image Loaded', 'Ready for 3D neural reconstruction.', 'success', 2500);
+    announceA11y('Image loaded successfully.');
+  };
+  reader.onerror = () => {
+    showToast('Read Error', 'Could not read the selected image file.', 'error');
   };
   reader.readAsDataURL(file);
 }
@@ -424,7 +496,8 @@ async function triggerReconstruction() {
   } catch (err) {
     console.error('Reconstruction error:', err);
     meshStatus.textContent = `Error: ${err.message}`;
-    alert(`Reconstruction error: ${err.message}`);
+    showToast('Reconstruction Error', err.message, 'error', 6000);
+    announceA11y(`Reconstruction failed: ${err.message}`);
   } finally {
     loadingOverlay.classList.add('hidden');
     generateBtn.disabled = false;
@@ -495,7 +568,8 @@ async function executeInBrowserWebGPU() {
   } catch (err) {
     console.error('Client WebGPU Error:', err);
     meshStatus.textContent = `Client Error: ${err.message}`;
-    alert(`In-Browser WebGPU error: ${err.message}`);
+    showToast('In-Browser WebGPU Error', err.message, 'error', 6500);
+    announceA11y(`In-browser WebGPU generation error: ${err.message}`);
   } finally {
     loadingOverlay.classList.add('hidden');
     generateBtn.disabled = false;
@@ -743,16 +817,20 @@ function resetCamera(size) {
 }
 
 // -------------------------------------------------------------
-// Viewport Tools
+// Viewport Tools & Accessibility Listeners
 // -------------------------------------------------------------
 rotateBtn.addEventListener('click', () => {
   autoRotate = !autoRotate;
   rotateBtn.classList.toggle('active', autoRotate);
+  rotateBtn.setAttribute('aria-pressed', autoRotate);
+  announceA11y(autoRotate ? 'Auto rotation enabled.' : 'Auto rotation paused.');
 });
 
 wireframeBtn.addEventListener('click', () => {
   isWireframe = !isWireframe;
   wireframeBtn.classList.toggle('active', isWireframe);
+  wireframeBtn.setAttribute('aria-pressed', isWireframe);
+  announceA11y(isWireframe ? 'Wireframe view activated.' : 'Solid mesh view activated.');
 
   if (currentMesh) {
     currentMesh.traverse((child) => {
@@ -765,4 +843,53 @@ wireframeBtn.addEventListener('click', () => {
 
 resetCamBtn.addEventListener('click', () => {
   resetCamera();
+  announceA11y('Camera view reset to default.');
 });
+
+// Keyboard support for dropzone and modal
+if (dropzone) {
+  dropzone.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      fileInput.click();
+    }
+  });
+}
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && warningModal && !warningModal.classList.contains('hidden')) {
+    warningModal.classList.add('hidden');
+    announceA11y('Resource warning dialog dismissed.');
+  }
+});
+
+// -------------------------------------------------------------
+// WebGPU Compatibility Verification on Launch
+// -------------------------------------------------------------
+async function checkWebGPUAvailability() {
+  const banner = document.getElementById('webgpuNoticeBanner');
+  const dismissBtn = document.getElementById('dismissBannerBtn');
+  const hardwareBadge = document.getElementById('hardwareBadge');
+
+  if (dismissBtn && banner) {
+    dismissBtn.addEventListener('click', () => banner.classList.add('hidden'));
+  }
+
+  if (!navigator.gpu) {
+    console.info('WebGPU is not enabled or available in this browser. Defaulting to Cloud TRELLIS.2 engine.');
+    if (banner) banner.classList.remove('hidden');
+    if (hardwareBadge) {
+      hardwareBadge.innerHTML = '<span class="pulse-dot"></span> Cloud AI Ready';
+    }
+    if (engineSelect && engineSelect.value === 'client_webgpu') {
+      engineSelect.value = 'trellis';
+      engineSelect.dispatchEvent(new Event('change'));
+    }
+  } else {
+    console.info('WebGPU hardware adapter confirmed available.');
+    if (hardwareBadge) {
+      hardwareBadge.innerHTML = '<span class="pulse-dot"></span> WebGPU Active';
+    }
+  }
+}
+checkWebGPUAvailability();

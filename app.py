@@ -393,12 +393,35 @@ CUSTOM_VOXEL = CustomVoxelEngine()
 # HTTP Request Handler (Hardened with Security Guards)
 # -------------------------------------------------------------
 class WebViewerHandler(BaseHTTPRequestHandler):
+    server_version = "3D-Vision-Lab/1.0"
+    sys_version = ""
+
     def apply_security_headers(self):
         self.send_header("X-Content-Type-Options", "nosniff")
         self.send_header("X-Frame-Options", "SAMEORIGIN")
         self.send_header("Referrer-Policy", "strict-origin-when-cross-origin")
         self.send_header("Permissions-Policy", "camera=(), microphone=(), geolocation=()")
         self.send_header("X-XSS-Protection", "1; mode=block")
+        self.send_header("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload")
+        self.send_header("Cross-Origin-Opener-Policy", "same-origin-allow-popups")
+        self.send_header("Cross-Origin-Resource-Policy", "cross-origin")
+
+        # Tailored CSP for WebGPU, WASM Shaders, Three.js, and Hugging Face CDN
+        csp_policy = (
+            "default-src 'self'; "
+            "script-src 'self' 'unsafe-eval' 'wasm-unsafe-eval' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; "
+            "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
+            "font-src 'self' https://fonts.gstatic.com data:; "
+            "img-src 'self' data: blob: https:; "
+            "connect-src 'self' blob: data: https://huggingface.co https://*.huggingface.co https://cdn-lfs.huggingface.co https://cdn-lfs-us-1.huggingface.co https://cdn.jsdelivr.net; "
+            "worker-src 'self' blob:; "
+            "media-src 'self' blob:; "
+            "object-src 'none'; "
+            "base-uri 'self'; "
+            "form-action 'self'; "
+            "frame-ancestors 'self';"
+        )
+        self.send_header("Content-Security-Policy", csp_policy)
 
     def send_json(self, data: Any, status: int = 200):
         body = json.dumps(data).encode("utf-8")
@@ -406,6 +429,7 @@ class WebViewerHandler(BaseHTTPRequestHandler):
         self.send_header("Content-Type", "application/json")
         self.send_header("Content-Length", str(len(body)))
         self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Cache-Control", "no-cache, no-store, must-revalidate")
         self.apply_security_headers()
         self.end_headers()
         self.wfile.write(body)
@@ -424,6 +448,13 @@ class WebViewerHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         self.handle_get_or_head(is_head=False)
 
+    def serve_404(self, is_head: bool = False):
+        custom_404 = os.path.join(WEB_DIR, "404.html")
+        if os.path.exists(custom_404):
+            self.serve_file(custom_404, status=404, is_head=is_head)
+        else:
+            self.send_error(404, "Page Not Found")
+
     def handle_get_or_head(self, is_head: bool = False):
         client_ip = SECURITY.get_client_ip(self)
         allowed, retry_after = SECURITY.check_rate_limit(client_ip, is_heavy_api=False)
@@ -435,6 +466,11 @@ class WebViewerHandler(BaseHTTPRequestHandler):
 
         parsed = urlparse(self.path)
         path = parsed.path
+
+        # Path Traversal Guard
+        if ".." in path or "\x00" in path:
+            self.serve_404(is_head=is_head)
+            return
 
         if path == "/api/samples":
             samples = []
@@ -461,7 +497,7 @@ class WebViewerHandler(BaseHTTPRequestHandler):
                 is_download = "download" in query or "download" in parsed.query
                 self.serve_file(file_path, as_attachment=is_download, is_head=is_head)
             else:
-                self.send_error(404, "Reconstruction file not found")
+                self.serve_404(is_head=is_head)
             return
 
         if path.startswith("/my_dataset/"):
@@ -470,18 +506,28 @@ class WebViewerHandler(BaseHTTPRequestHandler):
             if file_path.startswith(os.path.normpath(PROJECT_ROOT)) and os.path.exists(file_path):
                 self.serve_file(file_path, is_head=is_head)
             else:
-                self.send_error(404, "Dataset image not found")
+                self.serve_404(is_head=is_head)
             return
+
+        # Allowed static extensions
+        ALLOWED_EXTENSIONS = {
+            ".html", ".css", ".js", ".json", ".svg", ".png",
+            ".jpg", ".jpeg", ".webp", ".ico", ".obj", ".glb",
+            ".xml", ".txt", ".webmanifest"
+        }
 
         if path == "/" or path == "/index.html":
             file_path = os.path.join(WEB_DIR, "index.html")
         else:
             file_path = os.path.normpath(os.path.join(WEB_DIR, path.lstrip("/")))
 
-        if file_path.startswith(os.path.normpath(WEB_DIR)) and os.path.exists(file_path) and os.path.isfile(file_path):
+        _, ext = os.path.splitext(file_path)
+        is_known_asset = (ext.lower() in ALLOWED_EXTENSIONS) or (os.path.basename(file_path) in ("robots.txt", "sitemap.xml", "site.webmanifest"))
+
+        if file_path.startswith(os.path.normpath(WEB_DIR)) and os.path.exists(file_path) and os.path.isfile(file_path) and is_known_asset:
             self.serve_file(file_path, is_head=is_head)
         else:
-            self.send_error(404, "Not Found")
+            self.serve_404(is_head=is_head)
 
     def do_POST(self):
         parsed = urlparse(self.path)
@@ -517,7 +563,10 @@ class WebViewerHandler(BaseHTTPRequestHandler):
                 resolution = int(data.get("resolution", 192))
                 remove_bg = bool(data.get("remove_bg", True))
                 threshold = float(data.get("threshold", 0.45))
-                hf_token = data.get("hf_token", "").strip() or None
+                
+                # Check user-provided token, falling back to server-configured environment variable
+                server_hf_token = os.environ.get("HF_TOKEN", "").strip() or None
+                hf_token = data.get("hf_token", "").strip() or server_hf_token
 
                 temp_path = os.path.join(RECONSTRUCTIONS_DIR, f"temp_input_{int(time.time()*1000)}.png")
 
@@ -534,6 +583,10 @@ class WebViewerHandler(BaseHTTPRequestHandler):
                     img.save(temp_path)
                 elif "image_url" in data:
                     img_url = data["image_url"].lstrip("/")
+                    # Path traversal guard for sample URLs
+                    if ".." in img_url or "\x00" in img_url:
+                        self.send_json({"error": "Invalid image URL"}, status=400)
+                        return
                     local_path = os.path.normpath(os.path.join(PROJECT_ROOT, img_url))
                     if not (local_path.startswith(os.path.normpath(PROJECT_ROOT)) and os.path.exists(local_path)):
                         self.send_json({"error": f"Image file not found: {img_url}"}, status=400)
@@ -566,31 +619,50 @@ class WebViewerHandler(BaseHTTPRequestHandler):
                 import traceback
                 traceback.print_exc()
                 err_str = str(e)
+                # Strip internal project root path to avoid exposing server directory hierarchy
+                err_str = err_str.replace(PROJECT_ROOT, "[ROOT]")
                 if "ZeroGPU quota" in err_str:
                     err_str = "ZeroGPU free anonymous quota reached. Please paste your free Hugging Face token into the 'Hugging Face Token' box (or open the official TRELLIS space directly)."
-                self.send_json({"error": err_str}, status=500)
+                elif "CUDA out of memory" in err_str:
+                    err_str = "Host GPU ran out of memory. Please lower resolution or try the client WebGPU engine."
+                self.send_json({"error": f"Reconstruction failed: {err_str}"}, status=500)
             finally:
                 SECURITY.release_inference()
                 SECURITY.auto_prune_old_reconstructions()
         else:
-            self.send_error(404, "Endpoint Not Found")
+            self.send_json({"error": "API endpoint not found"}, status=404)
 
-    def serve_file(self, file_path: str, as_attachment: bool = False, is_head: bool = False):
+    def serve_file(self, file_path: str, status: int = 200, as_attachment: bool = False, is_head: bool = False):
         mime_type, _ = mimetypes.guess_type(file_path)
         if not mime_type:
             if file_path.endswith(".obj"):
                 mime_type = "model/obj"
             elif file_path.endswith(".glb"):
                 mime_type = "model/gltf-binary"
+            elif file_path.endswith(".webmanifest"):
+                mime_type = "application/manifest+json"
+            elif file_path.endswith(".xml"):
+                mime_type = "application/xml"
+            elif file_path.endswith(".svg"):
+                mime_type = "image/svg+xml"
+            elif file_path.endswith(".ico"):
+                mime_type = "image/x-icon"
             else:
                 mime_type = "application/octet-stream"
 
         try:
             file_size = os.path.getsize(file_path)
-            self.send_response(200)
+            self.send_response(status)
             self.send_header("Content-Type", mime_type)
             self.send_header("Content-Length", str(file_size))
             self.send_header("Access-Control-Allow-Origin", "*")
+
+            # Caching Headers: Immutable cache for static assets, no-store for HTML
+            if file_path.endswith((".css", ".js", ".svg", ".png", ".jpg", ".webp", ".ico", ".obj", ".glb", ".webmanifest")):
+                self.send_header("Cache-Control", "public, max-age=86400")
+            else:
+                self.send_header("Cache-Control", "no-cache, no-store, must-revalidate")
+
             self.apply_security_headers()
             if as_attachment:
                 filename = os.path.basename(file_path)

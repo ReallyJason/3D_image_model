@@ -1,0 +1,15 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /styles.css
+Allow: /app.js
+Allow: /favicon.svg
+Allow: /og-image.png
+
+# Disallow ephemeral dynamic API endpoints and temporary reconstructions
+Disallow: /api/
+Disallow: /reconstructions/
+
+# Sitemap
+Sitemap: /sitemap.xml
