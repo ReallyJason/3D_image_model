@@ -324,7 +324,104 @@ class TrellisEngine:
         }
 
 # -------------------------------------------------------------
-# 4. Custom Voxel Baseline
+# 4. Cloud TripoSG Engine (VAST-AI DiT Diffusion + 3D VAE)
+# -------------------------------------------------------------
+class TripoSGEngine:
+    """VAST-AI TripoSG: Diffusion Transformer with 3D VAE geometry synthesis."""
+    def predict_mesh(self, temp_img_path: str, hf_token: Optional[str] = None) -> Dict[str, Any]:
+        from gradio_client import Client, handle_file
+
+        t0 = time.perf_counter()
+        token = hf_token or os.environ.get("HF_TOKEN")
+        client = Client("VAST-AI/TripoSG", token=token, httpx_kwargs={"timeout": 120.0})
+
+        try:
+            client.predict(api_name='/start_session')
+        except Exception:
+            pass
+
+        res = client.predict(
+            image=handle_file(temp_img_path),
+            api_name='/image_to_3d'
+        )
+
+        glb_source = res if isinstance(res, str) else (res.get("path") if isinstance(res, dict) else res[0])
+
+        ts = int(time.time() * 1000)
+        obj_filename = f"triposg_{ts}.obj"
+        glb_filename = f"triposg_{ts}.glb"
+        obj_path = os.path.join(RECONSTRUCTIONS_DIR, obj_filename)
+        glb_path = os.path.join(RECONSTRUCTIONS_DIR, glb_filename)
+
+        shutil.copy(glb_source, glb_path)
+
+        mesh = trimesh.load(glb_path, force="mesh")
+        if isinstance(mesh, trimesh.Scene):
+            mesh = trimesh.util.concatenate([g for g in mesh.geometry.values() if isinstance(g, trimesh.Trimesh)])
+
+        mesh.export(obj_path)
+        total_ms = (time.perf_counter() - t0) * 1000.0
+
+        return {
+            "success": True,
+            "engine": "TripoSG (VAST-AI DiT Diffusion + 3D VAE)",
+            "obj_url": f"/reconstructions/{obj_filename}",
+            "glb_url": f"/reconstructions/{glb_filename}",
+            "inference_ms": round(total_ms, 1),
+            "total_latency_ms": round(total_ms, 1),
+            "vertices": len(mesh.vertices),
+            "faces": len(mesh.faces),
+            "has_colors": True
+        }
+
+# -------------------------------------------------------------
+# 5. Cloud SPAR3D Engine (Spatial-Aware 3D Mesh)
+# -------------------------------------------------------------
+class SPAR3DEngine:
+    """SPAR3D: Spatial-Aware Reconstruction 3D (Fast geometry + texture tradeoff)."""
+    def predict_mesh(self, temp_img_path: str, hf_token: Optional[str] = None) -> Dict[str, Any]:
+        from gradio_client import Client, handle_file
+
+        t0 = time.perf_counter()
+        token = hf_token or os.environ.get("HF_TOKEN")
+        client = Client("Neha03/spar-3d-mesh-generator", token=token, httpx_kwargs={"timeout": 120.0})
+
+        res = client.predict(
+            image=handle_file(temp_img_path),
+            api_name='/predict'
+        )
+
+        glb_source = res if isinstance(res, str) else (res.get("path") if isinstance(res, dict) else res[0])
+
+        ts = int(time.time() * 1000)
+        obj_filename = f"spar3d_{ts}.obj"
+        glb_filename = f"spar3d_{ts}.glb"
+        obj_path = os.path.join(RECONSTRUCTIONS_DIR, obj_filename)
+        glb_path = os.path.join(RECONSTRUCTIONS_DIR, glb_filename)
+
+        shutil.copy(glb_source, glb_path)
+
+        mesh = trimesh.load(glb_path, force="mesh")
+        if isinstance(mesh, trimesh.Scene):
+            mesh = trimesh.util.concatenate([g for g in mesh.geometry.values() if isinstance(g, trimesh.Trimesh)])
+
+        mesh.export(obj_path)
+        total_ms = (time.perf_counter() - t0) * 1000.0
+
+        return {
+            "success": True,
+            "engine": "SPAR3D (Spatial-Aware 3D Reconstruction)",
+            "obj_url": f"/reconstructions/{obj_filename}",
+            "glb_url": f"/reconstructions/{glb_filename}",
+            "inference_ms": round(total_ms, 1),
+            "total_latency_ms": round(total_ms, 1),
+            "vertices": len(mesh.vertices),
+            "faces": len(mesh.faces),
+            "has_colors": True
+        }
+
+# -------------------------------------------------------------
+# 6. Custom Voxel Baseline
 # -------------------------------------------------------------
 class CustomVoxelEngine:
     def __init__(self, checkpoint_path: str = CHECKPOINT_PATH):
@@ -387,6 +484,8 @@ class CustomVoxelEngine:
 LOCAL_TRIPOSR = TripoSREngine()
 CLOUD_INSTANTMESH = InstantMeshEngine()
 CLOUD_TRELLIS = TrellisEngine()
+CLOUD_TRIPOSG = TripoSGEngine()
+CLOUD_SPAR3D = SPAR3DEngine()
 CUSTOM_VOXEL = CustomVoxelEngine()
 
 # -------------------------------------------------------------
@@ -600,6 +699,10 @@ class WebViewerHandler(BaseHTTPRequestHandler):
                 # Route to selected engine
                 if engine_type == "trellis":
                     result = CLOUD_TRELLIS.predict_mesh(temp_path, hf_token=hf_token)
+                elif engine_type == "triposg":
+                    result = CLOUD_TRIPOSG.predict_mesh(temp_path, hf_token=hf_token)
+                elif engine_type == "spar3d":
+                    result = CLOUD_SPAR3D.predict_mesh(temp_path, hf_token=hf_token)
                 elif engine_type == "instantmesh":
                     result = CLOUD_INSTANTMESH.predict_mesh(temp_path, hf_token=hf_token)
                 elif engine_type == "triposr":

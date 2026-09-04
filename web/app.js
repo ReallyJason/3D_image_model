@@ -143,6 +143,18 @@ engineSelect.addEventListener('change', () => {
     triposrControls.classList.add('hidden');
     voxelControls.classList.add('hidden');
     activeModelBadge.textContent = 'Engine: Microsoft TRELLIS.2 (SOTA Cloud)';
+  } else if (engine === 'triposg') {
+    if (webgpuControls) webgpuControls.classList.add('hidden');
+    if (hfTokenRow) hfTokenRow.classList.remove('hidden');
+    triposrControls.classList.add('hidden');
+    voxelControls.classList.add('hidden');
+    activeModelBadge.textContent = 'Engine: VAST-AI TripoSG (DiT + 3D VAE)';
+  } else if (engine === 'spar3d') {
+    if (webgpuControls) webgpuControls.classList.add('hidden');
+    if (hfTokenRow) hfTokenRow.classList.remove('hidden');
+    triposrControls.classList.add('hidden');
+    voxelControls.classList.add('hidden');
+    activeModelBadge.textContent = 'Engine: StabilityAI SPAR3D (Spatial-Aware 3D)';
   } else if (engine === 'instantmesh') {
     if (webgpuControls) webgpuControls.classList.add('hidden');
     if (hfTokenRow) hfTokenRow.classList.remove('hidden');
@@ -430,6 +442,10 @@ async function triggerReconstruction() {
 
   if (engine === 'trellis') {
     loadingStatusText.textContent = 'Microsoft TRELLIS.2 Synthesizing 3D Flow Model...';
+  } else if (engine === 'triposg') {
+    loadingStatusText.textContent = 'VAST-AI TripoSG Synthesizing Geometry via DiT Diffusion...';
+  } else if (engine === 'spar3d') {
+    loadingStatusText.textContent = 'StabilityAI SPAR3D Generating Spatial-Aware 3D Mesh...';
   } else if (engine === 'instantmesh') {
     loadingStatusText.textContent = 'InstantMesh Multi-View Diffusion & FlexiCubes...';
   } else if (engine === 'triposr') {
