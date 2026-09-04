@@ -18,13 +18,18 @@ import mimetypes
 import glob
 import shutil
 from typing import Dict, Any, List, Optional
-from http.server import HTTPServer, BaseHTTPRequestHandler
+import threading
+from collections import defaultdict
+from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs
 import numpy as np
 import trimesh
 from PIL import Image
 import torch
 import torchvision.transforms as T
+
+# Protect against image decompression bombs
+Image.MAX_IMAGE_PIXELS = 16_000_000
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 if PROJECT_ROOT not in sys.path:
@@ -45,6 +50,90 @@ os.makedirs(WEB_DIR, exist_ok=True)
 os.makedirs(RECONSTRUCTIONS_DIR, exist_ok=True)
 
 DEVICE = torch.device("mps" if torch.backends.mps.is_available() else ("cuda" if torch.cuda.is_available() else "cpu"))
+
+# -------------------------------------------------------------
+# Production Security & Rate Limiting System
+# -------------------------------------------------------------
+MAX_UPLOAD_SIZE = 12 * 1024 * 1024         # 12 MB max upload limit (prevents DoS / memory exhaustion)
+RATE_LIMIT_WINDOW = 60                     # 60 second rolling window
+MAX_RECONSTRUCT_PER_MINUTE = 15            # Max 15 neural 3D generations per IP/minute
+MAX_TOTAL_REQUESTS_PER_MINUTE = 120        # Max 120 total requests per IP/minute
+MAX_CONCURRENT_INFERENCES = 2              # Max 2 heavy concurrent reconstructions simultaneously
+
+class SecurityManager:
+    """Thread-safe rate limiter, concurrency controller, and disk cleaner."""
+    def __init__(self):
+        self._lock = threading.Lock()
+        self._ip_api_timestamps = defaultdict(list)
+        self._ip_total_timestamps = defaultdict(list)
+        self._inference_semaphore = threading.Semaphore(MAX_CONCURRENT_INFERENCES)
+        self._active_inferences = 0
+        self._last_clean_time = time.time()
+
+    def get_client_ip(self, handler: BaseHTTPRequestHandler) -> str:
+        # Check standard reverse-proxy headers if behind Cloudflare / Nginx
+        cf_ip = handler.headers.get("CF-Connecting-IP")
+        if cf_ip:
+            return cf_ip.strip()
+        forwarded = handler.headers.get("X-Forwarded-For")
+        if forwarded:
+            return forwarded.split(",")[0].strip()
+        return handler.client_address[0]
+
+    def check_rate_limit(self, client_ip: str, is_heavy_api: bool = False) -> tuple[bool, int]:
+        now = time.time()
+        with self._lock:
+            # Clean up old timestamps
+            self._ip_total_timestamps[client_ip] = [
+                t for t in self._ip_total_timestamps[client_ip] if now - t < RATE_LIMIT_WINDOW
+            ]
+            if len(self._ip_total_timestamps[client_ip]) >= MAX_TOTAL_REQUESTS_PER_MINUTE:
+                retry_after = int(RATE_LIMIT_WINDOW - (now - self._ip_total_timestamps[client_ip][0])) + 1
+                return False, retry_after
+            self._ip_total_timestamps[client_ip].append(now)
+
+            if is_heavy_api:
+                self._ip_api_timestamps[client_ip] = [
+                    t for t in self._ip_api_timestamps[client_ip] if now - t < RATE_LIMIT_WINDOW
+                ]
+                if len(self._ip_api_timestamps[client_ip]) >= MAX_RECONSTRUCT_PER_MINUTE:
+                    retry_after = int(RATE_LIMIT_WINDOW - (now - self._ip_api_timestamps[client_ip][0])) + 1
+                    return False, retry_after
+                self._ip_api_timestamps[client_ip].append(now)
+
+        return True, 0
+
+    def try_acquire_inference(self) -> bool:
+        """Non-blocking semaphore acquire to prevent server queue exhaustion."""
+        acquired = self._inference_semaphore.acquire(blocking=False)
+        if acquired:
+            with self._lock:
+                self._active_inferences += 1
+        return acquired
+
+    def release_inference(self):
+        with self._lock:
+            if self._active_inferences > 0:
+                self._active_inferences -= 1
+        self._inference_semaphore.release()
+
+    def auto_prune_old_reconstructions(self, max_age_seconds: int = 3600):
+        """Clean up generated files older than 1 hour to prevent disk fill-up."""
+        now = time.time()
+        if now - self._last_clean_time < 300:
+            return
+        self._last_clean_time = now
+        try:
+            for f in glob.glob(os.path.join(RECONSTRUCTIONS_DIR, "*.*")):
+                if os.path.isfile(f) and (now - os.path.getmtime(f) > max_age_seconds):
+                    try:
+                        os.remove(f)
+                    except Exception:
+                        pass
+        except Exception:
+            pass
+
+SECURITY = SecurityManager()
 
 # -------------------------------------------------------------
 # 1. Local TripoSR Engine (Stability AI)
@@ -136,7 +225,7 @@ class InstantMeshEngine:
 
         t0 = time.perf_counter()
         token = hf_token or os.environ.get("HF_TOKEN")
-        client = Client("TencentARC/InstantMesh", hf_token=token)
+        client = Client("TencentARC/InstantMesh", token=token)
 
         prep = client.predict(input_image=handle_file(temp_img_path), do_remove_background=True, api_name='/preprocess')
         mvs = client.predict(input_image=handle_file(prep), sample_steps=40, sample_seed=42, api_name='/generate_mvs')
@@ -177,7 +266,7 @@ class TrellisEngine:
 
         t0 = time.perf_counter()
         token = hf_token or os.environ.get("HF_TOKEN")
-        client = Client("microsoft/TRELLIS.2", hf_token=token)
+        client = Client("microsoft/TRELLIS.2", token=token)
 
         client.predict(api_name='/start_session')
         prep = client.predict(input=handle_file(temp_img_path), api_name='/preprocess_image')
@@ -301,23 +390,32 @@ CLOUD_TRELLIS = TrellisEngine()
 CUSTOM_VOXEL = CustomVoxelEngine()
 
 # -------------------------------------------------------------
-# HTTP Request Handler
+# HTTP Request Handler (Hardened with Security Guards)
 # -------------------------------------------------------------
 class WebViewerHandler(BaseHTTPRequestHandler):
+    def apply_security_headers(self):
+        self.send_header("X-Content-Type-Options", "nosniff")
+        self.send_header("X-Frame-Options", "SAMEORIGIN")
+        self.send_header("Referrer-Policy", "strict-origin-when-cross-origin")
+        self.send_header("Permissions-Policy", "camera=(), microphone=(), geolocation=()")
+        self.send_header("X-XSS-Protection", "1; mode=block")
+
     def send_json(self, data: Any, status: int = 200):
         body = json.dumps(data).encode("utf-8")
         self.send_response(status)
         self.send_header("Content-Type", "application/json")
         self.send_header("Content-Length", str(len(body)))
         self.send_header("Access-Control-Allow-Origin", "*")
+        self.apply_security_headers()
         self.end_headers()
         self.wfile.write(body)
 
     def do_OPTIONS(self):
         self.send_response(200)
         self.send_header("Access-Control-Allow-Origin", "*")
-        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
-        self.send_header("Access-Control-Allow-Headers", "Content-Type")
+        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, HEAD")
+        self.send_header("Access-Control-Allow-Headers", "Content-Type, X-Forwarded-For")
+        self.apply_security_headers()
         self.end_headers()
 
     def do_HEAD(self):
@@ -327,6 +425,14 @@ class WebViewerHandler(BaseHTTPRequestHandler):
         self.handle_get_or_head(is_head=False)
 
     def handle_get_or_head(self, is_head: bool = False):
+        client_ip = SECURITY.get_client_ip(self)
+        allowed, retry_after = SECURITY.check_rate_limit(client_ip, is_heavy_api=False)
+        if not allowed:
+            self.send_response(429)
+            self.send_header("Retry-After", str(retry_after))
+            self.send_json({"error": f"Too many requests. Please wait {retry_after}s."}, status=429)
+            return
+
         parsed = urlparse(self.path)
         path = parsed.path
 
@@ -380,7 +486,29 @@ class WebViewerHandler(BaseHTTPRequestHandler):
     def do_POST(self):
         parsed = urlparse(self.path)
         if parsed.path == "/api/reconstruct":
+            client_ip = SECURITY.get_client_ip(self)
+            allowed, retry_after = SECURITY.check_rate_limit(client_ip, is_heavy_api=True)
+            if not allowed:
+                self.send_response(429)
+                self.send_header("Retry-After", str(retry_after))
+                self.send_json({
+                    "error": f"Rate limit exceeded (Max {MAX_RECONSTRUCT_PER_MINUTE} reconstructions/min). Please wait {retry_after}s before submitting again."
+                }, status=429)
+                return
+
             content_length = int(self.headers.get("Content-Length", 0))
+            if content_length > MAX_UPLOAD_SIZE:
+                self.send_json({
+                    "error": f"Payload too large ({content_length // (1024*1024)}MB). Maximum allowed upload is {MAX_UPLOAD_SIZE // (1024*1024)}MB."
+                }, status=413)
+                return
+
+            if not SECURITY.try_acquire_inference():
+                self.send_json({
+                    "error": "Server is currently at maximum capacity processing other 3D reconstructions. Please wait a few seconds and try again."
+                }, status=503)
+                return
+
             post_data = self.rfile.read(content_length)
 
             try:
@@ -398,13 +526,17 @@ class WebViewerHandler(BaseHTTPRequestHandler):
                     if "," in raw_b64:
                         raw_b64 = raw_b64.split(",", 1)[1]
                     img_bytes = base64.b64decode(raw_b64)
+                    
+                    # Verify image integrity and guard against decompression bombs
+                    img_check = Image.open(io.BytesIO(img_bytes))
+                    img_check.verify()
                     img = Image.open(io.BytesIO(img_bytes))
                     img.save(temp_path)
                 elif "image_url" in data:
                     img_url = data["image_url"].lstrip("/")
-                    local_path = os.path.join(PROJECT_ROOT, img_url)
-                    if not os.path.exists(local_path):
-                        self.send_json({"error": f"Image file not found: {local_path}"}, status=400)
+                    local_path = os.path.normpath(os.path.join(PROJECT_ROOT, img_url))
+                    if not (local_path.startswith(os.path.normpath(PROJECT_ROOT)) and os.path.exists(local_path)):
+                        self.send_json({"error": f"Image file not found: {img_url}"}, status=400)
                         return
                     img = Image.open(local_path)
                     shutil.copy(local_path, temp_path)
@@ -437,6 +569,9 @@ class WebViewerHandler(BaseHTTPRequestHandler):
                 if "ZeroGPU quota" in err_str:
                     err_str = "ZeroGPU free anonymous quota reached. Please paste your free Hugging Face token into the 'Hugging Face Token' box (or open the official TRELLIS space directly)."
                 self.send_json({"error": err_str}, status=500)
+            finally:
+                SECURITY.release_inference()
+                SECURITY.auto_prune_old_reconstructions()
         else:
             self.send_error(404, "Endpoint Not Found")
 
@@ -456,6 +591,7 @@ class WebViewerHandler(BaseHTTPRequestHandler):
             self.send_header("Content-Type", mime_type)
             self.send_header("Content-Length", str(file_size))
             self.send_header("Access-Control-Allow-Origin", "*")
+            self.apply_security_headers()
             if as_attachment:
                 filename = os.path.basename(file_path)
                 self.send_header("Content-Disposition", f'attachment; filename="{filename}"')
@@ -468,14 +604,15 @@ class WebViewerHandler(BaseHTTPRequestHandler):
 
 def run_server(port: int = 8080):
     server_address = ("127.0.0.1", port)
-    httpd = HTTPServer(server_address, WebViewerHandler)
+    httpd = ThreadingHTTPServer(server_address, WebViewerHandler)
     url = f"http://localhost:{port}"
 
     print("\n" + "=" * 65)
     print("      🌐 3D VISION LAB — MULTI-ENGINE 3D VIEWER")
     print("=" * 65)
-    print(f"  Server URL:    {url}")
-    print(f"  Engines:       TRELLIS.2 (Microsoft) | InstantMesh | TripoSR | Custom")
+    print(f"  Server URL:       {url}")
+    print(f"  Engines:          WebGPU | TRELLIS.2 | InstantMesh | TripoSR")
+    print(f"  Security:         Active (Rate Limiting + Concurrency Semaphore)")
     print("=" * 65 + "\n", flush=True)
 
     try:
